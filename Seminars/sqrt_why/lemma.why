@@ -1,0 +1,60 @@
+theory Proof "Lemma proof"
+	use import int.Int
+	function square(x: int): int = x*x
+    predicate is_sqrt(x y: int) = square y <= x < square (y+1)
+	predicate sqrt_x_less_y(x y: int) = forall s . is_sqrt x s -> s <= y
+
+    predicate phiL(a b: int) = a >= 0
+    predicate psiL(a b: int) = sqrt_x_less_y a b -> (a < square (b+1))
+
+	predicate phiS1(a: int) = a >= 0
+	predicate psiS1(a: int) = forall s . is_sqrt a s -> s >= 0
+
+	predicate phiS2(x y: int) = x >= 0 
+	predicate psiS2(x y: int) = sqrt_x_less_y x y
+		-> (forall s . is_sqrt x s -> 0 <= s <= y)
+
+	predicate phiS3(x y: int) = x >= 0
+	predicate psiS3(x y: int) = sqrt_x_less_y x y
+		-> (forall s . is_sqrt x s -> square (s+1) <= square (y+1))
+
+	predicate phiS4(x y: int) = x >= 0
+	predicate psiS4(x y: int) = sqrt_x_less_y x y
+		-> (forall s . is_sqrt x s -> x < square (y + 1))
+	
+	predicate phiS5(x y: int) = x >= 0
+	predicate psiS5(x y: int) = sqrt_x_less_y x y
+		-> ((exists s . is_sqrt x s) -> x < square (y + 1))
+
+	predicate phiS6(x: int) = x >= 0
+	predicate psiS6(x: int) = exists s . is_sqrt x s
+
+	predicate phiSqrt(n: int) = n >= 0 /\ (exists s . is_sqrt n s)
+	predicate psiSqrt(n s: int) = is_sqrt n s
+
+	goal ProofS1: forall a . phiS1 a -> psiS1 a
+	goal ProofS2: forall a b . phiS2 a b -> psiS2 a b
+	goal ProofS3: forall a b . phiS3 a b -> psiS3 a b
+	goal ProofS4: forall a b . phiS4 a b -> psiS4 a b
+	goal ProofS5: forall a b . phiS5 a b -> psiS5 a b
+
+	goal ProofS6_STH: phiS6 0 -> psiS6 0
+	goal ProofS6_SFTH: forall n s . phiS6 n /\  n <> 0 /\ psiS6 (n - 1) /\ psiSqrt (n - 1) s
+		/\ n = square (s + 1) -> psiS6 n
+	goal ProofS6_SFFH: forall n s . phiS6 n /\  n <> 0 /\ psiS6 (n - 1) /\ psiSqrt (n - 1) s
+		/\ n <> square (s + 1) -> psiS6 n
+	goal ProofS6_SFC: forall n . phiS6 n /\ n <> 0 -> phiS6 (n - 1)
+	goal ProofS6_SFCC: forall n . phiS6 n /\ n <> 0 /\ psiS6 (n - 1) -> phiSqrt (n - 1)
+
+	goal ProofL: forall a b . phiL a b /\ psiS1 a /\ psiS2 a b /\ psiS3 a b /\ psiS4 a b
+		/\ psiS5 a b /\ psiS6 a -> psiL a b 
+
+	goal CorrSS1: forall a b . phiL a b -> phiS1 a
+	goal CorrSS1S2: forall a b . phiL a b /\ psiS1 a -> phiS2 a b
+	goal CorrSS1S2S3: forall a b . phiL a b /\ psiS1 a /\ psiS2 a b -> phiS3 a b
+	goal CorrSS1S2S3S4: forall a b . phiL a b /\ psiS1 a /\ psiS2 a b /\ psiS3 a b -> phiS4 a b
+	goal CorrSS1S2S3S4S5: forall a b . phiL a b /\ psiS1 a /\ psiS2 a b /\ psiS3 a b /\ psiS4  a b
+		-> phiS5 a b
+	goal CorrSS1S2S3S4S5S6: forall a b . phiL a b /\ psiS1 a /\ psiS2 a b /\ psiS3 a b /\ psiS4  a b
+		/\ phiS5 a b -> phiS6 a
+end

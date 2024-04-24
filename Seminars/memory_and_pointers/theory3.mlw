@@ -1,0 +1,67 @@
+(* Попробуем написать модель C программы как можно ближе к C. Имена будем использовать наиболее близкие к AstraVer. *)
+
+(*void replace(int *arr, int size, int src, int dst) {
+    int *end = arr + size;
+    for (; arr < end; arr++) {
+        if ( *arr == src) {
+            *arr = dst;
+        }
+    }
+}*)
+
+(* Модули Memory и Pointers пришлось объединить: слишком много перекрёстных зависимостей между ними *)
+module Pointers
+    use export ref.Ref
+
+    type pointer 't
+    type memory 't
+
+    predicate same_block (mem: memory 't) (x y: pointer 't) 
+    function p_add (mem: memory 't) (p: pointer 't) (shift: int): pointer 't
+    predicate p_less (mem: memory 't) (lhs rhs: pointer 't')
+
+    predicate valid(mem: memory 't) (p: pointer 't)
+
+    function select(mem: memory 't) (p: pointer 't): 't
+    function store(mem: memory 't) (p: pointer 't) (v: 't): memory 't
+
+    val access(mem: ref (memory 't)) (p: pointer 't): 't
+        requires {valid !mem p}
+        ensures {result = select !mem p}
+    val update(mem: ref (memory 't)) (p: pointer 't) (v: 't): unit
+        writes {mem}
+        requires {valid !mem p}
+        ensures {!mem = store (old !mem) p v} (* Новая память - результат применения store к старой *)
+
+    val p_less (mem: memory 't) (lhs rhs: pointer 't'): bool
+        requires {same_block mem lhs rhs}
+        ensures {result = p_less mem lhs rhs}
+end
+
+module Replace
+    use import Pointers
+
+    predicate in_interval(i a b: int) = a <= i < b
+
+    (* memory (pointer 't) 't выглядит логичнее, но будет неудобнее.
+        Не влезая в детали, вместо memory (pointer int) (int) напишем просто memory int, но подразумевать под ней будем правильное.
+        arr не ref: в C нет изменяемых аргументов. Так что объявим новый внутри
+    *)
+    let replace(arr: pointer int) (size src dst: int) (mem: ref (memory int)): unit
+        requires {forall i. in_interval i 0 size -> valid mem (arr + i)}
+        requires {forall i. in_interval i 0 size -> same_block mem arr (arr + i)}
+        (* Что не сломали память (о cdecl умолчим...): *)
+        ensures {forall p. valid !mem p <-> old (valid !mem p) }
+        ensures {forall a b. same_block !mem a b <-> old (same_block !mem a b) }
+        (* Что требуем: *)
+        ensures {forall i. in_interval i 0 size /\ old (select !mem (p_add !mem arr i)) = src -> select !mem (p_add !mem arr i) = dst}
+        ensures {forall i. in_interval i 0 size /\ old (select !mem (p_add !mem arr i)) <> src -> select !mem (p_add !mem arr i) = old (select !mem (p_add !mem arr i))}
+    =
+        let _arr = ref arr in
+        let _end = p_add !mem !_arr size in
+        while p_less !mem !_arr _end do
+            if access mem !_arr = src then
+                update mem !_arr dst;
+            _arr := p_add !mem !_arr 1;
+        done;
+end

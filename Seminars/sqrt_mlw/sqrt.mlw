@@ -1,0 +1,75 @@
+module Sqrt
+	use import int.Int
+	type int_var = { mutable v: int; }
+	function square(x: int): int = x * x
+	function lsqrt(x: int): int
+	axiom lsqrt_def: forall x . x >= 0 -> square (lsqrt x) <= x < square ((lsqrt x) + 1)
+    predicate is_sqrt(x y: int) = square y <= x < square (y + 1)
+	predicate sqrt_x_less_y(x y: int) = lsqrt x <= y
+	predicate my_invariant(x y1 y2 : int) =
+	    (x = 0 -> (y1=y2=0)) /\ (x > 0 -> (y1 > 0 /\ y2 > 0)) /\ (y2 >= y1 -> lsqrt x = y1) /\
+	        (y2  >= lsqrt x)
+	predicate is_div(x y res: int) = 0 <= x - res * y < y
+	val div (x y: int): int
+		requires {x >= 0 /\ y > 0}
+		ensures {is_div x y result}
+
+	(*let rec sqrt_exists(x: int): unit
+		variant {x}
+		requires {x >= 0}
+		ensures {exists s . is_sqrt x s}
+		= if x = 0 then () else sqrt_exists (x - 1)*)
+
+	(*let lemma_1(a b: int): unit
+		requires {a >= 0}
+		ensures {(b >= lsqrt a) -> (a < (b+1)*(b+1))}
+		= assert {lsqrt a >= 0}; 
+			assert {sqrt_x_less_y a b -> (0 <= lsqrt a <= b)};
+			assert {sqrt_x_less_y a b -> (square (sqrt a+1) <= square (b+1))};
+			assert {sqrt_x_less_y a b -> (a < square (b + 1))};
+			assert {sqrt_x_less_y a b -> ((exists s . is_sqrt a s) -> a < square (b + 1))};
+			sqrt_exists a*)
+
+	predicate div_eqv_mult(a b c r: int) = a >= 0 /\ c > 0 /\ is_div a c r -> (r >= b <-> a >= b * c)
+	let lemma_2(x y y11 y12: int): unit
+		requires {x >= 0}
+		requires {y > 0}
+		requires {y >= lsqrt x}
+		requires {is_div x y y11}
+		requires {is_div (y11 + y) 2 y12}
+		ensures {y12 >= lsqrt x}
+		= assert {forall t . square t >= 0};
+			assert {x - square (lsqrt x) >= 0};
+			assert {square (lsqrt x - y) >= 0};
+			assert {x - square (lsqrt x) + square (lsqrt x - y) >= 0};
+			assert {x - 2 * (lsqrt x) * y + square y >= 0};
+			assert {x >= 2 * (lsqrt x) * y - square y};
+
+			assert {forall a b c r . div_eqv_mult a b c r};
+			assert {div_eqv_mult x (2 * (lsqrt x) - y) y y11};
+			assert {y11 >= 2 * (lsqrt x) - y};
+			assert {y11 + y >= 2 * (lsqrt x)};
+			assert {y12 >= (lsqrt x)};
+			()
+	
+	let sqrt (x: int): int 
+		requires {x >= 0}
+		ensures {(lsqrt x) = result}
+		= let y1: int_var = { v = x } in 
+		let y2: int_var = { v = 0 } in
+		y2.v <- div (x + 1) 2;
+		while y2.v < y1.v do
+			invariant {my_invariant x y1.v y2.v}
+			variant {y1.v}
+			y1.v <- div x y2.v;
+			let ghost y11 = y1.v in
+				y1.v <- div (y1.v + y2.v) 2;
+				y1.v <- (let tmp: int = y2.v in
+					y2.v <- y1.v;
+					tmp);
+				(*lemma_1 x y1.v;*)
+				lemma_2 x y1.v y11 y2.v
+		done;
+		y1.v
+
+end

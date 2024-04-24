@@ -1,0 +1,55 @@
+theory Proof "Task 1 proof"
+	use import int.Int
+    predicate is_sqrt(x y: int) = y * y <= x < (y+1)*(y+1)
+	predicate phi(x : int) = x >= 0
+	predicate psi(x z : int) = z * z <= x < (z + 1) * (z + 1)
+
+	predicate phiD(a1 a2 : int) = a1 >= 0 /\ a2 > 0
+	predicate psiD(a1 a2 r : int) = 0 <= a1 - r * a2 < a2
+
+    predicate phiL(a b: int) = a >= 0
+    predicate psiL(a b: int) = (forall s . is_sqrt a s -> b >= s) -> (a < (b+1)*(b+1))
+
+    predicate if1(x y1 y2: int) = y2 >= y1
+
+    (* индуктивное утверждение *)
+	predicate my_invariant(x y1 y2 : int) =
+	    (x = 0 -> (y1=y2=0)) /\ (x > 0 -> (y1 > 0 /\ y2 > 0)) /\ (if1 x y1 y2 -> is_sqrt x y1) /\
+	        (forall sqrt_x . is_sqrt x sqrt_x -> y2  >= sqrt_x)
+
+    (* оценочная функция *)
+	function my_variant(x y1 y2 : int): int = y1
+
+    (* условие корректности выбора оценочной функции *)
+    goal V_COR: forall x "model" y1 "model" y2 "model".
+        (phi x /\ my_invariant x y1 y2) -> my_variant x y1 y2 >= 0
+    (* условие завершаемости *)
+    (* для циклов *)
+    goal Term_AFA: forall x "model" y1 "model" y2 "model" r1 "model" r2 "model".
+        (phi x /\ my_invariant x y1 y2 /\ not if1 x y1 y2 /\ psiD x y2 r1 /\ psiD (r1+y2) 2 r2
+            /\ psiL x y2)
+            -> my_variant x y2 r2 < my_variant x y1 y2
+
+    (* для DIV'ов *)
+    goal Term_SD1: forall x. phi x -> phiD (x+1) 2
+    goal Term_AFD2: forall x y1 y2: int.
+      phi x /\ my_invariant x y1 y2 /\ not if1 x y1 y2 -> phiD x y2
+    goal Term_AFD2D3: forall x y1 y2 r1: int.
+      phi x /\ my_invariant x y1 y2 /\ not if1 x y1 y2 /\ psiD x y2 r1 -> phiD (r1+y2) 2
+    goal Term_AFD2D3Lemma: forall x y1 y2 r1 r2: int.
+        phi x /\ my_invariant x y1 y2 /\ not if1 x y1 y2 /\ psiD x y2 r1 /\ psiD (r1 + y2) 2 r2 ->
+                phiL x y2
+
+    (* условие верификации индуктивного утверждения *)
+    goal Corr_SA: forall x r1.
+        (phi x /\ psiD (x+1) 2 r1) -> my_invariant x x r1
+
+    goal Corr_AFA: forall x y1 y2 r1 r2.
+        (phi x /\ my_invariant x y1 y2 /\ not if1 x y1 y2 /\ psiD x y2 r1 /\ psiD (r1+y2) 2 r2
+            /\ psiL x y2) -> my_invariant x y2 r2
+
+    (* частичная корректность*)
+
+    goal Partial_correct_ATH: forall x y1 y2.
+        (phi x /\ my_invariant x y1 y2 /\ if1 x y1 y2) -> psi x y1
+end

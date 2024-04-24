@@ -1,0 +1,109 @@
+(* Для mutable по классике нужно завести тип:
+    type int_var = { mutable val : int }
+    let sqrt(x : int) : int = 
+        let y1 : int_var = { val = x } in
+        ...
+    CVC4 1.7 noBV справляется со всем, кроме s6 и итогового sqrt. (Только один солвер!)
+    В s6 допишем рекурсивную реализацию. Для работы рекурсии нужно ключевое слово rec. Полностью переварить эту математику сможет только Z3.
+    Теперь нужно будет доказать только 2 часть in_variant sqrt.
+    Lemma 2:
+        x⩾0 /\ y2=x11/2 /\ (x=0->y1=y21=0) /\ (x>0->y1>0/\y21>0) /\ (y21⩾y1->(y1=sqrt(x))) /\ ...
+
+        x>0 /\ y1 > y21 > 0, y21 ⩾ sqrt(x) -?-> (x/y21 + y21)/2⩾sqrt(x)
+        При a,b∈ℕ a/2⩾b <=> a⩾2*b.
+        x/y21 ⩾ 2sqrt(x) - y21 <=> x⩾2sqrt(x)y21-y21² <= x-(sqrt(x))²+(sqrt(x)-y21)²⩾0 <= x⩾(sqrt(x))²
+    ДОКАЗАЛИ!!!
+
+    Как упростить:
+        1) Избавиться от кучи дублирующихся кванторов, сделав s параметром лемм. Для передачи можно завести локальную переменную, получаемую тупейшим вычислением корня.
+            Альтернатива: добавим для sqrt новый функциональный символ.
+    Без свойств lsqrt почти ничего не докажется, но и синтаксических ошибок быть не должно. Солвер может подбирать функцию на место lsqrt:
+        x⩾0 /\ f(x)⩾y /\ y<0
+    UF - uninterpreted function. Если встречается 1 раз, после отрабатывания триггеров подменяется const, напр. z. SAT с x=y=z=0, то  есть x=y=0 и f(0)=0. Для неск. вхождений, берётся несколько const и требуется выполнение свойства функции: f(x)=f(y) при x=y.
+    ∀x. f(x)*f(x)⩾0 → f(x)*f(x)<0 → f(x)=t /\ t*t<0 → противоречие из условия t*t<0. Неинтересное свойство: ничего не требует от f.
+    ∀x y. x⩽y -> f(x)⩽f(y) → x⩽y /\ f(x)>f(y) → (f(x)=u, f(y)=v) x⩽y /\ u>v /\ (x=y->u=v) → x=0, y=1, u=1, v=0. Модель есть, значит не докажется => нужны свойства квадратного корня.
+    Определить корень можно из is_sqrt: ∀a. f²(a)⩽a<(f(a)+1)² (была очепятка: f²(a+1)). Тогда получится:
+        f(x)⩽f(y) → x⩽y /\ f(x)>f(y) /\ ∀a. square(f(a))⩽a<square(f(a)+1)
+        Триггеры - f(a) и f(a+1), но второй нигде не применится. Применяем первый:
+        f(x)⩽f(y) → x⩽y /\ f(x)>f(y) /\ f²(x)⩽x<(f(x)+1)² /\ f²(y)⩽y<(f(y)+1)² /\ ∀a. square(f(a))⩽a<square(f(a)+1)
+        Теперь куча замен с переменными и в итоге модели не будет.
+    Напишем ещё что-нибудь неправильное, например ∀x y. x⩽y -> f(x)>f(y). Хотелось бы, чтобы солвер нашёл модель, но её не будет.
+        При x=-1, y=0 упрёмся в f²(-1)⩽-1 => слева ложь и получим "доказано"!
+    Значит, в нашем условии нужно добавить a⩾0. Теперь проблемы с -1 не будет и модель найдётся (например, определением функции в отрицательной области).
+    Такое придётся приписывать к каждому свойству: к самой функции не умеем. f от отрицательных чисел будет неопределённым.
+    Свойства оформляются в виде аксиом. Теперь уже даже 1 лемма не нужна и животворящий CVC4 1.7 (noBV) всё доказывает.
+*)
+
+module Sqrt
+    use import int.Int
+    type int_var = { mutable v : int; }
+    function square(x: int) : int = x*x
+    function lsqrt(x: int): int
+    axiom lsqrt_def: forall x. x>=0 -> square(lsqrt x)<=x<square(lsqrt x + 1)
+    predicate is_sqrt(x y : int) = square(y) <= x < square(y+1)
+	predicate sqrt_x_less_y(x y : int) = lsqrt x <= y
+    predicate my_invariant(x y1 y2 : int) = (x=0 -> y1=y2=0) /\ (x>0 -> (y1 > 0 /\ y2 > 0)) /\ (y2 >= y1 -> y1 = lsqrt x) /\ (y2 >= lsqrt x)
+
+    predicate is_div(x y res : int) = 0 <= x - res * y < y (* res точно окажется положительным, когда предусловия деления выполнены *)
+    val div (x y : int) : int
+        requires {x >= 0 /\ y > 0}
+        ensures {is_div x y result}
+
+	(*let rec sqrt_exists(x : int) : unit
+        variant {x}
+        requires {x >= 0}
+        ensures {exists s. is_sqrt x s}
+        = if x = 0 then () else sqrt_exists (x - 1)*)
+
+    (*let lemma_1(a b: int): unit
+        requires {a >= 0}
+        ensures {sqrt_x_less_y a b -> (a < square(b+1))}
+        = assert {lsqrt a >= 0};
+        assert {sqrt_x_less_y a b -> 0 <= lsqrt a <= b};
+        assert {sqrt_x_less_y a b -> (square(lsqrt a + 1) <= square(b+1))};
+        assert {sqrt_x_less_y a b -> (lsqrt a < square(b+1))};
+        assert {sqrt_x_less_y a b -> ((exists s. is_sqrt a s) -> s < square(b+1))};
+        sqrt_exists a*)
+
+    predicate div_eqv_mult(a b c r : int) = a >= 0 /\ c > 0 /\ is_div a c r -> (r >= b <-> a >= b * c)
+    let lemma_2(x y y11 y12: int) : unit
+        requires {x >= 0}
+        requires {y > 0}
+        requires {y >= lsqrt x}
+        requires {is_div x y y11}
+        requires {is_div (y11 + y) 2 y12}
+        ensures {y12 >= lsqrt x}
+        = assert { forall t. square t >= 0};
+        assert {x - square (lsqrt x) >= 0};
+        assert {square (lsqrt x - y) >= 0};
+        assert {x - square (lsqrt x) + square (lsqrt x - y) >= 0};
+        assert {x >= 2 * lsqrt x * y - square y};
+        assert {forall a b c r. div_eqv_mult a b c r};
+        assert {div_eqv_mult x (2 * lsqrt x - y) y y11};
+        assert {y11 >= 2 * lsqrt x - y};
+        assert {y11 + y >= 2 * lsqrt x};
+        assert {y12 >= lsqrt x};
+        ()
+
+    let sqrt(x : int) : int
+        requires {x >= 0}
+        ensures {result = lsqrt x}
+    = 
+        let y1 : int_var = { v = x } in
+        let y2 : int_var = { v = 0 } in
+        y2.v <- div (x+1) 2;
+        while y2.v < y1.v do
+            invariant {my_invariant x y1.v y2.v} (* индуктивное утверждение *)
+            variant {y1.v} (* оценочная функция *)
+            y1.v <- div x y2.v;
+            let ghost y11 = y1.v in
+                y1.v <- div (y1.v+y2.v) 2;
+                y1.v <- (let tmp : int = y2.v in
+                    y2.v <- y1.v;
+                    tmp); (* ; относится ко внешнему выражению, кажется... *)
+                (*let ghost s = ... in*)
+                (* lemma_1 x y1.v; *) (* s *)
+                lemma_2 x y1.v y11 y2.v (* s *)
+        done;
+        y1.v
+end

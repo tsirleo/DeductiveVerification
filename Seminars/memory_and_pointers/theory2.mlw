@@ -1,0 +1,121 @@
+(* Пара от 5.04.24 *)
+
+(* Напишем теорию для абстрактного массива. Минимальная цель - без синтаксических ошибок.*)
+
+(* Хотим модуль, умеющий сам собирать типы. Есть в стандартной библиотеке!:) *)
+module Ref
+    type ref 't = {mutable r: 't}
+
+    function ref(r: 't): ref 't = {r = r}
+    val ref(r: 't): ref 't (* val нужен, чтобы можно было использовать в коде *)
+        ensures {result = ref r}
+    (* Для доступа перегрузим значок для краткости *)
+    function (!)(r: ref 't): 't = r.r
+    val (!)(r: ref 't): 't
+        ensures {result = !r}
+    (* А для присвоения переопределим другой: *)
+    val (:=) (r:ref 't) (v: 't): unit
+        writes {r}
+        ensures {!r = v}
+end
+
+module Array
+    use export int.Int
+    type array 'e (* 'e - типовой параметр для полиморфного типа. Можно исп. имя из нескольких букв *)
+
+    (* В объявления функциональных символов имена аргументов нужны лишь для самодокументации *)
+    function _size(this: array 'e): int
+    function _get(this: array 'e) (i: int): 'e
+    function _set(this: array 'e) (i: int) (e: 'e) : array 'e
+    
+    predicate valid_idx(this: array 'e) (i:int) = 0 <= i < _size this (* _size, т.к. предикат - формула *)
+
+    (* Дописываем алгебраические аксиомы. Учитываем, что типовые переменные автоматически не выводятся и их нужно указывать *)
+    axiom size_set: forall arr: array 'e, i e. valid_idx arr i -> _size (_set arr i e) = _size arr
+    axiom get_set_same: forall arr: array 'e, i e. valid_idx arr i -> _get (_set arr i e) i = e
+    axiom get_set_other: forall arr: array 'e, i j e. valid_idx arr i /\ valid_idx arr j /\ i <> j -> _get (_set arr i e) j = _get arr j
+
+    (* Ещё понадобилось size > 0 для завершаемости цикла. В виде леммы неоткуда взять *)
+    axiom size_nonneg: forall arr: array 'e. _size arr >= 0
+end
+
+module FunctionalArray
+    use export Array
+    use export Ref
+    (* Для записи требований к функциональным символам можно использовать конструкции с val.
+        Но val в формулах (например, requires, ensures и предикатах) использовать нельзя *)
+    val size(this: array 'e): int
+        ensures {result = _size this}
+    val get(this: array 'e) (i: int): 'e
+        requires {0 <= i < _size this}
+        ensures {result = _get this i}
+    val set(this: array 'e) (i: int) (e: 'e) : array 'e
+        requires {0 <= i < _size this}
+        ensures {result = _set this i e}
+end
+
+module ImperativeArray
+    use export Array
+    use export Ref
+
+    val size(this: ref (array 'e)): int
+        ensures {result = _size !this}
+    val get(this: ref (array 'e)) (i: int): 'e
+        requires {valid_idx !this i}
+        ensures {result = _get !this i}
+    val set(this: ref (array 'e)) (i: int) (e: 'e): unit
+        requires {valid_idx !this i}
+        ensures {!this = _set (old !this) i e}
+        writes {this}
+end
+
+module Program
+    use import int.Int
+    use import FunctionalArray
+
+    (* Замена всех вхождений src на dst *)
+    let replace(arr: (array 'e)) (src dst: 'e): array 'e
+        ensures {forall i. valid_idx arr i /\ _get arr i = src -> _get result i = dst}
+        ensures {forall i. valid_idx arr i /\ _get arr i <> src -> _get result i = _get arr i}
+        ensures {_size arr = _size result} (* Чуть не забыли :) *)
+    =
+        let i = ref 0 in (* тип должен понять: имя поля превращается в функцию! *)
+        let res = ref arr in
+        while !i < (size !res) do (* Для циклов есть for и while; for под капотом помогает *)
+            variant {_size !res - !i}
+            invariant {_size !res - !i >= 0 /\ !i >= 0 /\ _size arr = _size !res} (* Первое для завершаемости цикла, второе и третье (увидели, проверив задачу для солвера; вместо его добавления можно везде сделать res.a вместо arr; но будут проблемы с условиями из ensures) - корректности вызовов *)
+            invariant {forall j. valid_idx !res j /\ j < !i /\ _get arr j = src -> _get !res j = dst}
+            invariant {forall j. valid_idx !res j /\ j < !i /\ _get arr j <> src -> _get !res j = _get arr j}
+            (*!*) invariant {forall j. valid_idx !res j /\ j >= !i -> _get !res j = _get arr j} (* без этого он не понимал, что в следующем if'е i-ые элементы res.a и arr совпадают *)
+            if get !res !i = src then
+                res := set !res !i dst;
+            (* Следующая строка идёт вне if'а; для другого поведения нужно писать круглые скобки *)
+            i := !i + 1;
+        done;
+        !res
+end
+
+(* Перепишем Program в более императивном стиле. *)
+module Better
+    use import int.Int
+    use import ImperativeArray
+
+    (* Замена всех вхождений src на dst *)
+    let replace(arr: ref (array 'e)) (src dst: 'e): unit
+        ensures {forall i. valid_idx (old !arr) i /\ _get (old !arr) i = src -> _get !arr i = dst}
+        ensures {forall i. valid_idx (old !arr) i /\ _get (old !arr) i <> src -> _get !arr i = _get (old !arr) i}
+        ensures {_size (old !arr) = _size !arr}
+    =
+    'Pre: (* метка *)
+        let i = ref 0 in
+        while !i < size arr do
+            variant {_size !arr - !i}
+            invariant {_size !arr >= !i >= 0 /\ at (_size !arr) 'Pre = _size !arr}
+            invariant {forall j. valid_idx !arr j /\ j < !i /\ _get (at !arr 'Pre) j = src -> _get !arr j = dst}
+            invariant {forall j. valid_idx !arr j /\ j < !i /\ _get (at !arr 'Pre) j <> src -> _get !arr j = _get (at !arr 'Pre) j}
+            invariant {forall j. valid_idx !arr j /\ j >= !i -> _get !arr j = _get (at !arr 'Pre) j}
+            if get arr !i = src then
+                set arr !i dst;
+            i := !i + 1;
+        done;
+end

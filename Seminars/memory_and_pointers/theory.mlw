@@ -1,0 +1,63 @@
+(* Пара от 5.04.24 *)
+
+(* Напишем теорию для абстрактного массива. Минимальная цель - без синтаксических ошибок *)
+
+module Array
+    use import int.Int
+    type array 'e (* 'e - типовой параметр для полиморфного типа. Можно исп. имя из нескольких букв *)
+
+    (* В объявления функциональных символов имена аргументов нужны лишь для самодокументации *)
+    function _size(this: array 'e): int
+    function _get(this: array 'e) (i: int): 'e
+    function _set(this: array 'e) (i: int) (e: 'e) : array 'e
+    
+    predicate valid_idx(this: array 'e) (i:int) = 0 <= i < _size this (* _size, т.к. предикат - формула *)
+
+    (* Дописываем алгебраические аксиомы. Учитываем, что типовые переменные автоматически не выводятся и их нужно указывать *)
+    axiom size_set: forall arr: array 'e, i e. valid_idx arr i -> _size (_set arr i e) = _size arr
+    axiom get_set_same: forall arr: array 'e, i e. valid_idx arr i -> _get (_set arr i e) i = e
+    axiom get_set_other: forall arr: array 'e, i j e. valid_idx arr i /\ valid_idx arr j /\ i <> j -> _get (_set arr i e) j = _get arr j
+
+    (* Ещё понадобилось size > 0 для завершаемости цикла. В виде леммы неоткуда взять *)
+    axiom size_nonneg: forall arr: array 'e. _size arr >= 0
+
+    (* Для записи требований к функциональным символам можно использовать конструкции с val.
+        Но val в формулах (например, requires, ensures и предикатах) использовать нельзя *)
+    val size(this: array 'e): int
+        ensures {result = _size this}
+    val get(this: array 'e) (i: int): 'e
+        requires {0 <= i < _size this}
+        ensures {result = _get this i}
+    val set(this: array 'e) (i: int) (e: 'e) : array 'e
+        requires {0 <= i < _size this}
+        ensures {result = _set this i e}
+end
+
+module Program
+    use import int.Int
+    use import Array
+
+    type rint = {mutable v: int} (* тип для изменяемого индекса *)
+    type rarr 'e = {mutable a: array 'e}
+
+    (* Замена всех вхождений src на dst *)
+    let replace(arr: array 'e) (src dst: 'e): array 'e
+        ensures {forall i. valid_idx arr i /\ _get arr i = src -> _get result i = dst}
+        ensures {forall i. valid_idx arr i /\ _get arr i <> src -> _get result i = _get arr i}
+        ensures {_size arr = _size result} (* Чуть не забыли :) *)
+    =
+        let i = {v = 0} in (* тип должен понять: имя поля превращается в функцию! *)
+        let res = {a = arr} in
+        while i.v < (size res.a) do (* Для циклов есть for и while; for под капотом помогает *)
+            variant {_size res.a - i.v}
+            invariant {_size res.a - i.v >= 0 /\ i.v >= 0 /\ _size arr = _size res.a} (* Первое для завершаемости цикла, второе и третье (увидели, проверив задачу для солвера; вместо его добавления можно везде сделать res.a вместо arr; но будут проблемы с условиями из ensures) - корректности вызовов *)
+            invariant {forall j. valid_idx res.a j /\ j < i.v /\ _get arr j = src -> _get res.a j = dst}
+            invariant {forall j. valid_idx res.a j /\ j < i.v /\ _get arr j <> src -> _get res.a j = _get arr j}
+            (*!*) invariant {forall j. valid_idx res.a j /\ j >= i.v -> _get res.a j = _get arr j} (* без этого он не понимал, что в следующем if'е i-ые элементы res.a и arr совпадают *)
+            if get res.a i.v = src then
+                res.a <- set res.a i.v dst;
+            (* Следующая строка идёт вне if'а; для другого поведения нужно писать круглые скобки *)
+            i.v <- i.v + 1;
+        done;
+        res.a
+end

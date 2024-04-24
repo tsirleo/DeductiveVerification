@@ -1,0 +1,130 @@
+(* Попробуем написать модель C программы как можно ближе к C. Имена будем использовать наиболее близкие к AstraVer. *)
+
+(*void replace(int *arr, int size, int src, int dst) {
+    int *end = arr + size;
+    for (; arr < end; arr++) {
+        if ( *arr == src) {
+            *arr = dst;
+        }
+    }
+}*)
+
+(* Стремимся сделать наиболее компактную верификацию: она очень сложная *)
+
+(* Последний шаг - избавиться от типа block 't *)
+
+(* Модули Memory и Pointers пришлось объединить: слишком много перекрёстных зависимостей между ними *)
+module Pointers
+    use export ref.Ref (* int, похоже, из Ref приезжает :) *)
+    use import int.Int (* но для операций надо его "полностью привезти" *)
+
+
+    (* Проблемы с сохранением валидности valid после store => хотим разделить mem на 2 части: валидность и содержимое; но ref хотим вешать только на часть => для аллокации вводится отдельный новый тип, а не пара. *)
+    type memory 't
+    type alloc_table 't
+
+    (* Теперь pointer снова абстрактный, так как нет block *)
+    type pointer 't
+
+    predicate same_block (x y: pointer 't) (* без модели памяти: считаем, что pointer содержит информацию о своём блоке *)
+    function p_add (p: pointer 't) (shift: int): pointer 't (* в Astraver к указателю можно прибавлять ∀ число *)
+    function p_sub (lhs rhs: pointer 't): int
+    predicate p_less (lhs rhs: pointer 't') = p_sub lhs rhs < 0 
+
+    (* Вдруг захотели валидность определить неабстрактно. Память определим как сопоставление блоков и размеров (block -> int): если < 0, его ещё нет или уже освободили
+        alloc(n):p mem(block(p)) < 0 -> = n
+        free(p) mem(block(p)) >= 0 -> < 0
+    *)
+    (*function base_addr(p: pointer 't): pointer 't*) (* т.к. потеряли указатель на начало блока *)
+    (*function size_of(alloc: alloc_table 't) (p: pointer 't): int*) (* размер блока, соответствующего указателю *)
+    (* Вместо base_addr и size_of используются offset_min и offset_max - наибольшие возможные смещения от текущего указателя, по которым ещё остаёмся в блоке. Для аллоцированного блока и валидного p min <= 0 и max >= 0.
+        allocated(p) = offset_min(p) <= offset_max(p)
+        allocable(p) = not allocated(p)
+        valid_range(p+0,n) = offset_min(p) <= 0 /\ offset_max(p) >= n ([0,n] включительно) => без квантора обойдёмся
+    *)
+    function offset_min(alloc: alloc_table 't) (p: pointer 't): int
+    function offset_max(alloc: alloc_table 't) (p: pointer 't): int
+    
+    predicate valid(alloc: alloc_table 't) (p: pointer 't) = offset_min alloc p <= 0 <= offset_max alloc p (* указатель можно разыменовывать: указывает внутрь своего блока *)
+    predicate valid_range(alloc: alloc_table 't) (p: pointer 't) (n: int) = offset_min alloc p <= 0 /\ offset_max alloc p >= n (* лучше для [a; b]... *)
+
+    (* дальше нужен миллион аксиом, но мы мучиться не будем: просто посмотрим ~/.opam/4.10.0/.opam-switch/build/astraver-translator.v20.0/lib/astraver/why3/core.mlw *)
+    (* Где возможно сделать lemma вместо axiom, это делают. И триггеры для удобства доказательства в квадратных скобках.
+        Для нулевого указателя используется специальное значение -2, чтобы не путать с блоками нулевой длины. -3 - блок готов к выделению.
+        offset_min = 0 - указатель можно использовать для освобождения.
+        meta "inline : no" predicate (<=) - чтобы он не разбирался на < и = и не получалась каша.
+        Для памяти используется удобный тип map: Map.map (pointer 't) 'v.
+        Для соответствия с ACSL множества указателей вводятся руками через разнообразные Pset.
+        Дальше после кучи всего наконец-то начинаются module.
+        requires {"expl:..." ...} - добавить текстовое пояснение. Можно вешать на части на условия.
+        reads { v } - иногда помощь солверу.
+        Есть unsafe версия update и select с тождественно истинными предусловиями (понадобится для док-ва частичной корректности).
+    *)
+
+    (* select и store оставим абстрактными *)
+    function select(mem: memory 't) (p: pointer 't): 't
+    function store(mem: memory 't) (p: pointer 't) (v: 't): memory 't
+    
+    (* mem: memory 't - так как тип 't должен хотя бы раз обозваться явно.
+        В обход val'ов к нам никто не пойдёт => прописывать валидность указателей в аксиомах необязательно
+    *)
+    axiom select_store_same: forall mem: memory 't, p v. (*valid mem p -> *) select (store mem p v) p = v
+    axiom select_store_other: forall mem: memory 't, p q v. (* valid mem p /\ valid mem q /\ *) p <> q -> select (store mem p v) q = select mem q
+
+    val access(mem: memory 't) (alloc: alloc_table 't) (p: pointer 't): 't
+        requires {valid alloc p}
+        ensures {result = select mem p}
+    val update(mem: ref (memory 't)) (alloc: alloc_table 't) (p: pointer 't) (v: 't): unit
+        writes {mem}
+        requires {valid alloc p}
+        ensures {!mem = store (old !mem) p v} (* Новая память - результат применения store к старой *)
+
+    val p_less (lhs rhs: pointer 't): bool
+        requires {same_block lhs rhs}
+        ensures {result = p_less lhs rhs}
+end
+
+module Replace
+    use import int.Int
+    use import Pointers
+
+    predicate in_interval(i a b: int) = a <= i < b
+
+    (* memory (pointer 't) 't выглядит логичнее, но будет неудобнее.
+        Не влезая в детали, вместо memory (pointer int) (int) напишем просто memory int, но подразумевать под ней будем правильное.
+        arr не ref: в C нет изменяемых аргументов. Так что объявим новый внутри
+    *)
+    let replace(arr: pointer int) (size src dst: int) (mem: ref (memory int)) (alloc: alloc_table int): unit
+        requires {size > 0} (* неплохо было бы :) *)
+        requires {forall i. in_interval i 0 size -> valid alloc (p_add arr i)} (* массив в памяти *)
+        (* requires {forall i. in_interval i 0 size -> same_block arr (p_add arr i)} должно быть общим свойством *)
+        (* Что не сломали память (о cdecl умолчим...): *)
+        (*ensures {forall p. valid !mem p <-> valid (old !mem) p}*) (* ничего не выделяли и не освобождали *)
+        ensures {forall p. valid alloc p /\ not (same_block arr p) -> select (old !mem) p = select !mem p} (* другие блоки не поменяли *)
+        ensures {forall p. valid alloc p /\ same_block arr p /\ (p_less p arr \/ p_less (p_add arr (size - 1)) p) -> select (old !mem) p = select !mem p} (* наш блок вне массива не поменяли *)
+        (* Что требуем: *)
+        ensures {forall i. in_interval i 0 size /\ select (old !mem) (p_add arr i) = src -> select !mem (p_add arr i) = dst}
+        ensures {forall i. in_interval i 0 size /\ select (old !mem) (p_add arr i) <> src -> select !mem (p_add arr i) = select (old !mem) (p_add arr i)}
+    =
+        'Pre:
+        let _arr = ref arr in
+        let _end = p_add !_arr size in (* val для p_add не обязателен, если и пред- и постусловие true *)
+        while p_less !_arr _end do (* нигде не сказано, что block_of arr = block_of (p_add arr0 size) = block_of arr0 => нужен соответствующий инвариант *)
+            variant {p_sub _end !_arr} (* Для завершаемости потребовалось вычитание указателей *)
+            invariant {p_sub _end !_arr >= 0} (* arr + size - arr >= 0 => size >= 0 понадобится, т.к. точка сечения перед TEST *)
+            invariant {p_sub arr !_arr <= 0 (*p_sub !_arr arr >= 0*)} (* С p_sub arr !_arr <= 0 не работало без магического assert ☺ *)
+            invariant {same_block !_arr _end} (* precondition p_less в условии while *)
+            (* invariant {forall p. valid !mem p <-> valid (at !mem 'Pre) p} *)
+            (* Теперь частичная корректность по аналогии с theory2: *)
+            invariant {forall p. valid alloc p /\ not (same_block arr p) -> select (at !mem 'Pre) p = select !mem p}
+            invariant {forall p. valid alloc p /\ same_block arr p /\ (p_less p arr \/ p_less (p_add arr (size - 1)) p) -> select (at !mem 'Pre) p = select !mem p}
+            invariant {forall i. in_interval i 0 (p_sub !_arr arr) /\ select (at !mem 'Pre) (p_add arr i) = src -> select !mem (p_add arr i) = dst}
+            invariant {forall i. in_interval i 0 (p_sub !_arr arr) /\ select (at !mem 'Pre) (p_add arr i) <> src -> select !mem (p_add arr i) = select (at !mem 'Pre) (p_add arr i)}
+            invariant {forall i. in_interval i (p_sub !_arr arr) size -> select !mem (p_add arr i) = select (at !mem 'Pre) (p_add arr i)}
+
+            assert{p_add arr (p_sub !_arr arr) = !_arr}; (* магический assert *)
+            if access !mem alloc !_arr = src then (* precodintion: ... /\ arr < end = arr0 + size -> valid mem arr; а в предусловии у нас ∀i: 0⩽i<size->valid mem0 (arr0 + i) *)
+                update mem alloc !_arr dst;
+            _arr := p_add !_arr 1;
+        done;
+end
