@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE why3session PUBLIC "-//Why3//proof session v5//EN"
+"http://why3.lri.fr/why3session.dtd">
+<why3session shape_version="4">
+<prover id="0" name="CVC4" version="1.8" timelimit="5" steplimit="0" memlimit="4000"/>
+<file name="../task1_1.why" expanded="true">
+<theory name="Task_1_1" sum="89d765a75cb6807a9cc9a1aa9fffcebe" expanded="true">
+ <goal name="Partial_P1_T1" expl="" expanded="true">
+ <proof prover="0"><result status="valid" time="0.01" steps="413"/></proof>
+ </goal>
+ <goal name="Partial_P1_T2" expl="" expanded="true">
+ <proof prover="0"><result status="valid" time="0.01" steps="446"/></proof>
+ </goal>
+ <goal name="Full_P1_T1" expl="" expanded="true">
+ <proof prover="0"><result status="valid" time="0.01" steps="434"/></proof>
+ </goal>
+ <goal name="Partial_P2_T1" expl="" expanded="true">
+ <proof prover="0"><result status="valid" time="0.01" steps="413"/></proof>
+ </goal>
+ <goal name="Partial_P2_T2" expl="" expanded="true">
+ <proof prover="0"><result status="valid" time="0.00" steps="617"/></proof>
+ </goal>
+ <goal name="Full_P2_T1" expl="" expanded="true">
+ <proof prover="0"><result status="valid" time="0.02" steps="905"/></proof>
+ </goal>
+ <goal name="Full_P2_T2" expl="" expanded="true">
+ <proof prover="0"><result status="valid" time="0.02" steps="926"/></proof>
+ </goal>
+</theory>
+</file>
+</why3session>

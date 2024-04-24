@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE why3session PUBLIC "-//Why3//proof session v5//EN"
+"http://why3.lri.fr/why3session.dtd">
+<why3session shape_version="4">
+<prover id="0" name="CVC4" version="1.8" timelimit="5" steplimit="0" memlimit="4000"/>
+<file name="../task1_3.why" expanded="true">
+<theory name="Proof" sum="fd74c946ebb22a2ef3f30b0262cf2406" expanded="true">
+ <goal name="Fund_W" expl="" expanded="true">
+ <proof prover="0"><result status="valid" time="0.02" steps="387"/></proof>
+ </goal>
+ <goal name="SA" expl="" expanded="true">
+ <proof prover="0"><result status="valid" time="0.01" steps="353"/></proof>
+ </goal>
+ <goal name="ATA" expl="" expanded="true">
+ <proof prover="0"><result status="valid" time="0.01" steps="621"/></proof>
+ </goal>
+ <goal name="AFTA" expl="" expanded="true">
+ <proof prover="0"><result status="valid" time="0.03" steps="4116"/></proof>
+ </goal>
+ <goal name="Corr_A" expl="" expanded="true">
+ <proof prover="0"><result status="valid" time="0.02" steps="9076"/></proof>
+ </goal>
+ <goal name="Term_ATA" expl="" expanded="true">
+ <proof prover="0"><result status="valid" time="0.01" steps="428"/></proof>
+ </goal>
+ <goal name="Term_AFTA" expl="" expanded="true">
+ <proof prover="0"><result status="valid" time="0.03" steps="2814"/></proof>
+ </goal>
+</theory>
+</file>
+</why3session>

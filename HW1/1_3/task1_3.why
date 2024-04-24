@@ -1,0 +1,41 @@
+theory Proof "Task 1_3 proof"
+	use import int.Int
+
+    (* предусловие *)
+	predicate phi(x : int) = x > 1
+
+    (* W - множество натуральных чисел, объединенное с числом 0, и арифметическое сравнение < *)
+    (* Фундированность множества W *)
+    goal Fund_W: exists x_min:int. forall x:int.
+        (x >= 0) /\ (x_min >= 0) -> (( x_min < x) \/ (x_min = x))
+
+    (* индуктивное утверждение *)
+	predicate my_invariant(x y1 y2 y3 : int) =
+        y1 = y2 * x /\ ((y3 = x /\ y2 <= x) \/ (y3 = x * x /\ y2 <= x * x))
+
+    (* оценочная функция *)
+	function estimated_func(x y2 y3 : int): int =
+        x * x * x - y2 - y3
+
+    (* условие верификации индуктивного утверждения *)
+    goal SA: forall x: int.
+        (phi x) -> my_invariant x x 1 x
+
+    goal ATA: forall x y1 y2 y3: int.
+        (phi x /\ y2 < y3 /\ my_invariant x y1 y2 y3 ) -> my_invariant x (y1 + x) (y2 + 1) y3
+
+    goal AFTA: forall x y1 y2 y3: int.
+        (phi x /\ y2 >= y3 /\ y3 = x /\ my_invariant x y1 y2 y3) -> my_invariant x y1 y2 y1
+
+    (* условие корректности выбора оценочной функции *)
+    goal Corr_A: forall x y1 y2 y3: int.
+        (phi x /\ my_invariant x y1 y2 y3) -> estimated_func x y2 y3 >= 0
+
+    (* условие завершаемости *)
+    goal Term_ATA: forall x y1 y2 y3: int.
+        (phi x /\ y2 < y3 /\ my_invariant x y1 y2 y3 ) -> estimated_func x (y2 + 1) y3 < estimated_func x y2 y3
+
+    goal Term_AFTA: forall x y1 y2 y3: int.
+        (phi x /\ y2 >= y3 /\ y3 = x /\ my_invariant x y1 y2 y3) -> estimated_func x y2 y1 < estimated_func x y2 y3
+end
+

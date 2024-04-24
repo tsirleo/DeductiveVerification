@@ -1,0 +1,25 @@
+theory Proof "Task 1_2 proof"
+	use import int.Int
+    
+    (* предусловие *)
+	predicate phi(x : int) = x >= 0
+
+    (* постусловие *)
+	predicate psi(x z : int) = z * z * z <= x < (z + 1) * (z + 1) * (z + 1)
+
+    (* индуктивное утверждение *)
+	predicate my_invariant(x y1 y2 y3: int) =
+	    x >= y1 * y1 * y1 /\ y2 = y1 * y1 * y1 + 3 * y1 * y1 + 3 * y1 + 1 /\ y3 = 3 * y1 * y1 + 3 * y1 +1
+
+    (* условие верификации индуктивного утверждения *)
+    goal SA: forall x: int.
+        (phi x) -> my_invariant x 0 1 1
+
+    goal AFA: forall x y1 y2 y3: int.
+        (phi x /\ y2 <= x /\ my_invariant x y1 y2 y3) -> my_invariant x (y1 + 1) (y2 + y3 + 6 * y1 + 6) (y3 + 6 * y1 + 6)
+
+    (* частичная корректность *)
+    goal Partial_correct_ATH: forall x y1 y2 y3: int.
+        (phi x /\ y2 > x /\ my_invariant x y1 y2 y3) -> psi x y1
+end
+
