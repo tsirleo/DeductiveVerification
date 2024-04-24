@@ -1,0 +1,14 @@
+module Task_2_1
+    use import int.Int
+    use import int.EuclideanDivision
+
+    function power (basis: int) (exponent : int) : int =
+        if (exponent = 0) then 1 else (basis * (power basis (exponent - 1)))
+
+    let rec null_remainder (n : int) : bool
+        requires { n >= 0 }
+        ensures { mod ((power 2 (n * 3)) - (power 3 n)) 5 = 0 } 
+    =
+        variant { n }
+        if (n = 0) then (mod ((power 2 (0 * 3)) - (power 3 0)) 5 = 0) else (null_remainder (n - 1))
+end

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE why3session PUBLIC "-//Why3//proof session v5//EN"
+"http://why3.lri.fr/why3session.dtd">
+<why3session shape_version="4">
+<prover id="0" name="CVC4" version="1.8" timelimit="5" steplimit="0" memlimit="4000"/>
+<file name="../task2_1.mlw" expanded="true">
+<theory name="Task_2_1" sum="0c703ee8446afc9f004658b8c7572d8e" expanded="true">
+ <goal name="WP_parameter null_remainder" expl="VC for null_remainder" expanded="true">
+ <transf name="split_goal_wp" expanded="true">
+  <goal name="WP_parameter null_remainder.1" expl="postcondition">
+  <proof prover="0"><result status="valid" time="0.09" steps="6672"/></proof>
+  </goal>
+  <goal name="WP_parameter null_remainder.2" expl="variant decrease">
+  <proof prover="0"><result status="valid" time="0.02" steps="4734"/></proof>
+  </goal>
+  <goal name="WP_parameter null_remainder.3" expl="precondition">
+  <proof prover="0"><result status="valid" time="0.06" steps="5981"/></proof>
+  </goal>
+  <goal name="WP_parameter null_remainder.4" expl="postcondition">
+  <proof prover="0"><result status="valid" time="0.15" steps="8438"/></proof>
+  </goal>
+ </transf>
+ </goal>
+</theory>
+</file>
+</why3session>

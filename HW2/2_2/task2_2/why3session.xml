@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE why3session PUBLIC "-//Why3//proof session v5//EN"
+"http://why3.lri.fr/why3session.dtd">
+<why3session shape_version="4">
+<prover id="0" name="Z3" version="4.8.12" timelimit="5" steplimit="0" memlimit="4000"/>
+<prover id="1" name="CVC4" version="1.8" timelimit="5" steplimit="0" memlimit="4000"/>
+<prover id="2" name="Alt-Ergo" version="2.4.3" timelimit="5" steplimit="0" memlimit="4000"/>
+<file name="../task2_2.mlw" expanded="true">
+<theory name="FiniteSet" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+</theory>
+<theory name="EratosthenesSieve" sum="886327c00c477637f770219eef05279c" expanded="true">
+ <goal name="WP_parameter init_range" expl="VC for init_range" expanded="true">
+ <transf name="split_goal_wp" expanded="true">
+  <goal name="WP_parameter init_range.1" expl="loop invariant init">
+  <proof prover="1"><result status="valid" time="0.08" steps="12681"/></proof>
+  </goal>
+  <goal name="WP_parameter init_range.2" expl="loop invariant init">
+  <proof prover="1"><result status="valid" time="0.06" steps="12254"/></proof>
+  </goal>
+  <goal name="WP_parameter init_range.3" expl="loop invariant init">
+  <proof prover="1"><result status="valid" time="0.13" steps="13842"/></proof>
+  </goal>
+  <goal name="WP_parameter init_range.4" expl="precondition">
+  <proof prover="1"><result status="valid" time="0.11" steps="14752"/></proof>
+  </goal>
+  <goal name="WP_parameter init_range.5" expl="assertion">
+  <proof prover="1"><result status="valid" time="0.07" steps="14272"/></proof>
+  </goal>
+  <goal name="WP_parameter init_range.6" expl="loop invariant preservation">
+  <proof prover="1"><result status="valid" time="0.10" steps="13648"/></proof>
+  </goal>
+  <goal name="WP_parameter init_range.7" expl="loop invariant preservation">
+  <proof prover="1"><result status="valid" time="0.19" steps="17064"/></proof>
+  </goal>
+  <goal name="WP_parameter init_range.8" expl="loop invariant preservation">
+  <proof prover="1"><result status="valid" time="0.18" steps="17144"/></proof>
+  </goal>
+  <goal name="WP_parameter init_range.9" expl="loop variant decrease">
+  <proof prover="1"><result status="valid" time="0.08" steps="12134"/></proof>
+  </goal>
+  <goal name="WP_parameter init_range.10" expl="postcondition">
+  <proof prover="1"><result status="valid" time="0.10" steps="14819"/></proof>
+  </goal>
+  <goal name="WP_parameter init_range.11" expl="postcondition">
+  <proof prover="0"><result status="timeout" time="5.00"/></proof>
+  <proof prover="1"><result status="unknown" time="4.07" steps="196429"/></proof>
+  <proof prover="2"><result status="timeout" time="5.00"/></proof>
+  </goal>
+ </transf>
+ </goal>
+ <goal name="WP_parameter remove_not_primes_dividing_by_i" expl="VC for remove_not_primes_dividing_by_i" expanded="true">
+ <transf name="split_goal_wp" expanded="true">
+  <goal name="WP_parameter remove_not_primes_dividing_by_i.1" expl="loop invariant init">
+  <proof prover="1"><result status="valid" time="0.06" steps="12051"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_not_primes_dividing_by_i.2" expl="loop invariant init">
+  <proof prover="1"><result status="valid" time="0.11" steps="12386"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_not_primes_dividing_by_i.3" expl="loop invariant init">
+  <proof prover="1"><result status="valid" time="0.08" steps="12420"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_not_primes_dividing_by_i.4" expl="loop invariant init">
+  <proof prover="1"><result status="valid" time="0.03" steps="12416"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_not_primes_dividing_by_i.5" expl="loop invariant init">
+  <proof prover="1"><result status="unknown" time="3.95" steps="244620"/></proof>
+  <proof prover="2"><result status="valid" time="0.03" steps="89"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_not_primes_dividing_by_i.6" expl="precondition">
+  <proof prover="1"><result status="valid" time="0.07" steps="14191"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_not_primes_dividing_by_i.7" expl="precondition">
+  <proof prover="1"><result status="valid" time="0.05" steps="12851"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_not_primes_dividing_by_i.8" expl="loop invariant preservation">
+  <proof prover="1"><result status="valid" time="0.11" steps="14496"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_not_primes_dividing_by_i.9" expl="loop invariant preservation">
+  <proof prover="1"><result status="valid" time="0.25" steps="18026"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_not_primes_dividing_by_i.10" expl="loop invariant preservation">
+  <proof prover="1"><result status="valid" time="0.10" steps="19872"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_not_primes_dividing_by_i.11" expl="loop invariant preservation">
+  <proof prover="1"><result status="valid" time="0.17" steps="20474"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_not_primes_dividing_by_i.12" expl="loop invariant preservation">
+  <proof prover="1"><result status="valid" time="2.66" steps="175951"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_not_primes_dividing_by_i.13" expl="loop invariant preservation">
+  <proof prover="1"><result status="valid" time="1.23" steps="101363"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_not_primes_dividing_by_i.14" expl="loop variant decrease">
+  <proof prover="1"><result status="valid" time="0.15" steps="14158"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_not_primes_dividing_by_i.15" expl="loop invariant preservation">
+  <proof prover="1"><result status="valid" time="0.09" steps="12631"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_not_primes_dividing_by_i.16" expl="loop invariant preservation">
+  <proof prover="1"><result status="valid" time="0.15" steps="14813"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_not_primes_dividing_by_i.17" expl="loop invariant preservation">
+  <proof prover="1"><result status="valid" time="0.00" steps="17248"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_not_primes_dividing_by_i.18" expl="loop invariant preservation">
+  <proof prover="1"><result status="valid" time="0.20" steps="17806"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_not_primes_dividing_by_i.19" expl="loop invariant preservation">
+  <proof prover="1"><result status="valid" time="2.00" steps="152417"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_not_primes_dividing_by_i.20" expl="loop invariant preservation">
+  <proof prover="1"><result status="valid" time="1.32" steps="96165"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_not_primes_dividing_by_i.21" expl="loop variant decrease">
+  <proof prover="1"><result status="valid" time="0.15" steps="14020"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_not_primes_dividing_by_i.22" expl="postcondition">
+  <proof prover="1"><result status="valid" time="0.07" steps="17038"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_not_primes_dividing_by_i.23" expl="postcondition">
+  <proof prover="1"><result status="valid" time="0.12" steps="17203"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_not_primes_dividing_by_i.24" expl="postcondition">
+  <proof prover="1"><result status="valid" time="0.10" steps="14515"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_not_primes_dividing_by_i.25" expl="postcondition">
+  <proof prover="1"><result status="valid" time="0.21" steps="17196"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_not_primes_dividing_by_i.26" expl="postcondition">
+  <proof prover="1"><result status="valid" time="0.18" steps="16621"/></proof>
+  </goal>
+ </transf>
+ </goal>
+ <goal name="WP_parameter eratosthenessieve" expl="VC for eratosthenessieve" expanded="true">
+ <transf name="split_goal_wp" expanded="true">
+  <goal name="WP_parameter eratosthenessieve.1" expl="postcondition">
+  <proof prover="1"><result status="valid" time="0.11" steps="12313"/></proof>
+  </goal>
+  <goal name="WP_parameter eratosthenessieve.2" expl="postcondition">
+  <proof prover="1"><result status="valid" time="0.07" steps="14189"/></proof>
+  </goal>
+  <goal name="WP_parameter eratosthenessieve.3" expl="precondition">
+  <proof prover="1"><result status="valid" time="0.09" steps="11342"/></proof>
+  </goal>
+  <goal name="WP_parameter eratosthenessieve.4" expl="assertion">
+  <proof prover="1"><result status="valid" time="0.09" steps="11826"/></proof>
+  </goal>
+  <goal name="WP_parameter eratosthenessieve.5" expl="loop invariant init">
+  <proof prover="1"><result status="valid" time="0.12" steps="13215"/></proof>
+  </goal>
+  <goal name="WP_parameter eratosthenessieve.6" expl="loop invariant init">
+  <proof prover="1"><result status="valid" time="0.18" steps="14179"/></proof>
+  </goal>
+  <goal name="WP_parameter eratosthenessieve.7" expl="loop invariant init">
+  <proof prover="1"><result status="valid" time="0.17" steps="14889"/></proof>
+  </goal>
+  <goal name="WP_parameter eratosthenessieve.8" expl="loop invariant init">
+  <proof prover="1"><result status="valid" time="0.16" steps="12472"/></proof>
+  </goal>
+  <goal name="WP_parameter eratosthenessieve.9" expl="loop invariant init">
+  <proof prover="1"><result status="valid" time="0.09" steps="12465"/></proof>
+  </goal>
+  <goal name="WP_parameter eratosthenessieve.10" expl="loop invariant init">
+  <proof prover="0"><result status="highfailure" time="4.47"/></proof>
+  <proof prover="1"><result status="unknown" time="4.80" steps="198024"/></proof>
+  <proof prover="2"><result status="timeout" time="5.00"/></proof>
+  </goal>
+  <goal name="WP_parameter eratosthenessieve.11" expl="assertion">
+  <proof prover="1"><result status="valid" time="0.21" steps="18558"/></proof>
+  </goal>
+  <goal name="WP_parameter eratosthenessieve.12" expl="assertion">
+  <proof prover="1"><result status="valid" time="0.00" steps="12545"/></proof>
+  </goal>
+  <goal name="WP_parameter eratosthenessieve.13" expl="precondition">
+  <proof prover="1"><result status="valid" time="0.11" steps="12550"/></proof>
+  </goal>
+  <goal name="WP_parameter eratosthenessieve.14" expl="precondition">
+  <proof prover="1"><result status="valid" time="0.10" steps="13094"/></proof>
+  </goal>
+  <goal name="WP_parameter eratosthenessieve.15" expl="precondition">
+  <proof prover="1"><result status="valid" time="0.07" steps="16299"/></proof>
+  </goal>
+  <goal name="WP_parameter eratosthenessieve.16" expl="loop invariant preservation">
+  <proof prover="1"><result status="valid" time="0.12" steps="15291"/></proof>
+  </goal>
+  <goal name="WP_parameter eratosthenessieve.17" expl="loop invariant preservation">
+  <proof prover="1"><result status="valid" time="0.18" steps="17311"/></proof>
+  </goal>
+  <goal name="WP_parameter eratosthenessieve.18" expl="loop invariant preservation">
+  <proof prover="1"><result status="valid" time="0.27" steps="40743"/></proof>
+  </goal>
+  <goal name="WP_parameter eratosthenessieve.19" expl="loop invariant preservation">
+  <proof prover="1"><result status="valid" time="0.47" steps="38178"/></proof>
+  </goal>
+  <goal name="WP_parameter eratosthenessieve.20" expl="loop invariant preservation">
+  <proof prover="1"><result status="valid" time="0.11" steps="13822"/></proof>
+  </goal>
+  <goal name="WP_parameter eratosthenessieve.21" expl="loop invariant preservation">
+  <proof prover="1"><result status="valid" time="0.91" steps="75919"/></proof>
+  </goal>
+  <goal name="WP_parameter eratosthenessieve.22" expl="loop variant decrease">
+  <proof prover="1"><result status="valid" time="0.08" steps="13339"/></proof>
+  </goal>
+  <goal name="WP_parameter eratosthenessieve.23" expl="loop invariant preservation">
+  <proof prover="1"><result status="valid" time="0.13" steps="14215"/></proof>
+  </goal>
+  <goal name="WP_parameter eratosthenessieve.24" expl="loop invariant preservation">
+  <proof prover="1"><result status="valid" time="0.16" steps="15719"/></proof>
+  </goal>
+  <goal name="WP_parameter eratosthenessieve.25" expl="loop invariant preservation">
+  <proof prover="1"><result status="valid" time="0.18" steps="16267"/></proof>
+  </goal>
+  <goal name="WP_parameter eratosthenessieve.26" expl="loop invariant preservation">
+  <proof prover="1"><result status="valid" time="0.20" steps="18684"/></proof>
+  </goal>
+  <goal name="WP_parameter eratosthenessieve.27" expl="loop invariant preservation">
+  <proof prover="1"><result status="valid" time="0.09" steps="13161"/></proof>
+  </goal>
+  <goal name="WP_parameter eratosthenessieve.28" expl="loop invariant preservation">
+  <proof prover="0"><result status="valid" time="0.99"/></proof>
+  <proof prover="1"><result status="unknown" time="5.89" steps="312214"/></proof>
+  <proof prover="2"><result status="timeout" time="5.00"/></proof>
+  </goal>
+  <goal name="WP_parameter eratosthenessieve.29" expl="loop variant decrease">
+  <proof prover="1"><result status="valid" time="0.10" steps="12631"/></proof>
+  </goal>
+  <goal name="WP_parameter eratosthenessieve.30" expl="postcondition">
+  <proof prover="1"><result status="valid" time="0.15" steps="16847"/></proof>
+  </goal>
+  <goal name="WP_parameter eratosthenessieve.31" expl="postcondition">
+  <proof prover="1"><result status="valid" time="0.11" steps="15242"/></proof>
+  </goal>
+ </transf>
+ </goal>
+</theory>
+</file>
+</why3session>

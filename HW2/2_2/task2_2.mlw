@@ -1,0 +1,158 @@
+module FiniteSet
+    use import ref.Ref
+    use import int.Int
+    
+    type finset 'a
+
+    constant empty : finset 'a
+
+    (* functions *)
+    function add (x: 'a) (s: finset 'a) : finset 'a
+    function remove (x: 'a) (s: finset 'a) : finset 'a
+    function length (finset 'a) : int
+
+    (* membership *)
+    predicate member (x: 'a) (s: finset 'a)
+
+    (* empty set *)
+    predicate is_empty (s: finset 'a) = forall x: 'a. not (member x s)
+
+    axiom empty_set:
+        forall s : finset 'a, elem : 'a .
+            (s = empty) -> (member elem s) <-> false
+
+    axiom is_empty_empty: 
+      forall s : finset 'a . (forall x : 'a. not (member x s)) <-> is_empty s
+
+    (* addition *)
+    axiom add_def:
+      forall x: 'a, s: finset 'a, y: 'a. 
+          member y (add x s) <-> (member y s \/ y = x)
+
+    (* removal *)
+    axiom remove_def:
+      forall x: 'a, s: finset 'a, y: 'a. 
+          member y (remove x s) <-> (member y s /\ y <> x)
+
+    (* length *)
+    axiom length_nonneg:
+      forall s: finset 'a. 
+          length s >= 0
+
+    axiom length_empty:
+      forall s: finset 'a. 
+          is_empty s <-> length s = 0
+
+    axiom length_add:
+      forall x: 'a. forall s: finset 'a.
+          if member x s then length (add x s) = length s
+                else length (add x s) = length s + 1
+
+    axiom length_remove:
+      forall x: 'a. forall s: finset 'a.
+          if member x s then length (remove x s) = length s - 1
+                else length (remove x s) = length s
+    
+
+    (* vals *)
+    val add (x: 'a) (s: finset 'a) : finset 'a
+      requires { not (member x s) }
+      ensures { result = add x s }
+      ensures { if member x s then length result = length s else length result = length s + 1 }
+
+    val remove (x: 'a) (s: finset 'a) : finset 'a
+      requires { not (is_empty s) }
+      requires { member x s }
+      ensures { result = remove x s }
+      ensures { if member x s then length result = length s - 1 else length result = length s }
+end
+
+
+(* algo from https://younglinux.info/algorithm/sieve *)
+module EratosthenesSieve
+    use import int.Int
+    use import ref.Ref
+    use import FiniteSet
+    use import number.Prime
+    use import number.Divisibility
+
+    let init_range (n : int) : finset int
+        requires { 2 <= n }
+        ensures { forall x : int.  2 <= x <= n -> (member x result) }
+        ensures { forall x : int.  x > n \/ x < 2 -> ( not member x result) }
+    =
+        let range = ref empty in
+        let i = ref 2 in
+        while (!i <= n) do
+            variant {n - !i}
+            invariant { 2 <= !i <= n + 1 }
+            invariant {forall x: int . 2 <= x < !i -> member x !range}
+            invariant {forall x: int . x >= !i -> not member x !range}
+            range := (add !i !range);
+            assert { member !i !range };
+            i := !i + 1;
+        done;
+        !range
+
+    let remove_not_primes_dividing_by_i (source : finset int) (n : int) (i : int)  : finset int
+        requires { 2 <= i }
+        requires { member i source }
+        requires { forall x: int . 2 <= x <= i -> (member x source <-> prime x) }
+        ensures { member i source -> member i source }
+        ensures { forall x: int . ((member x source) /\ (not divides i x) /\ (i + i <= x <= n)) -> member x result }
+        ensures { forall x: int . ((member x source) /\ (divides i x) /\ (i + i <= x <= n)) -> not member x result }
+        ensures { forall x: int . not member x source -> not member x result }
+        ensures { forall x: int . member x source /\ not member x result /\ divides i x /\ x <> i -> not prime x }
+        ensures { forall x: int . 2 <= x <= i -> (member x source <-> prime x) }
+    =
+        let res = ref source in
+        let j = ref (i + i) in
+        while (!j <= n) do
+            variant { n - !j }
+            invariant { length source >= length !res }
+            invariant { forall x: int . not member x source -> not member x !res }
+            invariant { forall x: int . ((member x source) /\ (!j <= x)) -> member x !res }
+            invariant { forall x: int . (member x source /\ not (divides i x) /\ (i + i <= x < !j)) -> member x !res }
+            invariant { forall x: int . ((member x source) /\ ((i + i) <= x < !j) /\ (divides i x)) -> not member x !res }
+            invariant { divides i !j }
+
+            if (member !j !res) then 
+                res := (remove !j !res);
+
+            j := !j + i;
+
+        done;
+        !res
+
+    let eratosthenessieve (n: int): finset int
+        requires { n >= 0 }
+        ensures { n >= 2 -> forall x: int . (member x result <-> 2 <= x <= n /\ prime x) }
+        ensures { length result >= 0} 
+    = 
+        if (n < 2) then
+            let primes = ref empty in
+            !primes
+        else
+            let primes = ref (init_range n) in
+            let i = ref 2 in
+            assert { n >= 2 };
+            while (!i <= n) do
+                variant { n - !i }
+                invariant { 2 <= !i <= n + 1 }
+                invariant { forall x: int . member x !primes -> 2 <= x <= n }
+                invariant { forall x: int . not member x !primes -> not member x !primes }
+                invariant { forall x: int . !i <= x <= n /\ prime x -> member x !primes }
+                invariant { forall x: int . 2 <= x < !i -> (member x !primes <-> prime x) }
+                invariant { forall x: int . x < !i + !i /\ member x !primes -> member x !primes }
+                invariant { forall x: int . 2 <= x < (!i + !i) /\ member x !primes -> (forall y: int . divides y x <-> (y = x \/ y = 1)) }
+
+                if (member !i !primes) then (
+                    assert { prime !i };
+                    assert { 2 <= !i <= n };
+                    primes := (remove_not_primes_dividing_by_i !primes n !i);
+		            );		
+                
+                i := !i + 1;
+            done;
+            !primes
+end
