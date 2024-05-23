@@ -1,0 +1,3064 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE why3session PUBLIC "-//Why3//proof session v5//EN"
+"http://why3.lri.fr/why3session.dtd">
+<why3session shape_version="4">
+<prover id="0" name="Z3" version="4.8.12" timelimit="15" steplimit="0" memlimit="12000"/>
+<prover id="1" name="CVC4" version="1.8" timelimit="15" steplimit="0" memlimit="12000"/>
+<prover id="2" name="Alt-Ergo" version="2.4.3" timelimit="1" steplimit="0" memlimit="2000"/>
+<file name="../test_2_c.mlw" expanded="true">
+<theory name="Function_count_not_existent_lemma_safety" sum="9fc373368ed4200751c4c22ceb9afa69">
+ <goal name="WP_parameter count_not_existent_lemma" expl="Function count_not_existent_lemma, safety">
+ <transf name="split_goal_wp">
+  <goal name="WP_parameter count_not_existent_lemma.1" expl="Pointer dereference (Validity)">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter count_not_existent_lemma.1.1" expl="Function count_not_existent_lemma, safety">
+   <proof prover="0"><result status="valid" time="0.02"/></proof>
+   <proof prover="1"><result status="valid" time="0.07" steps="17533"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="10"/></proof>
+   </goal>
+   <goal name="WP_parameter count_not_existent_lemma.1.2" expl="Function count_not_existent_lemma, safety">
+   <proof prover="0"><result status="valid" time="0.02"/></proof>
+   <proof prover="1"><result status="valid" time="0.06" steps="17543"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="10"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter count_not_existent_lemma.2" expl="Integer cast (integer overflow)">
+  <proof prover="0"><result status="valid" time="0.05"/></proof>
+  <proof prover="1"><result status="valid" time="0.12" steps="19761"/></proof>
+  <proof prover="2"><result status="valid" time="0.01" steps="48"/></proof>
+  </goal>
+  <goal name="WP_parameter count_not_existent_lemma.3" expl="integer overflow">
+  <proof prover="0"><result status="valid" time="0.05"/></proof>
+  <proof prover="1"><result status="valid" time="0.12" steps="21860"/></proof>
+  <proof prover="2"><result status="valid" time="0.03" steps="348"/></proof>
+  </goal>
+  <goal name="WP_parameter count_not_existent_lemma.4" expl="check">
+  <proof prover="0"><result status="valid" time="0.04"/></proof>
+  <proof prover="1"><result status="valid" time="0.12" steps="20105"/></proof>
+  <proof prover="2"><result status="valid" time="0.01" steps="63"/></proof>
+  </goal>
+  <goal name="WP_parameter count_not_existent_lemma.5" expl="Precondition for count_not_existent_lemma (Requires clause. Internal)">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter count_not_existent_lemma.5.1" expl="Requires clause">
+   <proof prover="0"><result status="valid" time="0.01"/></proof>
+   <proof prover="1"><result status="valid" time="0.06" steps="17866"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="26"/></proof>
+   </goal>
+   <goal name="WP_parameter count_not_existent_lemma.5.2" expl="Requires clause">
+   <proof prover="0"><result status="valid" time="0.02"/></proof>
+   <proof prover="1"><result status="valid" time="0.06" steps="17866"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="26"/></proof>
+   </goal>
+   <goal name="WP_parameter count_not_existent_lemma.5.3" expl="Requires clause">
+   <proof prover="0"><result status="valid" time="0.02"/></proof>
+   <proof prover="1"><result status="valid" time="0.06" steps="17866"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="26"/></proof>
+   </goal>
+   <goal name="WP_parameter count_not_existent_lemma.5.4" expl="Requires clause">
+   <proof prover="0"><result status="valid" time="0.04"/></proof>
+   <proof prover="1"><result status="valid" time="0.11" steps="19987"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="62"/></proof>
+   </goal>
+   <goal name="WP_parameter count_not_existent_lemma.5.5" expl="Requires clause">
+   <proof prover="0"><result status="valid" time="0.04"/></proof>
+   <proof prover="1"><result status="valid" time="0.12" steps="19983"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="71"/></proof>
+   </goal>
+  </transf>
+  </goal>
+ </transf>
+ </goal>
+</theory>
+<theory name="Function_count_not_existent_lemma_behaviors" sum="24b38105305e810bc276df0aa9863390">
+ <goal name="WP_parameter count_not_existent_lemma_ensures_default" expl="Function count_not_existent_lemma, default behavior">
+ <transf name="split_goal_wp">
+  <goal name="WP_parameter count_not_existent_lemma_ensures_default.1" expl="Assertion in line 156">
+  <proof prover="0"><result status="valid" time="0.04"/></proof>
+  <proof prover="1"><result status="unknown" time="14.83" steps="1723683"/></proof>
+  <proof prover="2"><result status="valid" time="0.01" steps="38"/></proof>
+  </goal>
+  <goal name="WP_parameter count_not_existent_lemma_ensures_default.2" expl="Assertion in line 157">
+  <proof prover="0"><result status="valid" time="6.07"/></proof>
+  <proof prover="1"><result status="valid" time="0.11" steps="19713"/></proof>
+  <proof prover="2"><result status="valid" time="0.01" steps="49"/></proof>
+  </goal>
+  <goal name="WP_parameter count_not_existent_lemma_ensures_default.3" expl="Postcondition (Ensures clause)">
+  <proof prover="0"><result status="valid" time="0.04"/></proof>
+  <proof prover="1"><result status="valid" time="0.09" steps="18256"/></proof>
+  <proof prover="2"><result status="valid" time="0.01" steps="28"/></proof>
+  </goal>
+  <goal name="WP_parameter count_not_existent_lemma_ensures_default.4" expl="Postcondition (Ensures clause)">
+  <proof prover="0"><result status="valid" time="0.04"/></proof>
+  <proof prover="1"><result status="valid" time="0.10" steps="19128"/></proof>
+  <proof prover="2"><result status="valid" time="0.01" steps="21"/></proof>
+  </goal>
+ </transf>
+ </goal>
+</theory>
+<theory name="Function_remove_edge_safety" sum="9d3da9448a89ceedc9b9206f14ec7bc4">
+ <goal name="WP_parameter remove_edge" expl="Function remove_edge, safety">
+ <transf name="split_goal_wp">
+  <goal name="WP_parameter remove_edge.1" expl="Integer cast (integer overflow)">
+  <proof prover="0"><result status="valid" time="0.04"/></proof>
+  <proof prover="1"><result status="valid" time="0.06" steps="20712"/></proof>
+  <proof prover="2"><result status="valid" time="0.01" steps="22"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge.2" expl="Integer cast (integer overflow)">
+  <proof prover="0"><result status="valid" time="0.02"/></proof>
+  <proof prover="1"><result status="valid" time="0.06" steps="18948"/></proof>
+  <proof prover="2"><result status="valid" time="0.00" steps="20"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge.3" expl="Pointer dereference (Validity)">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge.3.1" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.01"/></proof>
+   <proof prover="1"><result status="valid" time="0.04" steps="19756"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="38"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge.3.2" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.01"/></proof>
+   <proof prover="1"><result status="valid" time="0.06" steps="19766"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="38"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter remove_edge.4" expl="Pointer dereference (Validity)">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge.4.1" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.02"/></proof>
+   <proof prover="1"><result status="valid" time="0.04" steps="19841"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="42"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge.4.2" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.02"/></proof>
+   <proof prover="1"><result status="valid" time="0.04" steps="19844"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="42"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter remove_edge.5" expl="Pointer dereference (Dereference by offset. Validity)">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge.5.1" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="timeout" time="15.00"/></proof>
+   <proof prover="1"><result status="valid" time="0.13" steps="27030"/></proof>
+   <proof prover="2"><result status="valid" time="0.03" steps="349"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge.5.2" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.05"/></proof>
+   <proof prover="1"><result status="valid" time="0.08" steps="27112"/></proof>
+   <proof prover="2"><result status="valid" time="0.06" steps="809"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter remove_edge.6" expl="Pointer dereference (Validity)">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge.6.1" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.01"/></proof>
+   <proof prover="1"><result status="valid" time="0.03" steps="19953"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="48"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge.6.2" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.02"/></proof>
+   <proof prover="1"><result status="valid" time="0.05" steps="19956"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="48"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter remove_edge.7" expl="Pointer dereference (Dereference by offset. Validity)">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge.7.1" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.01"/></proof>
+   <proof prover="1"><result status="valid" time="0.04" steps="19965"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="48"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge.7.2" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.01"/></proof>
+   <proof prover="1"><result status="valid" time="0.04" steps="19962"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="48"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter remove_edge.8" expl="Integer cast (integer overflow)">
+  <proof prover="0"><result status="valid" time="0.02"/></proof>
+  <proof prover="1"><result status="valid" time="0.07" steps="20008"/></proof>
+  <proof prover="2"><result status="valid" time="0.01" steps="50"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge.9" expl="Pointer dereference (Validity)">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge.9.1" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.01"/></proof>
+   <proof prover="1"><result status="valid" time="0.04" steps="20027"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="52"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge.9.2" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.02"/></proof>
+   <proof prover="1"><result status="valid" time="0.03" steps="20030"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="52"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter remove_edge.10" expl="Pointer dereference (Assignment with offset)">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge.10.1" expl="Left valid">
+   <proof prover="0"><result status="valid" time="0.02"/></proof>
+   <proof prover="1"><result status="valid" time="0.07" steps="20039"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="52"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge.10.2" expl="Right valid">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.04" steps="20036"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="52"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter remove_edge.11" expl="Integer cast (integer overflow)">
+  <proof prover="0"><result status="valid" time="0.02"/></proof>
+  <proof prover="1"><result status="valid" time="0.07" steps="20529"/></proof>
+  <proof prover="2"><result status="valid" time="0.01" steps="56"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge.12" expl="Pointer dereference (Validity)">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge.12.1" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.02"/></proof>
+   <proof prover="1"><result status="valid" time="0.07" steps="23797"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="66"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge.12.2" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.01"/></proof>
+   <proof prover="1"><result status="valid" time="0.07" steps="23800"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="66"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter remove_edge.13" expl="Integer cast (integer overflow)">
+  <proof prover="0"><result status="valid" time="0.05"/></proof>
+  <proof prover="1"><result status="valid" time="0.12" steps="29720"/></proof>
+  <proof prover="2"><result status="valid" time="0.02" steps="187"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge.14" expl="integer overflow">
+  <proof prover="0"><result status="valid" time="0.06"/></proof>
+  <proof prover="1"><result status="valid" time="0.14" steps="30475"/></proof>
+  <proof prover="2"><result status="valid" time="0.15" steps="1908"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge.15" expl="loop variant decrease">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge.15.1" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.04"/></proof>
+   <proof prover="1"><result status="valid" time="0.07" steps="27129"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="81"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge.15.2" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.04"/></proof>
+   <proof prover="1"><result status="valid" time="0.09" steps="27148"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="81"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter remove_edge.16" expl="Integer cast (integer overflow)">
+  <proof prover="0"><result status="valid" time="0.03"/></proof>
+  <proof prover="1"><result status="valid" time="0.07" steps="23851"/></proof>
+  <proof prover="2"><result status="valid" time="0.01" steps="70"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge.17" expl="Integer cast (integer overflow)">
+  <proof prover="0"><result status="valid" time="0.05"/></proof>
+  <proof prover="1"><result status="valid" time="0.09" steps="30677"/></proof>
+  <proof prover="2"><result status="valid" time="0.03" steps="264"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge.18" expl="integer overflow">
+  <proof prover="0"><result status="valid" time="0.06"/></proof>
+  <proof prover="1"><result status="valid" time="0.13" steps="41390"/></proof>
+  <proof prover="2"><result status="valid" time="0.34" steps="4700"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge.19" expl="loop variant decrease">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge.19.1" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.04"/></proof>
+   <proof prover="1"><result status="valid" time="0.08" steps="26973"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="100"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge.19.2" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.04"/></proof>
+   <proof prover="1"><result status="valid" time="0.12" steps="26994"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="101"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter remove_edge.20" expl="Integer cast (integer overflow)">
+  <proof prover="0"><result status="valid" time="0.05"/></proof>
+  <proof prover="1"><result status="valid" time="0.12" steps="30216"/></proof>
+  <proof prover="2"><result status="valid" time="0.03" steps="226"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge.21" expl="integer overflow">
+  <proof prover="0"><result status="valid" time="0.05"/></proof>
+  <proof prover="1"><result status="valid" time="0.11" steps="38050"/></proof>
+  <proof prover="2"><result status="valid" time="0.34" steps="5232"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge.22" expl="Pointer dereference (Validity)">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge.22.1" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.02"/></proof>
+   <proof prover="1"><result status="valid" time="0.06" steps="24779"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="100"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge.22.2" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.01"/></proof>
+   <proof prover="1"><result status="valid" time="0.07" steps="24782"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="100"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter remove_edge.23" expl="Integer cast (integer overflow)">
+  <proof prover="0"><result status="valid" time="0.01"/></proof>
+  <proof prover="1"><result status="valid" time="0.08" steps="25083"/></proof>
+  <proof prover="2"><result status="valid" time="0.02" steps="108"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge.24" expl="integer overflow">
+  <proof prover="0"><result status="valid" time="0.06"/></proof>
+  <proof prover="1"><result status="valid" time="0.14" steps="41874"/></proof>
+  <proof prover="2"><result status="valid" time="0.50" steps="6942"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge.25" expl="loop variant decrease">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge.25.1" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.09" steps="27677"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="119"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge.25.2" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.02"/></proof>
+   <proof prover="1"><result status="valid" time="0.07" steps="27698"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="120"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter remove_edge.26" expl="Integer cast (integer overflow)">
+  <proof prover="0"><result status="valid" time="0.02"/></proof>
+  <proof prover="1"><result status="valid" time="0.06" steps="24973"/></proof>
+  <proof prover="2"><result status="valid" time="0.02" steps="111"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge.27" expl="Pointer dereference (Validity)">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge.27.1" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.02"/></proof>
+   <proof prover="1"><result status="valid" time="0.05" steps="24992"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="117"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge.27.2" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.04" steps="24995"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="117"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter remove_edge.28" expl="Pointer dereference (Dereference by offset. Validity)">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge.28.1" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.01"/></proof>
+   <proof prover="1"><result status="valid" time="0.05" steps="25001"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="117"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge.28.2" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.02"/></proof>
+   <proof prover="1"><result status="valid" time="0.05" steps="24998"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="117"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter remove_edge.29" expl="Integer cast (integer overflow)">
+  <proof prover="0"><result status="valid" time="0.03"/></proof>
+  <proof prover="1"><result status="valid" time="0.08" steps="25059"/></proof>
+  <proof prover="2"><result status="valid" time="0.02" steps="120"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge.30" expl="integer overflow">
+  <proof prover="0"><result status="valid" time="0.02"/></proof>
+  <proof prover="1"><result status="valid" time="0.09" steps="27538"/></proof>
+  <proof prover="2"><result status="valid" time="0.02" steps="125"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge.31" expl="Integer cast (integer overflow)">
+  <proof prover="0"><result status="valid" time="0.02"/></proof>
+  <proof prover="1"><result status="valid" time="0.09" steps="25164"/></proof>
+  <proof prover="2"><result status="valid" time="0.02" steps="135"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge.32" expl="integer overflow">
+  <proof prover="0"><result status="valid" time="0.02"/></proof>
+  <proof prover="1"><result status="valid" time="0.10" steps="27696"/></proof>
+  <proof prover="2"><result status="valid" time="0.02" steps="140"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge.33" expl="loop variant decrease">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge.33.1" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.10" steps="27809"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="148"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge.33.2" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.12" steps="27830"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="148"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter remove_edge.34" expl="Integer cast (integer overflow)">
+  <proof prover="0"><result status="valid" time="0.01"/></proof>
+  <proof prover="1"><result status="valid" time="0.05" steps="25050"/></proof>
+  <proof prover="2"><result status="valid" time="0.02" steps="121"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge.35" expl="integer overflow">
+  <proof prover="0"><result status="valid" time="0.02"/></proof>
+  <proof prover="1"><result status="valid" time="0.13" steps="28146"/></proof>
+  <proof prover="2"><result status="valid" time="0.02" steps="126"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge.36" expl="loop variant decrease">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge.36.1" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.05"/></proof>
+   <proof prover="1"><result status="valid" time="0.13" steps="28259"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="133"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge.36.2" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.04"/></proof>
+   <proof prover="1"><result status="valid" time="0.10" steps="28280"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="133"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter remove_edge.37" expl="Integer cast (integer overflow)">
+  <proof prover="0"><result status="valid" time="0.02"/></proof>
+  <proof prover="1"><result status="valid" time="0.08" steps="20014"/></proof>
+  <proof prover="2"><result status="valid" time="0.01" steps="50"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge.38" expl="Pointer dereference (Validity)">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge.38.1" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.02"/></proof>
+   <proof prover="1"><result status="valid" time="0.08" steps="20033"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="52"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge.38.2" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.02"/></proof>
+   <proof prover="1"><result status="valid" time="0.09" steps="20036"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="52"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter remove_edge.39" expl="Pointer dereference (Dereference by offset. Validity)">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge.39.1" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.02"/></proof>
+   <proof prover="1"><result status="valid" time="0.05" steps="20045"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="52"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge.39.2" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.09" steps="20042"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="52"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter remove_edge.40" expl="Integer cast (integer overflow)">
+  <proof prover="0"><result status="valid" time="0.04"/></proof>
+  <proof prover="1"><result status="valid" time="0.14" steps="23512"/></proof>
+  <proof prover="2"><result status="valid" time="0.01" steps="100"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge.41" expl="integer overflow">
+  <proof prover="0"><result status="valid" time="0.04"/></proof>
+  <proof prover="1"><result status="valid" time="0.18" steps="28494"/></proof>
+  <proof prover="2"><result status="valid" time="0.03" steps="507"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge.42" expl="Integer cast (integer overflow)">
+  <proof prover="0"><result status="valid" time="0.02"/></proof>
+  <proof prover="1"><result status="valid" time="0.08" steps="20210"/></proof>
+  <proof prover="2"><result status="valid" time="0.01" steps="68"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge.43" expl="integer overflow">
+  <proof prover="0"><result status="valid" time="0.02"/></proof>
+  <proof prover="1"><result status="valid" time="0.12" steps="20931"/></proof>
+  <proof prover="2"><result status="valid" time="0.01" steps="70"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge.44" expl="loop variant decrease">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge.44.1" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.05"/></proof>
+   <proof prover="1"><result status="valid" time="0.09" steps="21044"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="75"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge.44.2" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.11" steps="21065"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="75"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter remove_edge.45" expl="Integer cast (integer overflow)">
+  <proof prover="0"><result status="valid" time="0.04"/></proof>
+  <proof prover="1"><result status="valid" time="0.13" steps="23467"/></proof>
+  <proof prover="2"><result status="valid" time="0.01" steps="102"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge.46" expl="integer overflow">
+  <proof prover="0"><result status="valid" time="0.05"/></proof>
+  <proof prover="1"><result status="valid" time="0.18" steps="28432"/></proof>
+  <proof prover="2"><result status="valid" time="0.04" steps="509"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge.47" expl="loop variant decrease">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge.47.1" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.05"/></proof>
+   <proof prover="1"><result status="valid" time="0.13" steps="20883"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="64"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge.47.2" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.04"/></proof>
+   <proof prover="1"><result status="valid" time="0.12" steps="20904"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="64"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter remove_edge.48" expl="Integer cast (integer overflow)">
+  <proof prover="0"><result status="valid" time="0.02"/></proof>
+  <proof prover="1"><result status="valid" time="0.09" steps="19959"/></proof>
+  <proof prover="2"><result status="valid" time="0.01" steps="48"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge.49" expl="Pointer dereference (Validity)">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge.49.1" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.02"/></proof>
+   <proof prover="1"><result status="valid" time="0.08" steps="19978"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="50"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge.49.2" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.08" steps="19981"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="50"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter remove_edge.50" expl="Pointer dereference (Dereference by offset. Validity)">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge.50.1" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.02"/></proof>
+   <proof prover="1"><result status="valid" time="0.09" steps="19990"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="50"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge.50.2" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.02"/></proof>
+   <proof prover="1"><result status="valid" time="0.09" steps="19987"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="50"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter remove_edge.51" expl="Integer cast (integer overflow)">
+  <proof prover="0"><result status="valid" time="0.04"/></proof>
+  <proof prover="1"><result status="valid" time="0.12" steps="23320"/></proof>
+  <proof prover="2"><result status="valid" time="0.01" steps="98"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge.52" expl="integer overflow">
+  <proof prover="0"><result status="valid" time="0.05"/></proof>
+  <proof prover="1"><result status="valid" time="0.16" steps="27606"/></proof>
+  <proof prover="2"><result status="valid" time="0.04" steps="579"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge.53" expl="Integer cast (integer overflow)">
+  <proof prover="0"><result status="valid" time="0.02"/></proof>
+  <proof prover="1"><result status="valid" time="0.09" steps="20155"/></proof>
+  <proof prover="2"><result status="valid" time="0.01" steps="66"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge.54" expl="integer overflow">
+  <proof prover="0"><result status="valid" time="0.02"/></proof>
+  <proof prover="1"><result status="valid" time="0.11" steps="20706"/></proof>
+  <proof prover="2"><result status="valid" time="0.01" steps="68"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge.55" expl="loop variant decrease">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge.55.1" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.05"/></proof>
+   <proof prover="1"><result status="valid" time="0.12" steps="20819"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="73"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge.55.2" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.04"/></proof>
+   <proof prover="1"><result status="valid" time="0.13" steps="20840"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="73"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter remove_edge.56" expl="Integer cast (integer overflow)">
+  <proof prover="0"><result status="valid" time="0.05"/></proof>
+  <proof prover="1"><result status="valid" time="0.24" steps="23275"/></proof>
+  <proof prover="2"><result status="valid" time="0.01" steps="100"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge.57" expl="integer overflow">
+  <proof prover="0"><result status="valid" time="0.05"/></proof>
+  <proof prover="1"><result status="valid" time="0.41" steps="27544"/></proof>
+  <proof prover="2"><result status="valid" time="0.04" steps="578"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge.58" expl="loop variant decrease">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge.58.1" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.04"/></proof>
+   <proof prover="1"><result status="valid" time="0.32" steps="20658"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="62"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge.58.2" expl="Function remove_edge, safety">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.37" steps="20679"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="62"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter remove_edge.59" expl="Pointer dereference (Assignment)">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge.59.1" expl="Left valid">
+   <proof prover="0"><result status="valid" time="0.02"/></proof>
+   <proof prover="1"><result status="valid" time="0.32" steps="19955"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="42"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge.59.2" expl="Right valid">
+   <proof prover="0"><result status="valid" time="0.02"/></proof>
+   <proof prover="1"><result status="valid" time="0.32" steps="19958"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="42"/></proof>
+   </goal>
+  </transf>
+  </goal>
+ </transf>
+ </goal>
+</theory>
+<theory name="Function_remove_edge_behaviors" sum="c46e592e6f4655eb3410686d7bfbdcd3" expanded="true">
+ <goal name="WP_parameter remove_edge_ensures_default" expl="Function remove_edge, default behavior" expanded="true">
+ <transf name="split_goal_wp" expanded="true">
+  <goal name="WP_parameter remove_edge_ensures_default.1" expl="loop invariant init">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge_ensures_default.1.1" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.04"/></proof>
+   <proof prover="1"><result status="valid" time="0.39" steps="22592"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="59"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.1.2" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.04"/></proof>
+   <proof prover="1"><result status="valid" time="0.41" steps="24307"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="128"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.1.3" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.05"/></proof>
+   <proof prover="1"><result status="valid" time="0.45" steps="21168"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="55"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.1.4" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.05"/></proof>
+   <proof prover="1"><result status="valid" time="0.48" steps="24372"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="148"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.1.5" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.31" steps="20699"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="30"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.1.6" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.05"/></proof>
+   <proof prover="1"><result status="valid" time="0.39" steps="22966"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="67"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.1.7" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.04"/></proof>
+   <proof prover="1"><result status="valid" time="0.37" steps="21433"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="36"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.1.8" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.41" steps="21472"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="42"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.2" expl="Assertion in line 209">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge_ensures_default.2.1" expl="Assertion in line 209">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.34" steps="21464"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="40"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.2.2" expl="Assertion in line 209">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.22" steps="21464"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="40"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.3" expl="Assertion in line 210">
+  <proof prover="0"><result status="valid" time="0.02"/></proof>
+  <proof prover="1"><result status="valid" time="0.33" steps="21477"/></proof>
+  <proof prover="2"><result status="valid" time="0.01" steps="40"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.4" expl="Assertion in line 218">
+  <proof prover="0"><result status="timeout" time="15.00"/></proof>
+  <proof prover="1"><result status="unknown" time="14.70" steps="2619813"/></proof>
+  <proof prover="2"><result status="valid" time="1.61" steps="21433"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.5" expl="Assertion in line 219">
+  <proof prover="0"><result status="timeout" time="15.00"/></proof>
+  <proof prover="1"><result status="timeout" time="15.00"/></proof>
+  <proof prover="2"><result status="valid" time="0.41" steps="5860"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.6" expl="Assertion in line 220">
+  <proof prover="0"><result status="timeout" time="15.00"/></proof>
+  <proof prover="1"><result status="valid" time="0.43" steps="25587"/></proof>
+  <proof prover="2"><result status="valid" time="0.02" steps="243"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.7" expl="Assertion in line 221">
+  <proof prover="0"><result status="valid" time="0.03"/></proof>
+  <proof prover="1"><result status="valid" time="0.42" steps="25904"/></proof>
+  <proof prover="2"><result status="valid" time="0.02" steps="129"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.8" expl="loop invariant init">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge_ensures_default.8.1" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.04"/></proof>
+   <proof prover="1"><result status="valid" time="0.39" steps="25683"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="157"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.8.2" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.04"/></proof>
+   <proof prover="1"><result status="valid" time="0.36" steps="25754"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="167"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.8.3" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.01"/></proof>
+   <proof prover="1"><result status="valid" time="0.07" steps="22233"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="58"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.8.4" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.02"/></proof>
+   <proof prover="1"><result status="valid" time="0.11" steps="22233"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="58"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.8.5" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.04"/></proof>
+   <proof prover="1"><result status="valid" time="0.16" steps="25804"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="130"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.8.6" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.15" steps="25811"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="128"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.8.7" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="timeout" time="15.00"/></proof>
+   <proof prover="1"><result status="unknown" time="14.70" steps="3158038"/></proof>
+   <proof prover="2"><result status="timeout" time="1.00"/></proof>
+   <transf name="introduce_premises">
+    <goal name="WP_parameter remove_edge_ensures_default.8.7.1" expl="Function remove_edge, default behavior">
+    <transf name="inline_goal">
+     <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1" expl="Function remove_edge, default behavior">
+     <proof prover="2"><result status="timeout" time="1.00"/></proof>
+     <transf name="split_goal_wp">
+      <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.1" expl="Function remove_edge, default behavior">
+      <proof prover="2"><result status="valid" time="0.03" steps="131"/></proof>
+      </goal>
+      <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.2" expl="Function remove_edge, default behavior">
+      <proof prover="2"><result status="valid" time="0.04" steps="131"/></proof>
+      </goal>
+      <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.3" expl="Function remove_edge, default behavior">
+      <proof prover="2"><result status="valid" time="0.02" steps="131"/></proof>
+      </goal>
+      <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.4" expl="Function remove_edge, default behavior">
+      <proof prover="2"><result status="valid" time="0.03" steps="131"/></proof>
+      </goal>
+      <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.5" expl="Function remove_edge, default behavior">
+      <proof prover="2"><result status="valid" time="0.03" steps="137"/></proof>
+      </goal>
+      <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.6" expl="Function remove_edge, default behavior">
+      <proof prover="2"><result status="valid" time="0.03" steps="134"/></proof>
+      </goal>
+      <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.7" expl="Function remove_edge, default behavior">
+      <proof prover="2"><result status="valid" time="0.02" steps="58"/></proof>
+      </goal>
+      <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.8" expl="Function remove_edge, default behavior">
+      <proof prover="2"><result status="valid" time="0.02" steps="58"/></proof>
+      </goal>
+      <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.9" expl="Function remove_edge, default behavior">
+      <proof prover="2"><result status="valid" time="0.02" steps="64"/></proof>
+      </goal>
+      <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.10" expl="Function remove_edge, default behavior">
+      <proof prover="2"><result status="valid" time="0.02" steps="64"/></proof>
+      </goal>
+      <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.11" expl="Function remove_edge, default behavior">
+      <proof prover="2"><result status="valid" time="0.02" steps="58"/></proof>
+      </goal>
+      <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.12" expl="Function remove_edge, default behavior">
+      <proof prover="2"><result status="valid" time="0.02" steps="58"/></proof>
+      </goal>
+      <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.13" expl="Function remove_edge, default behavior">
+      <proof prover="2"><result status="timeout" time="1.00"/></proof>
+      <transf name="inline_goal">
+       <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.13.1" expl="Function remove_edge, default behavior">
+       <proof prover="2"><result status="timeout" time="1.00"/></proof>
+       <transf name="introduce_premises">
+        <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.13.1.1" expl="Function remove_edge, default behavior">
+        <transf name="inline_goal">
+         <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.13.1.1.1" expl="Function remove_edge, default behavior">
+         <proof prover="2"><result status="timeout" time="1.00"/></proof>
+         <transf name="split_goal_wp">
+          <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.13.1.1.1.1" expl="Function remove_edge, default behavior">
+          <proof prover="2"><result status="timeout" time="1.00"/></proof>
+          <transf name="introduce_premises">
+           <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.13.1.1.1.1.1" expl="Function remove_edge, default behavior">
+           <transf name="inline_goal">
+            <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.13.1.1.1.1.1.1" expl="Function remove_edge, default behavior">
+            <proof prover="2"><result status="timeout" time="1.00"/></proof>
+            <transf name="split_goal_wp">
+             <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.13.1.1.1.1.1.1.1" expl="Function remove_edge, default behavior">
+             <proof prover="2"><result status="timeout" time="1.00"/></proof>
+             <transf name="inline_goal">
+              <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.13.1.1.1.1.1.1.1.1" expl="Function remove_edge, default behavior">
+              <proof prover="2"><result status="timeout" time="1.00"/></proof>
+              <transf name="inline_goal">
+               <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.13.1.1.1.1.1.1.1.1.1" expl="Function remove_edge, default behavior">
+               <proof prover="2"><result status="timeout" time="1.00"/></proof>
+               <transf name="inline_all">
+                <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.13.1.1.1.1.1.1.1.1.1.1" expl="Function remove_edge, default behavior">
+                <proof prover="2"><result status="valid" time="0.14" steps="427"/></proof>
+                </goal>
+               </transf>
+               </goal>
+              </transf>
+              </goal>
+             </transf>
+             </goal>
+             <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.13.1.1.1.1.1.1.2" expl="Function remove_edge, default behavior">
+             <proof prover="2"><result status="timeout" time="1.00"/></proof>
+             <transf name="inline_goal">
+              <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.13.1.1.1.1.1.1.2.1" expl="Function remove_edge, default behavior">
+              <proof prover="2"><result status="timeout" time="1.00"/></proof>
+              <transf name="inline_goal">
+               <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.13.1.1.1.1.1.1.2.1.1" expl="Function remove_edge, default behavior">
+               <proof prover="2"><result status="timeout" time="1.00"/></proof>
+               <transf name="inline_all">
+                <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.13.1.1.1.1.1.1.2.1.1.1" expl="Function remove_edge, default behavior">
+                <proof prover="2"><result status="valid" time="0.14" steps="418"/></proof>
+                </goal>
+               </transf>
+               </goal>
+              </transf>
+              </goal>
+             </transf>
+             </goal>
+            </transf>
+            </goal>
+           </transf>
+           </goal>
+          </transf>
+          </goal>
+          <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.13.1.1.1.2" expl="Function remove_edge, default behavior">
+          <proof prover="2"><result status="timeout" time="1.00"/></proof>
+          <transf name="introduce_premises">
+           <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.13.1.1.1.2.1" expl="Function remove_edge, default behavior">
+           <transf name="inline_goal">
+            <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.13.1.1.1.2.1.1" expl="Function remove_edge, default behavior">
+            <proof prover="2"><result status="timeout" time="1.00"/></proof>
+            <transf name="split_goal_wp">
+             <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.13.1.1.1.2.1.1.1" expl="Function remove_edge, default behavior">
+             <proof prover="2"><result status="timeout" time="1.00"/></proof>
+             <transf name="inline_goal">
+              <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.13.1.1.1.2.1.1.1.1" expl="Function remove_edge, default behavior">
+              <proof prover="2"><result status="timeout" time="1.00"/></proof>
+              <transf name="inline_goal">
+               <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.13.1.1.1.2.1.1.1.1.1" expl="Function remove_edge, default behavior">
+               <proof prover="2"><result status="timeout" time="1.00"/></proof>
+               <transf name="inline_all">
+                <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.13.1.1.1.2.1.1.1.1.1.1" expl="Function remove_edge, default behavior">
+                <proof prover="2"><result status="valid" time="0.14" steps="427"/></proof>
+                </goal>
+               </transf>
+               </goal>
+              </transf>
+              </goal>
+             </transf>
+             </goal>
+             <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.13.1.1.1.2.1.1.2" expl="Function remove_edge, default behavior">
+             <proof prover="2"><result status="timeout" time="1.00"/></proof>
+             <transf name="inline_goal">
+              <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.13.1.1.1.2.1.1.2.1" expl="Function remove_edge, default behavior">
+              <proof prover="2"><result status="timeout" time="1.00"/></proof>
+              <transf name="inline_goal">
+               <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.13.1.1.1.2.1.1.2.1.1" expl="Function remove_edge, default behavior">
+               <proof prover="2"><result status="timeout" time="1.00"/></proof>
+               <transf name="inline_all">
+                <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.13.1.1.1.2.1.1.2.1.1.1" expl="Function remove_edge, default behavior">
+                <proof prover="2"><result status="valid" time="0.14" steps="417"/></proof>
+                </goal>
+               </transf>
+               </goal>
+              </transf>
+              </goal>
+             </transf>
+             </goal>
+            </transf>
+            </goal>
+           </transf>
+           </goal>
+          </transf>
+          </goal>
+          <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.13.1.1.1.3" expl="Function remove_edge, default behavior">
+          <proof prover="2"><result status="timeout" time="1.00"/></proof>
+          <transf name="introduce_premises">
+           <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.13.1.1.1.3.1" expl="Function remove_edge, default behavior">
+           <transf name="inline_goal">
+            <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.13.1.1.1.3.1.1" expl="Function remove_edge, default behavior">
+            <proof prover="2"><result status="timeout" time="1.00"/></proof>
+            <transf name="inline_goal">
+             <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.13.1.1.1.3.1.1.1" expl="Function remove_edge, default behavior">
+             <proof prover="2"><result status="timeout" time="1.00"/></proof>
+             <transf name="inline_goal">
+              <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.13.1.1.1.3.1.1.1.1" expl="Function remove_edge, default behavior">
+              <proof prover="2"><result status="timeout" time="1.00"/></proof>
+              <transf name="inline_all">
+               <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.13.1.1.1.3.1.1.1.1.1" expl="Function remove_edge, default behavior">
+               <proof prover="2"><result status="valid" time="0.19" steps="459"/></proof>
+               </goal>
+              </transf>
+              </goal>
+             </transf>
+             </goal>
+            </transf>
+            </goal>
+           </transf>
+           </goal>
+          </transf>
+          </goal>
+          <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.13.1.1.1.4" expl="Function remove_edge, default behavior">
+          <proof prover="2"><result status="timeout" time="1.00"/></proof>
+          <transf name="introduce_premises">
+           <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.13.1.1.1.4.1" expl="Function remove_edge, default behavior">
+           <transf name="inline_goal">
+            <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.13.1.1.1.4.1.1" expl="Function remove_edge, default behavior">
+            <proof prover="2"><result status="timeout" time="1.00"/></proof>
+            <transf name="inline_goal">
+             <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.13.1.1.1.4.1.1.1" expl="Function remove_edge, default behavior">
+             <proof prover="2"><result status="timeout" time="1.00"/></proof>
+             <transf name="inline_goal">
+              <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.13.1.1.1.4.1.1.1.1" expl="Function remove_edge, default behavior">
+              <proof prover="2"><result status="timeout" time="1.00"/></proof>
+              <transf name="inline_all">
+               <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.13.1.1.1.4.1.1.1.1.1" expl="Function remove_edge, default behavior">
+               <proof prover="2"><result status="valid" time="0.19" steps="459"/></proof>
+               </goal>
+              </transf>
+              </goal>
+             </transf>
+             </goal>
+            </transf>
+            </goal>
+           </transf>
+           </goal>
+          </transf>
+          </goal>
+         </transf>
+         </goal>
+        </transf>
+        </goal>
+       </transf>
+       </goal>
+      </transf>
+      </goal>
+      <goal name="WP_parameter remove_edge_ensures_default.8.7.1.1.14" expl="Function remove_edge, default behavior">
+      <proof prover="2"><result status="valid" time="0.04" steps="300"/></proof>
+      </goal>
+     </transf>
+     </goal>
+    </transf>
+    </goal>
+   </transf>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.8.8" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.02"/></proof>
+   <proof prover="1"><result status="valid" time="0.14" steps="23712"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="68"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.8.9" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.10" steps="27008"/></proof>
+   <proof prover="2"><result status="valid" time="0.03" steps="252"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.8.10" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.16" steps="27769"/></proof>
+   <proof prover="2"><result status="valid" time="0.03" steps="320"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.8.11" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.04"/></proof>
+   <proof prover="1"><result status="valid" time="0.12" steps="28499"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="191"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.8.12" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.16" steps="27758"/></proof>
+   <proof prover="2"><result status="valid" time="0.03" steps="282"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.8.13" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.04"/></proof>
+   <proof prover="1"><result status="valid" time="0.13" steps="28505"/></proof>
+   <proof prover="2"><result status="valid" time="0.03" steps="341"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.8.14" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.13" steps="24643"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="96"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.8.15" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.16" steps="28766"/></proof>
+   <proof prover="2"><result status="valid" time="0.03" steps="293"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.8.16" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.04"/></proof>
+   <proof prover="1"><result status="valid" time="0.14" steps="25618"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="96"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.8.17" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.04"/></proof>
+   <proof prover="1"><result status="valid" time="0.18" steps="30160"/></proof>
+   <proof prover="2"><result status="valid" time="0.03" steps="295"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.8.18" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.13" steps="26584"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="97"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.8.19" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.05"/></proof>
+   <proof prover="1"><result status="valid" time="0.12" steps="31927"/></proof>
+   <proof prover="2"><result status="valid" time="0.03" steps="310"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.8.20" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="timeout" time="15.00"/></proof>
+   <proof prover="1"><result status="valid" time="0.13" steps="31400"/></proof>
+   <proof prover="2"><result status="valid" time="0.05" steps="700"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.8.21" expl="Assigns clause">
+   <proof prover="0"><result status="valid" time="0.04"/></proof>
+   <proof prover="1"><result status="valid" time="0.12" steps="23348"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="118"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.8.22" expl="Assigns clause">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.14" steps="23497"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="118"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.9" expl="Assertion in line 304">
+  <proof prover="0"><result status="timeout" time="15.00"/></proof>
+  <proof prover="1"><result status="timeout" time="15.00"/></proof>
+  <proof prover="2"><result status="timeout" time="3.00"/></proof>
+  <transf name="introduce_premises">
+   <goal name="WP_parameter remove_edge_ensures_default.9.1" expl="Assertion in line 304">
+   <transf name="inline_goal">
+    <goal name="WP_parameter remove_edge_ensures_default.9.1.1" expl="Assertion in line 304">
+    <proof prover="2"><result status="timeout" time="1.00"/></proof>
+    <transf name="inline_all">
+     <goal name="WP_parameter remove_edge_ensures_default.9.1.1.1" expl="Assertion in line 304">
+     <proof prover="2"><result status="timeout" time="1.00"/></proof>
+     <transf name="eliminate_if">
+      <goal name="WP_parameter remove_edge_ensures_default.9.1.1.1.1" expl="Assertion in line 304">
+      <transf name="remove_triggers">
+       <goal name="WP_parameter remove_edge_ensures_default.9.1.1.1.1.1" expl="Assertion in line 304">
+       <proof prover="2"><result status="valid" time="0.63" steps="6564"/></proof>
+       </goal>
+      </transf>
+      </goal>
+     </transf>
+     </goal>
+    </transf>
+    </goal>
+   </transf>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.10" expl="Assertion in line 305">
+  <proof prover="0"><result status="valid" time="0.03"/></proof>
+  <proof prover="1"><result status="valid" time="0.17" steps="33012"/></proof>
+  <proof prover="2"><result status="valid" time="0.04" steps="326"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.11" expl="Assertion in line 306">
+  <proof prover="0"><result status="valid" time="0.03"/></proof>
+  <proof prover="1"><result status="valid" time="0.17" steps="33332"/></proof>
+  <proof prover="2"><result status="valid" time="0.04" steps="327"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.12" expl="Assertion in line 307">
+  <proof prover="0"><result status="highfailure" time="13.42"/></proof>
+  <proof prover="1"><result status="valid" time="0.18" steps="34148"/></proof>
+  <proof prover="2"><result status="valid" time="0.17" steps="1788"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.13" expl="Assertion in line 308">
+  <proof prover="0"><result status="timeout" time="15.00"/></proof>
+  <proof prover="1"><result status="valid" time="0.19" steps="34724"/></proof>
+  <proof prover="2"><result status="valid" time="0.04" steps="278"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.14" expl="loop invariant preservation">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge_ensures_default.14.1" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.06"/></proof>
+   <proof prover="1"><result status="valid" time="0.17" steps="32879"/></proof>
+   <proof prover="2"><result status="valid" time="0.04" steps="241"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.14.2" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.05"/></proof>
+   <proof prover="1"><result status="valid" time="0.17" steps="32933"/></proof>
+   <proof prover="2"><result status="valid" time="0.03" steps="199"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.14.3" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.02"/></proof>
+   <proof prover="1"><result status="valid" time="0.10" steps="26969"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="79"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.14.4" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.02"/></proof>
+   <proof prover="1"><result status="valid" time="0.10" steps="26969"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="79"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.14.5" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.10" steps="26975"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="84"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.14.6" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.02"/></proof>
+   <proof prover="1"><result status="valid" time="0.10" steps="26975"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="84"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.14.7" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.09" steps="26975"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="79"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.14.8" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="timeout" time="15.00"/></proof>
+   <proof prover="1"><result status="unknown" time="14.76" steps="2524373"/></proof>
+   <proof prover="2"><result status="valid" time="0.30" steps="3317"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.14.9" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.04"/></proof>
+   <proof prover="1"><result status="valid" time="0.18" steps="34496"/></proof>
+   <proof prover="2"><result status="valid" time="0.04" steps="363"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.14.10" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.04"/></proof>
+   <proof prover="1"><result status="valid" time="0.15" steps="35725"/></proof>
+   <proof prover="2"><result status="valid" time="0.05" steps="414"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.14.11" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="timeout" time="15.00"/></proof>
+   <proof prover="1"><result status="timeout" time="15.00"/></proof>
+   <proof prover="2"><result status="valid" time="0.11" steps="1133"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.14.12" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.04"/></proof>
+   <proof prover="1"><result status="valid" time="0.11" steps="35195"/></proof>
+   <proof prover="2"><result status="valid" time="0.05" steps="362"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.14.13" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.06"/></proof>
+   <proof prover="1"><result status="valid" time="0.15" steps="36157"/></proof>
+   <proof prover="2"><result status="valid" time="0.05" steps="415"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.14.14" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.19" steps="36095"/></proof>
+   <proof prover="2"><result status="valid" time="0.06" steps="321"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.14.15" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.05"/></proof>
+   <proof prover="1"><result status="valid" time="0.18" steps="36640"/></proof>
+   <proof prover="2"><result status="valid" time="0.06" steps="326"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.14.16" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.05"/></proof>
+   <proof prover="1"><result status="valid" time="0.18" steps="37231"/></proof>
+   <proof prover="2"><result status="valid" time="0.05" steps="324"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.14.17" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.04"/></proof>
+   <proof prover="1"><result status="valid" time="0.20" steps="37854"/></proof>
+   <proof prover="2"><result status="valid" time="0.05" steps="327"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.14.18" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="timeout" time="15.00"/></proof>
+   <proof prover="1"><result status="timeout" time="15.00"/></proof>
+   <proof prover="2"><result status="valid" time="0.93" steps="11946"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.14.19" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="timeout" time="15.00"/></proof>
+   <proof prover="1"><result status="valid" time="0.19" steps="53971"/></proof>
+   <proof prover="2"><result status="highfailure" time="1.22"/></proof>
+   <transf name="introduce_premises">
+    <goal name="WP_parameter remove_edge_ensures_default.14.19.1" expl="Function remove_edge, default behavior">
+    <transf name="inline_all">
+     <goal name="WP_parameter remove_edge_ensures_default.14.19.1.1" expl="Function remove_edge, default behavior">
+     <proof prover="2"><result status="timeout" time="1.00"/></proof>
+     <transf name="eliminate_if">
+      <goal name="WP_parameter remove_edge_ensures_default.14.19.1.1.1" expl="Function remove_edge, default behavior">
+      <transf name="remove_triggers">
+       <goal name="WP_parameter remove_edge_ensures_default.14.19.1.1.1.1" expl="Function remove_edge, default behavior">
+       <proof prover="2" timelimit="5" memlimit="4000"><result status="valid" time="0.94" steps="9425"/></proof>
+       </goal>
+      </transf>
+      </goal>
+     </transf>
+     </goal>
+    </transf>
+    </goal>
+   </transf>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.14.20" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.04"/></proof>
+   <proof prover="1"><result status="valid" time="0.12" steps="38386"/></proof>
+   <proof prover="2"><result status="valid" time="0.06" steps="490"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.14.21" expl="Assigns clause">
+   <proof prover="0"><result status="valid" time="0.01"/></proof>
+   <proof prover="1"><result status="valid" time="0.08" steps="26947"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="76"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.14.22" expl="Assigns clause">
+   <proof prover="0"><result status="valid" time="0.01"/></proof>
+   <proof prover="1"><result status="valid" time="0.08" steps="26947"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="76"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.15" expl="loop invariant init">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge_ensures_default.15.1" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.20" steps="38600"/></proof>
+   <proof prover="2"><result status="valid" time="0.04" steps="241"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.15.2" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.20" steps="38614"/></proof>
+   <proof prover="2"><result status="valid" time="0.05" steps="241"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.15.3" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.05"/></proof>
+   <proof prover="1"><result status="valid" time="0.18" steps="32243"/></proof>
+   <proof prover="2"><result status="valid" time="0.05" steps="225"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.15.4" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.13" steps="32512"/></proof>
+   <proof prover="2"><result status="valid" time="0.03" steps="222"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.15.5" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.04"/></proof>
+   <proof prover="1"><result status="valid" time="0.13" steps="43412"/></proof>
+   <proof prover="2"><result status="valid" time="0.04" steps="239"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.16" expl="Assertion in line 323">
+  <proof prover="0"><result status="valid" time="0.04"/></proof>
+  <proof prover="1"><result status="valid" time="0.09" steps="33427"/></proof>
+  <proof prover="2"><result status="valid" time="0.05" steps="300"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.17" expl="Assertion in line 324">
+  <proof prover="0"><result status="valid" time="0.04"/></proof>
+  <proof prover="1"><result status="valid" time="0.18" steps="34546"/></proof>
+  <proof prover="2"><result status="valid" time="0.04" steps="319"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.18" expl="loop invariant preservation">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge_ensures_default.18.1" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.06"/></proof>
+   <proof prover="1"><result status="valid" time="0.17" steps="33778"/></proof>
+   <proof prover="2"><result status="valid" time="0.07" steps="344"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.18.2" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.06"/></proof>
+   <proof prover="1"><result status="valid" time="0.18" steps="33778"/></proof>
+   <proof prover="2"><result status="valid" time="0.07" steps="273"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.18.3" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.05"/></proof>
+   <proof prover="1"><result status="valid" time="0.17" steps="34057"/></proof>
+   <proof prover="2"><result status="valid" time="0.06" steps="309"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.18.4" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.05"/></proof>
+   <proof prover="1"><result status="valid" time="0.17" steps="34326"/></proof>
+   <proof prover="2"><result status="valid" time="0.07" steps="305"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.18.5" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="timeout" time="15.00"/></proof>
+   <proof prover="1"><result status="unknown" time="14.95" steps="2440058"/></proof>
+   <proof prover="2"><result status="valid" time="0.54" steps="4458"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.19" expl="loop invariant init">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge_ensures_default.19.1" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.13" steps="28646"/></proof>
+   <proof prover="2"><result status="valid" time="0.03" steps="91"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.19.2" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.05"/></proof>
+   <proof prover="1"><result status="valid" time="0.20" steps="40009"/></proof>
+   <proof prover="2"><result status="valid" time="0.25" steps="2241"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.19.3" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="timeout" time="15.00"/></proof>
+   <proof prover="1"><result status="valid" time="0.16" steps="34014"/></proof>
+   <proof prover="2"><result status="valid" time="0.10" steps="477"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.19.4" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.04"/></proof>
+   <proof prover="1"><result status="valid" time="0.17" steps="35205"/></proof>
+   <proof prover="2"><result status="valid" time="0.08" steps="261"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.20" expl="Assertion in line 337">
+  <proof prover="0"><result status="valid" time="0.03"/></proof>
+  <proof prover="1"><result status="valid" time="0.17" steps="34760"/></proof>
+  <proof prover="2"><result status="valid" time="0.08" steps="282"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.21" expl="Assertion in line 338">
+  <proof prover="0"><result status="valid" time="0.04"/></proof>
+  <proof prover="1"><result status="valid" time="0.17" steps="35427"/></proof>
+  <proof prover="2"><result status="valid" time="0.08" steps="301"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.22" expl="loop invariant preservation">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge_ensures_default.22.1" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.04"/></proof>
+   <proof prover="1"><result status="valid" time="0.13" steps="29848"/></proof>
+   <proof prover="2"><result status="valid" time="0.04" steps="114"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.22.2" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.17" steps="34912"/></proof>
+   <proof prover="2"><result status="valid" time="0.07" steps="308"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.22.3" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.07"/></proof>
+   <proof prover="1"><result status="valid" time="0.18" steps="36262"/></proof>
+   <proof prover="2"><result status="valid" time="0.07" steps="345"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.22.4" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="timeout" time="15.00"/></proof>
+   <proof prover="1"><result status="unknown" time="15.50" steps="1703501"/></proof>
+   <proof prover="2"><result status="valid" time="4.02" steps="32325"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.23" expl="Assertion in line 343">
+  <proof prover="0"><result status="valid" time="0.06"/></proof>
+  <proof prover="1"><result status="valid" time="0.10" steps="35484"/></proof>
+  <proof prover="2"><result status="valid" time="0.06" steps="316"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.24" expl="Assertion in line 344">
+  <proof prover="0"><result status="valid" time="0.08"/></proof>
+  <proof prover="1"><result status="valid" time="0.53" steps="110904"/></proof>
+  <proof prover="2"><result status="valid" time="0.05" steps="299"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.25" expl="Assertion in line 345">
+  <proof prover="0"><result status="valid" time="0.02"/></proof>
+  <proof prover="1"><result status="valid" time="0.07" steps="29451"/></proof>
+  <proof prover="2"><result status="valid" time="0.03" steps="106"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.26" expl="Assertion in line 346">
+  <proof prover="0"><result status="valid" time="0.02"/></proof>
+  <proof prover="1"><result status="valid" time="0.06" steps="26980"/></proof>
+  <proof prover="2"><result status="valid" time="0.03" steps="107"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.27" expl="Assertion in line 350">
+  <proof prover="0"><result status="valid" time="0.03"/></proof>
+  <proof prover="1"><result status="valid" time="0.05" steps="27028"/></proof>
+  <proof prover="2"><result status="valid" time="0.02" steps="115"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.28" expl="Assertion in line 351">
+  <proof prover="0"><result status="valid" time="0.03"/></proof>
+  <proof prover="1"><result status="valid" time="0.05" steps="27031"/></proof>
+  <proof prover="2"><result status="valid" time="0.01" steps="115"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.29" expl="Assertion in line 353">
+  <proof prover="0"><result status="valid" time="0.07"/></proof>
+  <proof prover="1"><result status="valid" time="0.08" steps="30095"/></proof>
+  <proof prover="2"><result status="valid" time="0.04" steps="317"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.30" expl="Assertion in line 355">
+  <proof prover="0"><result status="valid" time="0.07"/></proof>
+  <proof prover="1"><result status="valid" time="0.13" steps="30107"/></proof>
+  <proof prover="2"><result status="valid" time="0.04" steps="305"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.31" expl="Assertion in line 359">
+  <proof prover="0"><result status="valid" time="0.03"/></proof>
+  <proof prover="1"><result status="valid" time="0.10" steps="27125"/></proof>
+  <proof prover="2"><result status="valid" time="0.02" steps="128"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.32" expl="loop invariant preservation">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge_ensures_default.32.1" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.07"/></proof>
+   <proof prover="1"><result status="valid" time="0.14" steps="30252"/></proof>
+   <proof prover="2"><result status="valid" time="0.04" steps="336"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.32.2" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.06"/></proof>
+   <proof prover="1"><result status="valid" time="0.13" steps="30264"/></proof>
+   <proof prover="2"><result status="valid" time="0.04" steps="325"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.32.3" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.02"/></proof>
+   <proof prover="1"><result status="valid" time="0.08" steps="27219"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="140"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.32.4" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.05"/></proof>
+   <proof prover="1"><result status="valid" time="0.14" steps="30280"/></proof>
+   <proof prover="2"><result status="valid" time="0.04" steps="343"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.32.5" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.08" steps="27233"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="142"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.32.6" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.06"/></proof>
+   <proof prover="1"><result status="valid" time="0.14" steps="30371"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="145"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.32.7" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.07"/></proof>
+   <proof prover="1"><result status="valid" time="0.14" steps="30570"/></proof>
+   <proof prover="2"><result status="valid" time="0.04" steps="356"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.32.8" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.08"/></proof>
+   <proof prover="1"><result status="valid" time="0.13" steps="30747"/></proof>
+   <proof prover="2"><result status="valid" time="0.05" steps="379"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.32.9" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.06"/></proof>
+   <proof prover="1"><result status="valid" time="0.13" steps="30885"/></proof>
+   <proof prover="2"><result status="valid" time="0.05" steps="365"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.32.10" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.07"/></proof>
+   <proof prover="1"><result status="valid" time="0.14" steps="31098"/></proof>
+   <proof prover="2"><result status="valid" time="0.05" steps="408"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.32.11" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.07"/></proof>
+   <proof prover="1"><result status="valid" time="0.14" steps="30934"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="161"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.33" expl="Assertion in line 359">
+  <proof prover="0"><result status="valid" time="0.03"/></proof>
+  <proof prover="1"><result status="valid" time="0.09" steps="27022"/></proof>
+  <proof prover="2"><result status="valid" time="0.01" steps="116"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.34" expl="loop invariant preservation">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge_ensures_default.34.1" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.06"/></proof>
+   <proof prover="1"><result status="valid" time="0.16" steps="35292"/></proof>
+   <proof prover="2"><result status="valid" time="0.04" steps="379"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.34.2" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.07"/></proof>
+   <proof prover="1"><result status="valid" time="0.17" steps="35344"/></proof>
+   <proof prover="2"><result status="valid" time="0.04" steps="306"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.34.3" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.09" steps="27116"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="129"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.34.4" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.02"/></proof>
+   <proof prover="1"><result status="valid" time="0.09" steps="27119"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="129"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.34.5" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.02"/></proof>
+   <proof prover="1"><result status="valid" time="0.09" steps="27122"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="129"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.34.6" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.06"/></proof>
+   <proof prover="1"><result status="valid" time="0.15" steps="31058"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="132"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.34.7" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="timeout" time="15.00"/></proof>
+   <proof prover="1"><result status="valid" time="0.27" steps="49731"/></proof>
+   <proof prover="2"><result status="valid" time="0.30" steps="3137"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.34.8" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.05"/></proof>
+   <proof prover="1"><result status="valid" time="0.11" steps="37605"/></proof>
+   <proof prover="2"><result status="valid" time="0.08" steps="648"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.34.9" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="timeout" time="15.00"/></proof>
+   <proof prover="1"><result status="unknown" time="14.81" steps="1071648"/></proof>
+   <proof prover="2"><result status="valid" time="0.05" steps="401"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.34.10" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="timeout" time="15.00"/></proof>
+   <proof prover="1"><result status="valid" time="0.17" steps="37274"/></proof>
+   <proof prover="2"><result status="valid" time="0.07" steps="463"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.34.11" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="timeout" time="15.00"/></proof>
+   <proof prover="1"><result status="valid" time="0.18" steps="37688"/></proof>
+   <proof prover="2"><result status="valid" time="0.08" steps="445"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.35" expl="Assertion in line 350">
+  <proof prover="0"><result status="valid" time="0.02"/></proof>
+  <proof prover="1"><result status="valid" time="0.04" steps="21584"/></proof>
+  <proof prover="2"><result status="valid" time="0.03" steps="48"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.36" expl="Assertion in line 351">
+  <proof prover="0"><result status="valid" time="0.03"/></proof>
+  <proof prover="1"><result status="valid" time="0.07" steps="21587"/></proof>
+  <proof prover="2"><result status="valid" time="0.02" steps="48"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.37" expl="Assertion in line 353">
+  <proof prover="0"><result status="valid" time="0.04"/></proof>
+  <proof prover="1"><result status="valid" time="0.08" steps="25025"/></proof>
+  <proof prover="2"><result status="valid" time="0.03" steps="136"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.38" expl="Assertion in line 355">
+  <proof prover="0"><result status="valid" time="0.04"/></proof>
+  <proof prover="1"><result status="valid" time="0.08" steps="25079"/></proof>
+  <proof prover="2"><result status="valid" time="0.02" steps="105"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.39" expl="Assertion in line 359">
+  <proof prover="0"><result status="valid" time="0.02"/></proof>
+  <proof prover="1"><result status="valid" time="0.08" steps="21681"/></proof>
+  <proof prover="2"><result status="valid" time="0.02" steps="58"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.40" expl="loop invariant preservation">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge_ensures_default.40.1" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.05"/></proof>
+   <proof prover="1"><result status="valid" time="0.12" steps="25293"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="127"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.40.2" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.05"/></proof>
+   <proof prover="1"><result status="valid" time="0.12" steps="25338"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="122"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.40.3" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.02"/></proof>
+   <proof prover="1"><result status="valid" time="0.06" steps="21775"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="68"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.40.4" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.04"/></proof>
+   <proof prover="1"><result status="valid" time="0.14" steps="31090"/></proof>
+   <proof prover="2"><result status="valid" time="0.06" steps="527"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.40.5" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.07" steps="21789"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="70"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.40.6" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="timeout" time="15.00"/></proof>
+   <proof prover="1"><result status="timeout" time="15.00"/></proof>
+   <proof prover="2"><result status="timeout" time="3.00"/></proof>
+   <transf name="introduce_premises">
+    <goal name="WP_parameter remove_edge_ensures_default.40.6.1" expl="Function remove_edge, default behavior">
+    <transf name="inline_all">
+     <goal name="WP_parameter remove_edge_ensures_default.40.6.1.1" expl="Function remove_edge, default behavior">
+     <proof prover="2"><result status="timeout" time="1.00"/></proof>
+     <transf name="eliminate_if">
+      <goal name="WP_parameter remove_edge_ensures_default.40.6.1.1.1" expl="Function remove_edge, default behavior">
+      <transf name="remove_triggers">
+       <goal name="WP_parameter remove_edge_ensures_default.40.6.1.1.1.1" expl="Function remove_edge, default behavior">
+       <proof prover="2"><result status="valid" time="0.53" steps="3824"/></proof>
+       </goal>
+      </transf>
+      </goal>
+     </transf>
+     </goal>
+    </transf>
+    </goal>
+   </transf>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.40.7" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.05"/></proof>
+   <proof prover="1"><result status="valid" time="0.12" steps="22896"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="153"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.40.8" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.05"/></proof>
+   <proof prover="1"><result status="valid" time="0.07" steps="26125"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="161"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.40.9" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="timeout" time="15.00"/></proof>
+   <proof prover="1"><result status="timeout" time="15.00"/></proof>
+   <proof prover="2"><result status="valid" time="5.92" steps="40039"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.40.10" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="timeout" time="15.00"/></proof>
+   <proof prover="1"><result status="valid" time="0.14" steps="26787"/></proof>
+   <proof prover="2"><result status="valid" time="0.04" steps="238"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.40.11" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.04"/></proof>
+   <proof prover="1"><result status="valid" time="0.11" steps="23372"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="85"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.41" expl="Assertion in line 359">
+  <proof prover="0"><result status="valid" time="0.02"/></proof>
+  <proof prover="1"><result status="valid" time="0.07" steps="21578"/></proof>
+  <proof prover="2"><result status="valid" time="0.01" steps="48"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.42" expl="loop invariant preservation">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge_ensures_default.42.1" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.04"/></proof>
+   <proof prover="1"><result status="valid" time="0.12" steps="24991"/></proof>
+   <proof prover="2"><result status="valid" time="0.03" steps="137"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.42.2" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.04"/></proof>
+   <proof prover="1"><result status="valid" time="0.14" steps="25045"/></proof>
+   <proof prover="2"><result status="valid" time="0.03" steps="108"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.42.3" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.06" steps="21672"/></proof>
+   <proof prover="2"><result status="valid" time="0.03" steps="58"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.42.4" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.07" steps="21675"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="58"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.42.5" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.02"/></proof>
+   <proof prover="1"><result status="valid" time="0.07" steps="21678"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="58"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.42.6" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="timeout" time="15.00"/></proof>
+   <proof prover="1"><result status="timeout" time="15.00"/></proof>
+   <proof prover="2"><result status="timeout" time="3.00"/></proof>
+   <transf name="introduce_premises">
+    <goal name="WP_parameter remove_edge_ensures_default.42.6.1" expl="Function remove_edge, default behavior">
+    <transf name="inline_all">
+     <goal name="WP_parameter remove_edge_ensures_default.42.6.1.1" expl="Function remove_edge, default behavior">
+     <proof prover="2"><result status="timeout" time="1.00"/></proof>
+     <transf name="eliminate_if">
+      <goal name="WP_parameter remove_edge_ensures_default.42.6.1.1.1" expl="Function remove_edge, default behavior">
+      <transf name="remove_triggers">
+       <goal name="WP_parameter remove_edge_ensures_default.42.6.1.1.1.1" expl="Function remove_edge, default behavior">
+       <proof prover="2"><result status="valid" time="0.31" steps="611"/></proof>
+       </goal>
+      </transf>
+      </goal>
+     </transf>
+     </goal>
+    </transf>
+    </goal>
+   </transf>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.42.7" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.06"/></proof>
+   <proof prover="1"><result status="valid" time="0.06" steps="22724"/></proof>
+   <proof prover="2"><result status="valid" time="0.03" steps="135"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.42.8" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.07"/></proof>
+   <proof prover="1"><result status="valid" time="0.11" steps="25786"/></proof>
+   <proof prover="2"><result status="valid" time="0.04" steps="143"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.42.9" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="timeout" time="15.00"/></proof>
+   <proof prover="1"><result status="timeout" time="15.00"/></proof>
+   <proof prover="2"><result status="timeout" time="3.00"/></proof>
+   <transf name="introduce_premises">
+    <goal name="WP_parameter remove_edge_ensures_default.42.9.1" expl="Function remove_edge, default behavior">
+    <transf name="inline_goal">
+     <goal name="WP_parameter remove_edge_ensures_default.42.9.1.1" expl="Function remove_edge, default behavior">
+     <proof prover="2"><result status="timeout" time="1.00"/></proof>
+     <transf name="inline_all">
+      <goal name="WP_parameter remove_edge_ensures_default.42.9.1.1.1" expl="Function remove_edge, default behavior">
+      <proof prover="2"><result status="timeout" time="1.00"/></proof>
+      <transf name="eliminate_if">
+       <goal name="WP_parameter remove_edge_ensures_default.42.9.1.1.1.1" expl="Function remove_edge, default behavior">
+       <transf name="remove_triggers">
+        <goal name="WP_parameter remove_edge_ensures_default.42.9.1.1.1.1.1" expl="Function remove_edge, default behavior">
+        <proof prover="2" timelimit="5" memlimit="4000"><result status="timeout" time="5.00"/></proof>
+        </goal>
+       </transf>
+       </goal>
+      </transf>
+      </goal>
+     </transf>
+     </goal>
+    </transf>
+    </goal>
+   </transf>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.42.10" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="timeout" time="15.00"/></proof>
+   <proof prover="1"><result status="valid" time="0.13" steps="26423"/></proof>
+   <proof prover="2"><result status="valid" time="0.05" steps="212"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.42.11" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="timeout" time="15.00"/></proof>
+   <proof prover="1"><result status="valid" time="0.13" steps="26427"/></proof>
+   <proof prover="2"><result status="valid" time="0.05" steps="197"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.43" expl="Assertion in line 350">
+  <proof prover="0"><result status="valid" time="0.02"/></proof>
+  <proof prover="1"><result status="valid" time="0.07" steps="21561"/></proof>
+  <proof prover="2"><result status="valid" time="0.02" steps="46"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.44" expl="Assertion in line 351">
+  <proof prover="0"><result status="valid" time="0.02"/></proof>
+  <proof prover="1"><result status="valid" time="0.08" steps="21564"/></proof>
+  <proof prover="2"><result status="valid" time="0.02" steps="46"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.45" expl="Assertion in line 353">
+  <proof prover="0"><result status="valid" time="0.03"/></proof>
+  <proof prover="1"><result status="valid" time="0.13" steps="24868"/></proof>
+  <proof prover="2"><result status="valid" time="0.04" steps="134"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.46" expl="Assertion in line 355">
+  <proof prover="0"><result status="valid" time="0.03"/></proof>
+  <proof prover="1"><result status="valid" time="0.13" steps="24922"/></proof>
+  <proof prover="2"><result status="valid" time="0.03" steps="104"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.47" expl="Assertion in line 359">
+  <proof prover="0"><result status="valid" time="0.02"/></proof>
+  <proof prover="1"><result status="valid" time="0.09" steps="21658"/></proof>
+  <proof prover="2"><result status="valid" time="0.02" steps="56"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.48" expl="loop invariant preservation">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge_ensures_default.48.1" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.12" steps="25136"/></proof>
+   <proof prover="2"><result status="valid" time="0.04" steps="125"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.48.2" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.04"/></proof>
+   <proof prover="1"><result status="valid" time="0.12" steps="25181"/></proof>
+   <proof prover="2"><result status="valid" time="0.04" steps="121"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.48.3" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.02"/></proof>
+   <proof prover="1"><result status="valid" time="0.07" steps="21752"/></proof>
+   <proof prover="2"><result status="valid" time="0.03" steps="66"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.48.4" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.04"/></proof>
+   <proof prover="1"><result status="valid" time="0.13" steps="30383"/></proof>
+   <proof prover="2"><result status="valid" time="0.08" steps="522"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.48.5" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.01"/></proof>
+   <proof prover="1"><result status="valid" time="0.08" steps="21766"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="68"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.48.6" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="timeout" time="15.00"/></proof>
+   <proof prover="1"><result status="timeout" time="15.00"/></proof>
+   <proof prover="2"><result status="timeout" time="3.00"/></proof>
+   <transf name="introduce_premises">
+    <goal name="WP_parameter remove_edge_ensures_default.48.6.1" expl="Function remove_edge, default behavior">
+    <transf name="inline_all">
+     <goal name="WP_parameter remove_edge_ensures_default.48.6.1.1" expl="Function remove_edge, default behavior">
+     <proof prover="2"><result status="timeout" time="1.00"/></proof>
+     <transf name="eliminate_if">
+      <goal name="WP_parameter remove_edge_ensures_default.48.6.1.1.1" expl="Function remove_edge, default behavior">
+      <transf name="remove_triggers">
+       <goal name="WP_parameter remove_edge_ensures_default.48.6.1.1.1.1" expl="Function remove_edge, default behavior">
+       <proof prover="2"><result status="valid" time="0.54" steps="3770"/></proof>
+       </goal>
+      </transf>
+      </goal>
+     </transf>
+     </goal>
+    </transf>
+    </goal>
+   </transf>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.48.7" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.06"/></proof>
+   <proof prover="1"><result status="valid" time="0.06" steps="22671"/></proof>
+   <proof prover="2"><result status="valid" time="0.04" steps="152"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.48.8" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.06"/></proof>
+   <proof prover="1"><result status="valid" time="0.10" steps="25867"/></proof>
+   <proof prover="2"><result status="valid" time="0.04" steps="159"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.48.9" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="timeout" time="15.00"/></proof>
+   <proof prover="1"><result status="timeout" time="15.00"/></proof>
+   <proof prover="2"><result status="valid" time="5.03" steps="42625"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.48.10" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="timeout" time="15.00"/></proof>
+   <proof prover="1"><result status="valid" time="0.14" steps="26446"/></proof>
+   <proof prover="2"><result status="valid" time="0.06" steps="236"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.48.11" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.11" steps="23073"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="83"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.49" expl="Assertion in line 359">
+  <proof prover="0"><result status="valid" time="0.02"/></proof>
+  <proof prover="1"><result status="valid" time="0.07" steps="21555"/></proof>
+  <proof prover="2"><result status="valid" time="0.02" steps="46"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.50" expl="loop invariant preservation">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge_ensures_default.50.1" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.13" steps="24834"/></proof>
+   <proof prover="2"><result status="valid" time="0.03" steps="135"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.50.2" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.13" steps="24888"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="107"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.50.3" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.02"/></proof>
+   <proof prover="1"><result status="valid" time="0.08" steps="21649"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="56"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.50.4" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.01"/></proof>
+   <proof prover="1"><result status="valid" time="0.07" steps="21652"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="56"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.50.5" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.02"/></proof>
+   <proof prover="1"><result status="valid" time="0.07" steps="21655"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="56"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.50.6" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="timeout" time="15.00"/></proof>
+   <proof prover="1"><result status="unknown" time="14.66" steps="4070248"/></proof>
+   <proof prover="2"><result status="timeout" time="3.00"/></proof>
+   <transf name="introduce_premises">
+    <goal name="WP_parameter remove_edge_ensures_default.50.6.1" expl="Function remove_edge, default behavior">
+    <transf name="inline_all">
+     <goal name="WP_parameter remove_edge_ensures_default.50.6.1.1" expl="Function remove_edge, default behavior">
+     <proof prover="2"><result status="timeout" time="1.00"/></proof>
+     <transf name="eliminate_if">
+      <goal name="WP_parameter remove_edge_ensures_default.50.6.1.1.1" expl="Function remove_edge, default behavior">
+      <transf name="remove_triggers">
+       <goal name="WP_parameter remove_edge_ensures_default.50.6.1.1.1.1" expl="Function remove_edge, default behavior">
+       <proof prover="2"><result status="valid" time="0.24" steps="578"/></proof>
+       </goal>
+      </transf>
+      </goal>
+     </transf>
+     </goal>
+    </transf>
+    </goal>
+   </transf>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.50.7" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.07" steps="22499"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="133"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.50.8" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="valid" time="0.05"/></proof>
+   <proof prover="1"><result status="valid" time="0.08" steps="25528"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="142"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.50.9" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="timeout" time="15.00"/></proof>
+   <proof prover="1"><result status="timeout" time="15.00"/></proof>
+   <proof prover="2"><result status="timeout" time="1.00"/></proof>
+   <transf name="introduce_premises">
+    <goal name="WP_parameter remove_edge_ensures_default.50.9.1" expl="Function remove_edge, default behavior">
+    <transf name="inline_goal">
+     <goal name="WP_parameter remove_edge_ensures_default.50.9.1.1" expl="Function remove_edge, default behavior">
+     <proof prover="2"><result status="timeout" time="1.00"/></proof>
+     <transf name="inline_all">
+      <goal name="WP_parameter remove_edge_ensures_default.50.9.1.1.1" expl="Function remove_edge, default behavior">
+      <proof prover="2"><result status="timeout" time="1.00"/></proof>
+      <transf name="eliminate_if">
+       <goal name="WP_parameter remove_edge_ensures_default.50.9.1.1.1.1" expl="Function remove_edge, default behavior">
+       <transf name="remove_triggers">
+        <goal name="WP_parameter remove_edge_ensures_default.50.9.1.1.1.1.1" expl="Function remove_edge, default behavior">
+        <proof prover="2" timelimit="5" memlimit="4000"><result status="timeout" time="5.00"/></proof>
+        </goal>
+       </transf>
+       </goal>
+      </transf>
+      </goal>
+     </transf>
+     </goal>
+    </transf>
+    </goal>
+   </transf>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.50.10" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="timeout" time="15.00"/></proof>
+   <proof prover="1"><result status="valid" time="0.13" steps="26082"/></proof>
+   <proof prover="2"><result status="valid" time="0.03" steps="210"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.50.11" expl="Function remove_edge, default behavior">
+   <proof prover="0"><result status="timeout" time="15.00"/></proof>
+   <proof prover="1"><result status="valid" time="0.14" steps="26111"/></proof>
+   <proof prover="2"><result status="valid" time="0.03" steps="195"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.51" expl="Assertion in line 361">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge_ensures_default.51.1" expl="Assertion in line 361">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.07" steps="21471"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="40"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.51.2" expl="Assertion in line 361">
+   <proof prover="0"><result status="valid" time="0.02"/></proof>
+   <proof prover="1"><result status="valid" time="0.08" steps="21471"/></proof>
+   <proof prover="2"><result status="valid" time="0.01" steps="40"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.52" expl="Assertion in line 362">
+  <proof prover="0"><result status="valid" time="0.02"/></proof>
+  <proof prover="1"><result status="valid" time="0.07" steps="21484"/></proof>
+  <proof prover="2"><result status="valid" time="0.02" steps="40"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.53" expl="Assertion in line 363">
+  <proof prover="0"><result status="valid" time="0.02"/></proof>
+  <proof prover="1"><result status="valid" time="0.08" steps="21487"/></proof>
+  <proof prover="2"><result status="valid" time="0.01" steps="40"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.54" expl="Assertion in line 364">
+  <proof prover="0"><result status="valid" time="0.05"/></proof>
+  <proof prover="1"><result status="valid" time="0.14" steps="24776"/></proof>
+  <proof prover="2"><result status="valid" time="0.06" steps="381"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.55" expl="Assertion in line 366">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge_ensures_default.55.1" expl="Assertion in line 366">
+   <proof prover="0"><result status="valid" time="0.06"/></proof>
+   <proof prover="1"><result status="valid" time="0.12" steps="24507"/></proof>
+   <proof prover="2"><result status="valid" time="0.04" steps="110"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.55.2" expl="Assertion in line 366">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.11" steps="22133"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="42"/></proof>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.56" expl="Assertion in line 367">
+  <proof prover="0"><result status="valid" time="0.06"/></proof>
+  <proof prover="1"><result status="valid" time="1.05" steps="140936"/></proof>
+  <proof prover="2"><result status="valid" time="0.97" steps="10747"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.57" expl="Assertion in line 368">
+  <proof prover="0"><result status="valid" time="0.04"/></proof>
+  <proof prover="1"><result status="valid" time="0.23" steps="40793"/></proof>
+  <proof prover="2"><result status="valid" time="0.07" steps="418"/></proof>
+  </goal>
+  <goal name="WP_parameter remove_edge_ensures_default.58" expl="Postcondition (Ensures clause)">
+  <transf name="split_goal_wp">
+   <goal name="WP_parameter remove_edge_ensures_default.58.1" expl="Ensures clause">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.07" steps="21777"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="49"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.58.2" expl="Ensures clause">
+   <proof prover="0"><result status="valid" time="0.02"/></proof>
+   <proof prover="1"><result status="valid" time="0.06" steps="21777"/></proof>
+   <proof prover="2"><result status="valid" time="0.02" steps="49"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.58.3" expl="Ensures clause">
+   <proof prover="0"><result status="valid" time="0.03"/></proof>
+   <proof prover="1"><result status="valid" time="0.04" steps="21777"/></proof>
+   <proof prover="2"><result status="valid" time="0.03" steps="49"/></proof>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.58.4" expl="Ensures clause">
+   <proof prover="0"><result status="timeout" time="15.00"/></proof>
+   <proof prover="1"><result status="valid" time="0.60" steps="129144"/></proof>
+   <proof prover="2"><result status="timeout" time="1.00"/></proof>
+   <transf name="introduce_premises">
+    <goal name="WP_parameter remove_edge_ensures_default.58.4.1" expl="Ensures clause">
+    <transf name="inline_goal">
+     <goal name="WP_parameter remove_edge_ensures_default.58.4.1.1" expl="Ensures clause">
+     <proof prover="2"><result status="timeout" time="1.00"/></proof>
+     <transf name="inline_goal">
+      <goal name="WP_parameter remove_edge_ensures_default.58.4.1.1.1" expl="Ensures clause">
+      <proof prover="2"><result status="timeout" time="1.00"/></proof>
+      <transf name="inline_all">
+       <goal name="WP_parameter remove_edge_ensures_default.58.4.1.1.1.1" expl="Ensures clause">
+       <proof prover="2"><result status="timeout" time="1.00"/></proof>
+       <transf name="eliminate_if">
+        <goal name="WP_parameter remove_edge_ensures_default.58.4.1.1.1.1.1" expl="Ensures clause">
+        <transf name="remove_triggers">
+         <goal name="WP_parameter remove_edge_ensures_default.58.4.1.1.1.1.1.1" expl="Ensures clause">
+         <proof prover="2" timelimit="5" memlimit="4000"><result status="timeout" time="5.00"/></proof>
+         </goal>
+        </transf>
+        </goal>
+       </transf>
+       </goal>
+      </transf>
+      </goal>
+     </transf>
+     </goal>
+    </transf>
+    </goal>
+   </transf>
+   </goal>
+   <goal name="WP_parameter remove_edge_ensures_default.58.5" expl="Ensures clause">
+   <proof prover="0"><result status="valid" time="0.06"/></proof>
+   <proof prover="1"><result status="valid" time="0.05" steps="22581"/></proof>
+   <proof prover="2"><result status="valid" time="0.04" steps="101"/></proof>
+   </goal>
+  </transf>
+  </goal>
+ </transf>
+ </goal>
+</theory>
+<theory name="Lemma_count_zero_lemma" sum="f53050e7552c1fcf9e300a42a5994626">
+ <goal name="Count_zero_lemma" expl="Lemma count_zero_lemma">
+ <proof prover="0"><result status="valid" time="0.03"/></proof>
+ <proof prover="1"><result status="valid" time="0.03" steps="9040"/></proof>
+ <proof prover="2"><result status="valid" time="0.01" steps="4"/></proof>
+ </goal>
+</theory>
+<theory name="Lemma_count_one_lemma" sum="64140584c8615d325aeafe5d61d57554">
+ <goal name="Count_one_lemma" expl="Lemma count_one_lemma">
+ <transf name="split_goal_wp">
+  <goal name="Count_one_lemma.1" expl="Lemma count_one_lemma">
+  <proof prover="0"><result status="valid" time="0.04"/></proof>
+  <proof prover="1"><result status="valid" time="0.03" steps="8755"/></proof>
+  <proof prover="2"><result status="valid" time="0.01" steps="7"/></proof>
+  </goal>
+  <goal name="Count_one_lemma.2" expl="Lemma count_one_lemma">
+  <proof prover="0"><result status="timeout" time="15.00"/></proof>
+  <proof prover="1"><result status="unknown" time="15.01" steps="3331309"/></proof>
+  <proof prover="2"><result status="timeout" time="1.00"/></proof>
+  <transf name="introduce_premises">
+   <goal name="Count_one_lemma.2.1" expl="Lemma count_one_lemma">
+   <transf name="inline_all">
+    <goal name="Count_one_lemma.2.1.1" expl="Lemma count_one_lemma">
+    <proof prover="2"><result status="valid" time="0.03" steps="216"/></proof>
+    </goal>
+   </transf>
+   </goal>
+  </transf>
+  </goal>
+ </transf>
+ </goal>
+</theory>
+<theory name="Lemma_count_split_lemma" sum="ec9a5c1fc63cade4504ab8d62211a7ed">
+ <goal name="Count_split_lemma" expl="Lemma count_split_lemma">
+ <transf name="split_goal_wp">
+  <goal name="Count_split_lemma.1" expl="Lemma count_split_lemma">
+  <proof prover="0"><result status="valid" time="0.02"/></proof>
+  <proof prover="1"><result status="valid" time="0.05" steps="9131"/></proof>
+  <proof prover="2"><result status="valid" time="0.01" steps="6"/></proof>
+  </goal>
+  <goal name="Count_split_lemma.2" expl="Lemma count_split_lemma">
+  <proof prover="0"><result status="timeout" time="15.00"/></proof>
+  <proof prover="1"><result status="unknown" time="0.09" steps="15898"/></proof>
+  <proof prover="2"><result status="timeout" time="1.00"/></proof>
+  <transf name="introduce_premises">
+   <goal name="Count_split_lemma.2.1" expl="Lemma count_split_lemma">
+   <transf name="inline_all">
+    <goal name="Count_split_lemma.2.1.1" expl="Lemma count_split_lemma">
+    <proof prover="2"><result status="valid" time="0.01" steps="7"/></proof>
+    </goal>
+   </transf>
+   </goal>
+  </transf>
+  </goal>
+ </transf>
+ </goal>
+</theory>
+<theory name="Lemma_count_split_2_lemma" sum="c69626deb3b49dbb0e6090315b3e94d3">
+ <goal name="Count_split_2_lemma" expl="Lemma count_split_2_lemma">
+ <proof prover="0"><result status="timeout" time="15.00"/></proof>
+ <proof prover="1"><result status="unknown" time="0.08" steps="15827"/></proof>
+ <proof prover="2"><result status="timeout" time="1.00"/></proof>
+ <transf name="introduce_premises">
+  <goal name="Count_split_2_lemma.1" expl="Lemma count_split_2_lemma">
+  <transf name="inline_all">
+   <goal name="Count_split_2_lemma.1.1" expl="Lemma count_split_2_lemma">
+   <proof prover="2"><result status="valid" time="0.01" steps="13"/></proof>
+   </goal>
+  </transf>
+  </goal>
+ </transf>
+ </goal>
+</theory>
+<theory name="Lemma_count_double_split_lemma" sum="4f58b88041adff0623aac1303295feeb">
+ <goal name="Count_double_split_lemma" expl="Lemma count_double_split_lemma">
+ <proof prover="0"><result status="timeout" time="15.00"/></proof>
+ <proof prover="1"><result status="unknown" time="0.09" steps="16151"/></proof>
+ <proof prover="2"><result status="timeout" time="1.00"/></proof>
+ <transf name="introduce_premises">
+  <goal name="Count_double_split_lemma.1" expl="Lemma count_double_split_lemma">
+  <transf name="inline_all">
+   <goal name="Count_double_split_lemma.1.1" expl="Lemma count_double_split_lemma">
+   <proof prover="2"><result status="valid" time="0.03" steps="94"/></proof>
+   </goal>
+  </transf>
+  </goal>
+ </transf>
+ </goal>
+</theory>
+<theory name="Lemma_all_count_lemma" sum="b8b74489e29b7e13c863b7c67228b054">
+ <goal name="All_count_lemma" expl="Lemma all_count_lemma">
+ <transf name="split_goal_wp">
+  <goal name="All_count_lemma.1" expl="Lemma all_count_lemma">
+  <proof prover="0"><result status="valid" time="0.02"/></proof>
+  <proof prover="1"><result status="valid" time="0.04" steps="9397"/></proof>
+  <proof prover="2"><result status="valid" time="0.01" steps="7"/></proof>
+  </goal>
+  <goal name="All_count_lemma.2" expl="Lemma all_count_lemma">
+  <proof prover="0"><result status="timeout" time="15.00"/></proof>
+  <proof prover="1"><result status="unknown" time="0.11" steps="18214"/></proof>
+  <proof prover="2"><result status="timeout" time="1.00"/></proof>
+  <transf name="introduce_premises">
+   <goal name="All_count_lemma.2.1" expl="Lemma all_count_lemma">
+   <transf name="inline_goal">
+    <goal name="All_count_lemma.2.1.1" expl="Lemma all_count_lemma">
+    <proof prover="2"><result status="timeout" time="1.00"/></proof>
+    <transf name="inline_goal">
+     <goal name="All_count_lemma.2.1.1.1" expl="Lemma all_count_lemma">
+     <proof prover="2"><result status="timeout" time="1.00"/></proof>
+     <transf name="inline_all">
+      <goal name="All_count_lemma.2.1.1.1.1" expl="Lemma all_count_lemma">
+      <proof prover="2"><result status="valid" time="0.01" steps="15"/></proof>
+      </goal>
+     </transf>
+     </goal>
+    </transf>
+    </goal>
+   </transf>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="All_count_lemma.3" expl="Lemma all_count_lemma">
+  <proof prover="0"><result status="highfailure" time="13.35"/></proof>
+  <proof prover="1"><result status="unknown" time="0.09" steps="18262"/></proof>
+  <proof prover="2"><result status="timeout" time="1.00"/></proof>
+  <transf name="introduce_premises">
+   <goal name="All_count_lemma.3.1" expl="Lemma all_count_lemma">
+   <transf name="inline_goal">
+    <goal name="All_count_lemma.3.1.1" expl="Lemma all_count_lemma">
+    <proof prover="2"><result status="timeout" time="1.00"/></proof>
+    <transf name="inline_all">
+     <goal name="All_count_lemma.3.1.1.1" expl="Lemma all_count_lemma">
+     <proof prover="2"><result status="valid" time="0.01" steps="15"/></proof>
+     </goal>
+    </transf>
+    </goal>
+   </transf>
+   </goal>
+  </transf>
+  </goal>
+ </transf>
+ </goal>
+</theory>
+<theory name="Lemma_zero_after_ecnt_lemma" sum="91e36b40769ba2f6fa5f02c34e95072f">
+ <goal name="Zero_after_ecnt_lemma" expl="Lemma zero_after_ecnt_lemma">
+ <transf name="split_goal_wp">
+  <goal name="Zero_after_ecnt_lemma.1" expl="Lemma zero_after_ecnt_lemma">
+  <proof prover="0"><result status="timeout" time="15.00"/></proof>
+  <proof prover="1"><result status="unknown" time="0.18" steps="38042"/></proof>
+  <proof prover="2"><result status="timeout" time="1.00"/></proof>
+  <transf name="introduce_premises">
+   <goal name="Zero_after_ecnt_lemma.1.1" expl="Lemma zero_after_ecnt_lemma">
+   <transf name="inline_goal">
+    <goal name="Zero_after_ecnt_lemma.1.1.1" expl="Lemma zero_after_ecnt_lemma">
+    <proof prover="2"><result status="timeout" time="1.00"/></proof>
+    <transf name="inline_all">
+     <goal name="Zero_after_ecnt_lemma.1.1.1.1" expl="Lemma zero_after_ecnt_lemma">
+     <proof prover="2"><result status="valid" time="0.21" steps="1190"/></proof>
+     </goal>
+    </transf>
+    </goal>
+   </transf>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="Zero_after_ecnt_lemma.2" expl="Lemma zero_after_ecnt_lemma">
+  <proof prover="0"><result status="valid" time="0.03"/></proof>
+  <proof prover="1"><result status="valid" time="0.06" steps="16483"/></proof>
+  <proof prover="2"><result status="valid" time="0.02" steps="132"/></proof>
+  </goal>
+ </transf>
+ </goal>
+</theory>
+<theory name="Lemma_count_lemma" sum="6025b2eac3632ae3e69269ea2e2da63b">
+ <goal name="Count_lemma" expl="Lemma count_lemma">
+ <proof prover="0"><result status="timeout" time="15.00"/></proof>
+ <proof prover="1"><result status="unknown" time="0.10" steps="16599"/></proof>
+ <proof prover="2"><result status="timeout" time="1.00"/></proof>
+ <transf name="introduce_premises">
+  <goal name="Count_lemma.1" expl="Lemma count_lemma">
+  <transf name="inline_goal">
+   <goal name="Count_lemma.1.1" expl="Lemma count_lemma">
+   <proof prover="2"><result status="timeout" time="1.00"/></proof>
+   <transf name="inline_all">
+    <goal name="Count_lemma.1.1.1" expl="Lemma count_lemma">
+    <proof prover="2"><result status="valid" time="0.01" steps="38"/></proof>
+    </goal>
+   </transf>
+   </goal>
+  </transf>
+  </goal>
+ </transf>
+ </goal>
+</theory>
+<theory name="Axiomatic_Padding" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Int32_of_Int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_int32_of_Bit_int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Int64_of_Int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_int64_of_Bit_int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Int64_of_Int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_int64_of_Bit_int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Int8_of_Int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_int8_of_Bit_int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Int8_of_Int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_int8_of_Bit_int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Int8_of_Int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_int8_of_Bit_int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Uint16_of_Int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_uint16_of_Bit_int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Uint16_of_Int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_uint16_of_Bit_int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Uint16_of_Int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_uint16_of_Bit_int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Uint16_of_Int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_uint16_of_Bit_int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Uint32_of_Int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_uint32_of_Bit_int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Uint32_of_Int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_uint32_of_Bit_int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Uint32_of_Int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_uint32_of_Bit_int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Uint32_of_Int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_uint32_of_Bit_int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Uint32_of_Uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_uint32_of_Bit_uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Uint64_of_Int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_uint64_of_Bit_int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Uint64_of_Int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_uint64_of_Bit_int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Uint64_of_Int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_uint64_of_Bit_int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Uint64_of_Int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_uint64_of_Bit_int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Uint64_of_Uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_uint64_of_Bit_uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Uint64_of_Uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_uint64_of_Bit_uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Uint8_of_Int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_uint8_of_Bit_int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Uint8_of_Int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_uint8_of_Bit_int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Uint8_of_Int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_uint8_of_Bit_int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Uint8_of_Int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_uint8_of_Bit_int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Uint8_of_Uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_uint8_of_Bit_uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Uint8_of_Uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_uint8_of_Bit_uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Uint8_of_Uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_uint8_of_Bit_uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Int16_of_Int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_int16_of_Bit_int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Int16_of_Int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_int16_of_Bit_int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Int32_of_Int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_int32_of_Bit_int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Int16_of_Int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_int16_of_Bit_int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Int32_of_Int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_int32_of_Bit_int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Int64_of_Int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_int64_of_Bit_int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Int16_of_Uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_int16_of_Bit_uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Int32_of_Uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_int32_of_Bit_uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Int64_of_Uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_int64_of_Bit_uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Int8_of_Uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_int8_of_Bit_uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Int16_of_Uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_int16_of_Bit_uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Int32_of_Uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_int32_of_Bit_uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Int64_of_Uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_int64_of_Bit_uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Int8_of_Uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_int8_of_Bit_uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Uint16_of_Uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_uint16_of_Bit_uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Int16_of_Uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_int16_of_Bit_uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Int32_of_Uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_int32_of_Bit_uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Int64_of_Uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_int64_of_Bit_uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Int8_of_Uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_int8_of_Bit_uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Uint16_of_Uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_uint16_of_Bit_uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Uint32_of_Uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_uint32_of_Bit_uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Int16_of_Uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_int16_of_Bit_uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Int32_of_Uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_int32_of_Bit_uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Int64_of_Uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_int64_of_Bit_uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Int8_of_Uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_int8_of_Bit_uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Uint16_of_Uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_uint16_of_Bit_uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Uint32_of_Uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_uint32_of_Bit_uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Uint64_of_Uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Bit_uint64_of_Bit_uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Globals_simple" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Root_voidP" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Root_voidP_safe" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Root_voidP_unsafe" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Root___anonstruct_Vertex_2_safe" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Root___anonstruct_Vertex_2_unsafe" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Root___anonstruct_Graph_4_safe" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Root___anonstruct_Graph_4_unsafe" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Root___anonstruct_Edge_3_safe" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Root___anonstruct_Edge_3_unsafe" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Root___anonstruct_Graph_4" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Root___anonstruct_Edge_3" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Axiomatic_EdgesCount" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Logic_all_count" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Root___anonstruct_Vertex_2" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Logic_is_vertex" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Logic_edge_valid" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Logic_edges_valid" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Logic_graph_valid" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Axiomatic_LF__Axiomatic__count_not_existent_lemma" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Function_count_not_existent_lemma_safe" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Function_count_not_existent_lemma" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Exceptions" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Logic_type_padding" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Struct___anonstruct_Edge_3" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Struct___anonstruct_Edge_3_unsafe" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Struct___anonstruct_Edge_3_safe" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Struct___anonstruct_Graph_4" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Struct___anonstruct_Graph_4_unsafe" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Struct___anonstruct_Graph_4_safe" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Struct___anonstruct_Vertex_2" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Struct___anonstruct_Vertex_2_unsafe" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Struct___anonstruct_Vertex_2_safe" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Struct_voidP" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Struct_charP" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Struct_charP_unsafe" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Struct_charP_safe" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Struct_voidP_unsafe" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Struct_voidP_safe" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_uint64_of_Safe_bit_uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_uint64_of_Unsafe_bit_uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_uint64_of_Safe_uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_uint64_of_Unsafe_uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_uint32_of_Safe_bit_uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_uint32_of_Unsafe_bit_uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_uint32_of_Safe_uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_uint32_of_Unsafe_uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_uint16_of_Safe_bit_uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_uint16_of_Unsafe_bit_uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_uint16_of_Safe_uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_uint16_of_Unsafe_uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_int8_of_Safe_bit_uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_int8_of_Unsafe_bit_uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_int8_of_Safe_uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_int8_of_Unsafe_uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_int64_of_Safe_bit_uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_int64_of_Unsafe_bit_uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_int64_of_Safe_uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_int64_of_Unsafe_uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_int32_of_Safe_bit_uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_int32_of_Unsafe_bit_uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_int32_of_Safe_uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_int32_of_Unsafe_uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_int16_of_Safe_bit_uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_int16_of_Unsafe_bit_uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_int16_of_Safe_uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_int16_of_Unsafe_uint8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_uint32_of_Safe_bit_uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_uint32_of_Unsafe_bit_uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_uint32_of_Safe_uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_uint32_of_Unsafe_uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_uint16_of_Safe_bit_uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_uint16_of_Unsafe_bit_uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_uint16_of_Safe_uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_uint16_of_Unsafe_uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_int8_of_Safe_bit_uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_int8_of_Unsafe_bit_uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_int8_of_Safe_uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_int8_of_Unsafe_uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_int64_of_Safe_bit_uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_int64_of_Unsafe_bit_uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_int64_of_Safe_uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_int64_of_Unsafe_uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_int32_of_Safe_bit_uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_int32_of_Unsafe_bit_uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_int32_of_Safe_uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_int32_of_Unsafe_uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_int16_of_Safe_bit_uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_int16_of_Unsafe_bit_uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_int16_of_Safe_uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_int16_of_Unsafe_uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_uint16_of_Safe_bit_uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_uint16_of_Unsafe_bit_uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_uint16_of_Safe_uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_uint16_of_Unsafe_uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_int8_of_Safe_bit_uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_int8_of_Unsafe_bit_uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_int8_of_Safe_uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_int8_of_Unsafe_uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_int64_of_Safe_bit_uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_int64_of_Unsafe_bit_uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_int64_of_Safe_uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_int64_of_Unsafe_uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_int32_of_Safe_bit_uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_int32_of_Unsafe_bit_uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_int32_of_Safe_uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_int32_of_Unsafe_uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_int16_of_Safe_bit_uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_int16_of_Unsafe_bit_uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_int16_of_Safe_uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_int16_of_Unsafe_uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_int8_of_Safe_bit_uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_int8_of_Unsafe_bit_uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_int8_of_Safe_uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_int8_of_Unsafe_uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_int64_of_Safe_bit_uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_int64_of_Unsafe_bit_uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_int64_of_Safe_uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_int64_of_Unsafe_uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_int32_of_Safe_bit_uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_int32_of_Unsafe_bit_uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_int32_of_Safe_uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_int32_of_Unsafe_uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_int16_of_Safe_bit_uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_int16_of_Unsafe_bit_uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_int16_of_Safe_uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_int16_of_Unsafe_uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_int64_of_Safe_bit_int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_int64_of_Unsafe_bit_int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_int64_of_Safe_int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_int64_of_Unsafe_int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_int32_of_Safe_bit_int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_int32_of_Unsafe_bit_int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_int32_of_Safe_int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_int32_of_Unsafe_int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_int16_of_Safe_bit_int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_int16_of_Unsafe_bit_int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_int16_of_Safe_int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_int16_of_Unsafe_int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_int32_of_Safe_bit_int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_int32_of_Unsafe_bit_int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_int32_of_Safe_int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_int32_of_Unsafe_int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_int16_of_Safe_bit_int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_int16_of_Unsafe_bit_int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_int16_of_Safe_int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_int16_of_Unsafe_int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_int16_of_Safe_bit_int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_int16_of_Unsafe_bit_int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_int16_of_Safe_int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_int16_of_Unsafe_int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_uint8_of_Safe_bit_uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_uint8_of_Unsafe_bit_uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_uint8_of_Safe_uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_uint8_of_Unsafe_uint64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_uint8_of_Safe_bit_uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_uint8_of_Unsafe_bit_uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_uint8_of_Safe_uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_uint8_of_Unsafe_uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_uint8_of_Safe_bit_uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_uint8_of_Unsafe_bit_uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_uint8_of_Safe_uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_uint8_of_Unsafe_uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_uint8_of_Safe_bit_int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_uint8_of_Unsafe_bit_int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_uint8_of_Safe_int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_uint8_of_Unsafe_int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_uint8_of_Safe_bit_int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_uint8_of_Unsafe_bit_int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_uint8_of_Safe_int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_uint8_of_Unsafe_int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_uint8_of_Safe_bit_int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_uint8_of_Unsafe_bit_int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_uint8_of_Safe_int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_uint8_of_Unsafe_int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_uint8_of_Safe_bit_int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_uint8_of_Unsafe_bit_int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_uint8_of_Safe_int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_uint8_of_Unsafe_int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_uint64_of_Safe_bit_uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_uint64_of_Unsafe_bit_uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_uint64_of_Safe_uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_uint64_of_Unsafe_uint32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_uint64_of_Safe_bit_uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_uint64_of_Unsafe_bit_uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_uint64_of_Safe_uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_uint64_of_Unsafe_uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_uint64_of_Safe_bit_int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_uint64_of_Unsafe_bit_int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_uint64_of_Safe_int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_uint64_of_Unsafe_int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_uint64_of_Safe_bit_int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_uint64_of_Unsafe_bit_int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_uint64_of_Safe_int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_uint64_of_Unsafe_int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_uint64_of_Safe_bit_int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_uint64_of_Unsafe_bit_int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_uint64_of_Safe_int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_uint64_of_Unsafe_int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_uint64_of_Safe_bit_int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_uint64_of_Unsafe_bit_int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_uint64_of_Safe_int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_uint64_of_Unsafe_int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_uint32_of_Safe_bit_uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_uint32_of_Unsafe_bit_uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_uint32_of_Safe_uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_uint32_of_Unsafe_uint16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_uint32_of_Safe_bit_int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_uint32_of_Unsafe_bit_int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_uint32_of_Safe_int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_uint32_of_Unsafe_int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_uint32_of_Safe_bit_int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_uint32_of_Unsafe_bit_int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_uint32_of_Safe_int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_uint32_of_Unsafe_int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_uint32_of_Safe_bit_int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_uint32_of_Unsafe_bit_int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_uint32_of_Safe_int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_uint32_of_Unsafe_int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_uint32_of_Safe_bit_int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_uint32_of_Unsafe_bit_int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_uint32_of_Safe_int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_uint32_of_Unsafe_int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_uint16_of_Safe_bit_int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_uint16_of_Unsafe_bit_int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_uint16_of_Safe_int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_uint16_of_Unsafe_int8" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_uint16_of_Safe_bit_int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_uint16_of_Unsafe_bit_int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_uint16_of_Safe_int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_uint16_of_Unsafe_int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_uint16_of_Safe_bit_int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_uint16_of_Unsafe_bit_int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_uint16_of_Safe_int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_uint16_of_Unsafe_int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_uint16_of_Safe_bit_int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_uint16_of_Unsafe_bit_int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_uint16_of_Safe_int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_uint16_of_Unsafe_int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_int8_of_Safe_bit_int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_int8_of_Unsafe_bit_int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_int8_of_Safe_int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_int8_of_Unsafe_int64" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_int8_of_Safe_bit_int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_int8_of_Unsafe_bit_int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_int8_of_Safe_int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_int8_of_Unsafe_int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_int8_of_Safe_bit_int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_int8_of_Unsafe_bit_int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_int8_of_Safe_int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_int8_of_Unsafe_int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_int64_of_Safe_bit_int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_int64_of_Unsafe_bit_int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_int64_of_Safe_int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_int64_of_Unsafe_int32" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_int64_of_Safe_bit_int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_int64_of_Unsafe_bit_int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_int64_of_Safe_int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_int64_of_Unsafe_int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_bit_int32_of_Safe_bit_int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_bit_int32_of_Unsafe_bit_int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Safe_int32_of_Safe_int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Unsafe_int32_of_Unsafe_int16" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Function_remove_edge" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+<theory name="Function_remove_edge_safe" sum="d41d8cd98f00b204e9800998ecf8427e">
+</theory>
+</file>
+</why3session>
