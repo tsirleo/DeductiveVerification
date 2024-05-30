@@ -1,0 +1,27 @@
+gcc -I. -Wall -Wextra -std=c99 -o test -I. map.c test.c
+In file included from map.h:4,
+                 from map.c:3:
+maptypes.h:15:5: warning: ‘noembed’ attribute directive ignored [-Wattributes]
+   15 |     Key key __attribute__((noembed));
+      |     ^~~
+In file included from map.h:4,
+                 from test.c:3:
+maptypes.h:15:5: warning: ‘noembed’ attribute directive ignored [-Wattributes]
+   15 |     Key key __attribute__((noembed));
+      |   
+./test
+
+testInitializeMap passed
+testInitializeMapInvalidSize passed
+testAddElement passed
+testAddElementUntilFull passed
+testAddDuplicateKeys passed
+testGetElement passed
+testRemoveElement passed
+testRemoveAllElements passed
+testRemoveAndReAddElement passed
+testOverwriteValue passed
+testLargeMap passed
+testFinalizeMap passed
+ALL TESTS PASSED
+
