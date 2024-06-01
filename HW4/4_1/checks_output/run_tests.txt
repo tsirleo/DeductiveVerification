@@ -8,7 +8,7 @@ In file included from map.h:4,
                  from test.c:3:
 maptypes.h:15:5: warning: ‘noembed’ attribute directive ignored [-Wattributes]
    15 |     Key key __attribute__((noembed));
-      |   
+      |     ^~~
 ./test
 
 testInitializeMap passed

@@ -55,20 +55,47 @@ int addElement(Map *map, Key *key, Value *value) {
 }
 
 int removeElement(Map *map, Key *key, Value *value) {
-    for (int i = 0; i < map->capacity; i++) {
-        if (map->items[i].existent && compareKeys(map->items[i].key, *key)) {
-            if (value != NULL) {
-                *value = map->items[i].value;
-            }
+    int foundIndex = -1;
+    if (map->count >= 1) { 
+        for (int i = 0; i < map->capacity; i++) {
+            if (map->items[i].existent && (map->items[i].key.a == key->a) && (map->items[i].key.b == key->b)) {
+                if (value != NULL)
+                    *value = map->items[i].value;
 
-            map->items[i].key = map->items[map->count - 1].key;
-            map->items[i].value = map->items[map->count - 1].value;
-            map->items[i].existent = 0;
-            map->count--;
-            return 1;
+                map->items[i].existent = 0;
+                map->count--;
+                foundIndex = i;
+
+                break;
+            }
         }
+
+        if (foundIndex == -1)
+            return 0;
+    } else {
+        return 0;
     }
-    return 0;
+
+    if (map->count >= 1) { 
+        Key tmp_key;
+        int insertIndex = foundIndex;
+
+        for (int i = foundIndex + 1; i < map->capacity; i++) {
+            if (map->items[i].existent == 1) {
+                tmp_key = map->items[insertIndex].key;
+                map->items[insertIndex].key = map->items[i].key;
+                map->items[insertIndex].value = map->items[i].value;
+                map->items[insertIndex].existent = 1;
+                map->items[i].key = tmp_key;
+                map->items[i].existent = 0;
+                insertIndex++;
+            }
+        }
+
+        return 1;
+    }
+
+    return 1;
 }
 
 int getElement(Map *map, Key *key, Value *value) {

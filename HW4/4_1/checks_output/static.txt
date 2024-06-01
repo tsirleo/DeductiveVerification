@@ -7,7 +7,7 @@ map.c:1:0: information: Include file: <stdlib.h> not found. Please note: Cppchec
 map.c:2:0: information: Include file: <stdio.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
 
 ^
-1/2 files checked 19% done
+1/2 files checked 29% done
 Checking test.c ...
 test.c:1:0: information: Include file: <stdio.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
 
@@ -16,3 +16,4 @@ test.c:2:0: information: Include file: <assert.h> not found. Please note: Cppche
 
 ^
 2/2 files checked 100% done
+
