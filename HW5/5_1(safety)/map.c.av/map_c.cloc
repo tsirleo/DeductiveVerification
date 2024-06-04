@@ -1,0 +1,1910 @@
+[_C_259]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 142
+begin = 38
+end = 74
+
+[_C_228]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 72
+begin = 12
+end = 23
+
+[_C_132]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 111
+begin = 26
+end = 36
+
+[_C_121]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 100
+begin = 27
+end = 63
+
+[_C_35]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 6
+begin = 11
+end = 27
+
+[_C_246]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 139
+begin = 21
+end = 38
+
+[_C_249]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 132
+begin = 23
+end = 66
+
+[_C_242]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 60
+begin = 13
+end = 26
+
+[_C_56]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 65
+begin = 33
+end = 59
+
+[_C_241]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 59
+begin = 13
+end = 24
+
+[_C_296]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 125
+begin = 12
+end = 29
+
+[_C_204]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 110
+begin = 16
+end = 38
+
+[_C_72]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 76
+begin = 29
+end = 48
+
+[_C_180]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 114
+begin = 16
+end = 26
+
+[_C_130]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 109
+begin = 37
+end = 54
+
+[_C_59]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 64
+begin = 32
+end = 50
+
+[lemma2_count_positive]
+name = "Lemma lemma2_count_positive"
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/maptypes.h"
+line = 101
+begin = 109
+end = 258
+
+[_C_284]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 116
+begin = 12
+end = 53
+
+[_C_103]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 73
+begin = 43
+end = 46
+
+[_C_147]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 112
+begin = 16
+end = 26
+
+[_C_301]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 109
+begin = 13
+end = 30
+
+[_C_215]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 72
+begin = 12
+end = 23
+
+[_C_108]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 60
+begin = 8
+end = 18
+
+[_C_218]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 72
+begin = 12
+end = 23
+
+[_C_83]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 79
+begin = 16
+end = 28
+
+[_C_209]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 121
+begin = 8
+end = 17
+
+[_C_41]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 29
+begin = 4
+end = 62
+
+[_C_268]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 143
+begin = 21
+end = 31
+
+[_C_200]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 117
+begin = 16
+end = 29
+
+[_C_101]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 74
+begin = 16
+end = 38
+
+[_C_70]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 76
+begin = 29
+end = 39
+
+[_C_167]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 113
+begin = 16
+end = 67
+
+[_C_155]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 112
+begin = 46
+end = 63
+
+[_C_90]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 74
+begin = 78
+end = 97
+
+[lemma_count_one_p]
+name = "Lemma lemma_count_one_p"
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/maptypes.h"
+line = 92
+begin = 123
+end = 354
+
+[_C_69]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 76
+begin = 20
+end = 48
+
+[_C_232]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 72
+begin = 12
+end = 23
+
+[_C_32]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 6
+begin = 31
+end = 47
+
+[_C_23]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 5
+begin = 20
+end = 24
+
+[_C_19]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 5
+begin = 30
+end = 34
+
+[_C_129]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 109
+begin = 41
+end = 54
+
+[_C_82]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 79
+begin = 16
+end = 28
+
+[_C_138]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 111
+begin = 26
+end = 36
+
+[_C_233]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 88
+begin = 12
+end = 90
+
+[_C_193]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 115
+begin = 16
+end = 43
+
+[_C_189]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 115
+begin = 36
+end = 43
+
+[_C_160]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 112
+begin = 16
+end = 63
+
+[_C_13]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 5
+begin = 30
+end = 34
+
+[_C_5]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/maptypes.h"
+line = 86
+begin = 12
+end = 199
+
+[_C_91]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 74
+begin = 78
+end = 97
+
+[_C_12]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 5
+begin = 20
+end = 24
+
+[_C_283]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 147
+begin = 4
+end = 13
+
+[_C_191]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 115
+begin = 16
+end = 26
+
+[_C_111]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 109
+begin = 21
+end = 35
+
+[_C_79]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 78
+begin = 16
+end = 42
+
+[_C_290]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 116
+begin = 12
+end = 53
+
+[_C_133]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 111
+begin = 26
+end = 53
+
+[_C_212]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 124
+begin = 4
+end = 13
+
+[_C_225]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 77
+begin = 12
+end = 169
+
+[_C_104]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 73
+begin = 43
+end = 46
+
+[_C_85]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 79
+begin = 16
+end = 28
+
+[_C_223]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 76
+begin = 13
+end = 49
+
+[_C_194]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 115
+begin = 16
+end = 43
+
+[_C_173]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 113
+begin = 48
+end = 67
+
+[_C_149]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 112
+begin = 16
+end = 63
+
+[_C_201]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 117
+begin = 16
+end = 29
+
+[_C_65]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 76
+begin = 29
+end = 39
+
+[_C_9]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/maptypes.h"
+line = 104
+begin = 12
+end = 101
+
+[_C_57]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 64
+begin = 27
+end = 50
+
+[_C_54]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 65
+begin = 27
+end = 59
+
+[_C_30]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 6
+begin = 41
+end = 47
+
+[_C_222]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 72
+begin = 12
+end = 23
+
+[_C_214]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 72
+begin = 12
+end = 23
+
+[_C_234]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 72
+begin = 12
+end = 23
+
+[_C_174]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 113
+begin = 16
+end = 26
+
+[lemma1_count_positive]
+name = "Lemma lemma1_count_positive"
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/maptypes.h"
+line = 97
+begin = 109
+end = 301
+
+[_C_169]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 113
+begin = 16
+end = 67
+
+[_C_102]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 74
+begin = 16
+end = 38
+
+[_C_49]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 73
+begin = 17
+end = 18
+
+[_C_24]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 5
+begin = 20
+end = 24
+
+[_C_170]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 113
+begin = 48
+end = 58
+
+[lemma3_count_positive]
+name = "Lemma lemma3_count_positive"
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/maptypes.h"
+line = 105
+begin = 72
+end = 234
+
+[_C_127]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 98
+begin = 27
+end = 70
+
+[_C_97]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 74
+begin = 43
+end = 62
+
+[_C_20]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 5
+begin = 30
+end = 34
+
+[_C_134]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 111
+begin = 26
+end = 53
+
+[_C_73]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 76
+begin = 29
+end = 48
+
+[_C_96]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 74
+begin = 43
+end = 62
+
+[_C_248]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 133
+begin = 23
+end = 63
+
+[_C_221]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 75
+begin = 12
+end = 45
+
+[_C_38]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 28
+begin = 9
+end = 19
+
+[_C_146]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 112
+begin = 46
+end = 63
+
+[_C_289]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 118
+begin = 12
+end = 48
+
+[_C_109]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 60
+begin = 8
+end = 23
+
+[_C_176]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 113
+begin = 16
+end = 67
+
+[_C_124]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 99
+begin = 27
+end = 58
+
+[_C_114]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 107
+begin = 25
+end = 42
+
+[_C_81]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 79
+begin = 16
+end = 26
+
+[_C_157]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 112
+begin = 16
+end = 26
+
+[_C_112]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 109
+begin = 21
+end = 35
+
+[count_zero]
+name = "Lemma count_zero"
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/maptypes.h"
+line = 52
+begin = 64
+end = 191
+
+[_C_198]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 116
+begin = 16
+end = 42
+
+[_C_262]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 143
+begin = 21
+end = 31
+
+[_C_168]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 113
+begin = 16
+end = 67
+
+[_C_145]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 112
+begin = 46
+end = 63
+
+[_C_86]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 80
+begin = 16
+end = 30
+
+[_C_55]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 65
+begin = 27
+end = 43
+
+[_C_172]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 113
+begin = 48
+end = 67
+
+[getElement]
+name = "Function getElement"
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 127
+begin = 4
+end = 48
+
+[_C_152]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 112
+begin = 46
+end = 56
+
+[_C_105]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 73
+begin = 43
+end = 46
+
+[_C_292]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 116
+begin = 12
+end = 53
+
+[_C_171]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 113
+begin = 48
+end = 58
+
+[_C_87]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 74
+begin = 101
+end = 107
+
+[_C_177]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 113
+begin = 16
+end = 67
+
+[_C_46]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 93
+begin = 12
+end = 19
+
+[_C_15]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 5
+begin = 30
+end = 34
+
+[_C_26]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 5
+begin = 20
+end = 24
+
+[_C_10]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/maptypes.h"
+line = 108
+begin = 12
+end = 122
+
+[_C_280]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 141
+begin = 39
+end = 42
+
+[_C_60]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 63
+begin = 27
+end = 70
+
+[_C_40]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 29
+begin = 4
+end = 62
+
+[_C_270]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 143
+begin = 21
+end = 40
+
+[_C_58]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 64
+begin = 27
+end = 33
+
+[_C_205]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 110
+begin = 16
+end = 43
+
+[_C_139]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 111
+begin = 26
+end = 53
+
+[_C_119]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 101
+begin = 27
+end = 43
+
+[_C_66]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 76
+begin = 29
+end = 48
+
+[_C_18]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 5
+begin = 30
+end = 34
+
+[_C_29]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 6
+begin = 11
+end = 47
+
+[_C_265]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 143
+begin = 21
+end = 40
+
+[_C_192]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 115
+begin = 16
+end = 43
+
+[_C_274]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 144
+begin = 12
+end = 21
+
+[_C_75]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 76
+begin = 20
+end = 48
+
+[_C_14]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 5
+begin = 30
+end = 34
+
+[_C_182]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 114
+begin = 16
+end = 52
+
+[_C_224]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 72
+begin = 12
+end = 23
+
+[_C_37]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 5
+begin = 30
+end = 34
+
+[_C_298]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 106
+begin = 13
+end = 25
+
+[_C_43]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 41
+begin = 13
+end = 30
+
+[_C_202]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 110
+begin = 16
+end = 26
+
+[_C_107]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 85
+begin = 12
+end = 28
+
+[_C_220]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 72
+begin = 12
+end = 23
+
+[_C_159]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 112
+begin = 16
+end = 63
+
+[lemma2_count_split]
+name = "Lemma lemma2_count_split"
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/maptypes.h"
+line = 83
+begin = 86
+end = 322
+
+[_C_175]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 113
+begin = 16
+end = 26
+
+[_C_213]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 93
+begin = 12
+end = 19
+
+[compareKeys]
+name = "Function compareKeys"
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 5
+begin = 4
+end = 35
+
+[_C_199]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 117
+begin = 16
+end = 29
+
+[_C_126]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 99
+begin = 32
+end = 58
+
+[_C_161]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 113
+begin = 48
+end = 58
+
+[_C_190]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 115
+begin = 16
+end = 26
+
+[_C_80]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 78
+begin = 16
+end = 42
+
+[_C_164]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 113
+begin = 48
+end = 67
+
+[count_split]
+name = "Lemma count_split"
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/maptypes.h"
+line = 66
+begin = 68
+end = 211
+
+[_C_240]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 58
+begin = 13
+end = 25
+
+[_C_282]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 141
+begin = 39
+end = 42
+
+[_C_187]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 115
+begin = 16
+end = 43
+
+[_C_294]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 116
+begin = 12
+end = 53
+
+[_C_211]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 92
+begin = 8
+end = 23
+
+[_C_128]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 97
+begin = 27
+end = 38
+
+[_C_115]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 102
+begin = 27
+end = 59
+
+[_C_52]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 66
+begin = 27
+end = 42
+
+[_C_295]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 124
+begin = 12
+end = 28
+
+[_C_277]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 142
+begin = 12
+end = 22
+
+[_C_261]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 142
+begin = 38
+end = 74
+
+[_C_219]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 74
+begin = 12
+end = 29
+
+[_C_158]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 112
+begin = 16
+end = 63
+
+[_C_117]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 102
+begin = 32
+end = 59
+
+[_C_144]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 112
+begin = 46
+end = 56
+
+[_C_120]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 101
+begin = 32
+end = 59
+
+[_C_252]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 129
+begin = 24
+end = 47
+
+[_C_227]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 78
+begin = 12
+end = 176
+
+[_C_28]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 6
+begin = 11
+end = 47
+
+[_C_156]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 112
+begin = 16
+end = 26
+
+[_C_226]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 72
+begin = 12
+end = 23
+
+[_C_140]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 111
+begin = 26
+end = 53
+
+[_C_48]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 89
+begin = 8
+end = 17
+
+[_C_273]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 143
+begin = 12
+end = 40
+
+[_C_271]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 143
+begin = 21
+end = 40
+
+[_C_116]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 102
+begin = 27
+end = 42
+
+[_C_51]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 66
+begin = 27
+end = 59
+
+[_C_287]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 117
+begin = 12
+end = 80
+
+[_C_163]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 113
+begin = 48
+end = 67
+
+[_C_31]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 6
+begin = 31
+end = 37
+
+[_C_285]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 116
+begin = 12
+end = 53
+
+[_C_288]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 116
+begin = 12
+end = 53
+
+[_C_238]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 92
+begin = 12
+end = 220
+
+[_C_77]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 78
+begin = 16
+end = 26
+
+[_C_135]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 111
+begin = 16
+end = 53
+
+[_C_151]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 112
+begin = 16
+end = 63
+
+[_C_4]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/maptypes.h"
+line = 81
+begin = 12
+end = 193
+
+[_C_183]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 115
+begin = 36
+end = 43
+
+[_C_71]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 76
+begin = 29
+end = 39
+
+[_C_89]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 74
+begin = 78
+end = 88
+
+[_C_237]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 91
+begin = 12
+end = 81
+
+[_C_267]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 143
+begin = 12
+end = 40
+
+[_C_137]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 111
+begin = 26
+end = 36
+
+[_C_61]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 62
+begin = 27
+end = 38
+
+[_C_293]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 120
+begin = 12
+end = 380
+
+[_C_297]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 105
+begin = 13
+end = 25
+
+[_C_254]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 129
+begin = 29
+end = 47
+
+[_C_278]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 142
+begin = 12
+end = 34
+
+[_C_188]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 115
+begin = 16
+end = 43
+
+[_C_42]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 43
+begin = 12
+end = 40
+
+[_C_247]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 134
+begin = 23
+end = 57
+
+[_C_110]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 94
+begin = 12
+end = 23
+
+[_C_217]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 73
+begin = 12
+end = 23
+
+[_C_94]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 74
+begin = 43
+end = 53
+
+[_C_236]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 72
+begin = 12
+end = 23
+
+[_C_84]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 79
+begin = 16
+end = 28
+
+[_C_266]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 143
+begin = 12
+end = 40
+
+[_C_184]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 115
+begin = 16
+end = 26
+
+[_C_36]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 5
+begin = 20
+end = 24
+
+[_C_186]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 115
+begin = 16
+end = 43
+
+[_C_33]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 6
+begin = 21
+end = 27
+
+[_C_291]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 119
+begin = 12
+end = 42
+
+[_C_162]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 113
+begin = 48
+end = 58
+
+[_C_230]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 72
+begin = 12
+end = 23
+
+[_C_185]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 115
+begin = 16
+end = 26
+
+[_C_150]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 112
+begin = 16
+end = 63
+
+[lemma1_count_split]
+name = "Lemma lemma1_count_split"
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/maptypes.h"
+line = 79
+begin = 24
+end = 253
+
+[_C_136]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 111
+begin = 16
+end = 53
+
+[_C_22]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 5
+begin = 20
+end = 24
+
+[_C_275]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 142
+begin = 38
+end = 74
+
+[_C_302]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 110
+begin = 13
+end = 30
+
+[_C_276]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 142
+begin = 12
+end = 22
+
+[_C_63]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 73
+begin = 24
+end = 41
+
+[_C_6]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/maptypes.h"
+line = 91
+begin = 12
+end = 170
+
+[_C_195]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 116
+begin = 16
+end = 26
+
+[_C_178]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 113
+begin = 16
+end = 67
+
+[_C_64]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 76
+begin = 29
+end = 39
+
+[_C_251]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 130
+begin = 23
+end = 40
+
+[_C_122]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 100
+begin = 27
+end = 46
+
+[_C_207]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 109
+begin = 56
+end = 59
+
+[_C_203]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 110
+begin = 16
+end = 26
+
+[_C_181]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 114
+begin = 16
+end = 52
+
+[_C_95]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 74
+begin = 43
+end = 53
+
+[_C_93]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 74
+begin = 66
+end = 72
+
+[_C_231]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 84
+begin = 12
+end = 432
+
+[_C_166]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 113
+begin = 16
+end = 26
+
+[_C_45]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 93
+begin = 12
+end = 19
+
+[_C_239]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 57
+begin = 13
+end = 25
+
+[_C_264]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 143
+begin = 21
+end = 40
+
+[_C_196]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 116
+begin = 16
+end = 26
+
+[_C_216]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 72
+begin = 12
+end = 23
+
+[_C_3]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/maptypes.h"
+line = 69
+begin = 12
+end = 109
+
+[_C_243]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 61
+begin = 13
+end = 30
+
+[_C_253]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 129
+begin = 24
+end = 30
+
+[_C_98]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 74
+begin = 43
+end = 72
+
+[_C_255]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 141
+begin = 24
+end = 37
+
+[_C_92]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 74
+begin = 78
+end = 107
+
+[_C_258]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 142
+begin = 50
+end = 60
+
+[_C_131]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 111
+begin = 26
+end = 36
+
+[_C_210]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 92
+begin = 8
+end = 18
+
+[_C_17]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 5
+begin = 30
+end = 34
+
+[_C_141]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 111
+begin = 16
+end = 53
+
+[_C_260]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 142
+begin = 38
+end = 74
+
+[finalizeMap]
+name = "Function finalizeMap"
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 27
+begin = 5
+end = 26
+
+[_C_7]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/maptypes.h"
+line = 95
+begin = 12
+end = 187
+
+[_C_62]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 73
+begin = 28
+end = 41
+
+[_C_27]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 6
+begin = 11
+end = 47
+
+[_C_208]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 109
+begin = 56
+end = 59
+
+[_C_154]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 112
+begin = 46
+end = 63
+
+[lemma3_count_split]
+name = "Lemma lemma3_count_split"
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/maptypes.h"
+line = 88
+begin = 78
+end = 286
+
+[_C_256]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 141
+begin = 20
+end = 37
+
+[_C_299]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 107
+begin = 13
+end = 24
+
+[_C_44]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 42
+begin = 13
+end = 34
+
+[_C_250]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 131
+begin = 23
+end = 40
+
+[_C_99]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 74
+begin = 16
+end = 26
+
+[_C_47]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 58
+begin = 8
+end = 18
+
+[_C_68]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 76
+begin = 20
+end = 48
+
+[_C_53]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 66
+begin = 32
+end = 59
+
+[_C_142]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 111
+begin = 16
+end = 53
+
+[_C_8]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/maptypes.h"
+line = 100
+begin = 12
+end = 150
+
+[_C_263]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 143
+begin = 21
+end = 31
+
+[_C_123]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 100
+begin = 45
+end = 63
+
+[_C_106]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 86
+begin = 12
+end = 21
+
+[_C_50]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 71
+begin = 25
+end = 42
+
+[_C_235]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 90
+begin = 12
+end = 53
+
+[_C_88]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 74
+begin = 78
+end = 88
+
+[_C_100]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 74
+begin = 16
+end = 26
+
+[_C_2]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/maptypes.h"
+line = 62
+begin = 12
+end = 77
+
+[_C_300]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 108
+begin = 13
+end = 26
+
+[_C_165]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 113
+begin = 16
+end = 26
+
+[_C_281]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 141
+begin = 39
+end = 42
+
+[_C_153]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 112
+begin = 46
+end = 56
+
+[_C_34]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 6
+begin = 11
+end = 17
+
+[_C_272]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 143
+begin = 12
+end = 40
+
+[_C_269]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 143
+begin = 21
+end = 31
+
+[_C_67]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 76
+begin = 29
+end = 48
+
+[_C_16]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 5
+begin = 30
+end = 34
+
+[_C_125]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 99
+begin = 27
+end = 42
+
+[_C_245]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 141
+begin = 13
+end = 14
+
+[_C_229]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 79
+begin = 12
+end = 432
+
+[_C_113]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 109
+begin = 17
+end = 18
+
+[_C_1]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/maptypes.h"
+line = 55
+begin = 12
+end = 97
+
+[_C_206]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 109
+begin = 56
+end = 59
+
+[_C_76]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 75
+begin = 20
+end = 86
+
+[_C_25]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 5
+begin = 20
+end = 24
+
+[count_one]
+name = "Lemma count_one"
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/maptypes.h"
+line = 59
+begin = 69
+end = 178
+
+[_C_286]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 116
+begin = 12
+end = 53
+
+[_C_244]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.h"
+line = 62
+begin = 13
+end = 30
+
+[_C_39]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 28
+begin = 4
+end = 20
+
+[_C_143]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 112
+begin = 46
+end = 56
+
+[_C_74]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 76
+begin = 20
+end = 48
+
+[_C_257]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 142
+begin = 50
+end = 60
+
+[_C_179]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 114
+begin = 16
+end = 26
+
+[_C_78]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 78
+begin = 16
+end = 26
+
+[_C_11]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 5
+begin = 20
+end = 24
+
+[removeElement]
+name = "Function removeElement"
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 57
+begin = 4
+end = 51
+
+[_C_148]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 112
+begin = 16
+end = 26
+
+[_C_21]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 5
+begin = 20
+end = 24
+
+[_C_279]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 142
+begin = 12
+end = 34
+
+[_C_197]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 116
+begin = 16
+end = 42
+
+[_C_118]
+file = "/home/tsirleo/University/DeductiveVerification/HW5/5_1(safety)/map.c"
+line = 101
+begin = 27
+end = 59
+
