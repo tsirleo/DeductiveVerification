@@ -1,0 +1,549 @@
+[_C_52]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 79
+begin = 11
+end = 88
+
+[_C_35]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 12
+begin = 12
+end = 33
+
+[_C_56]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 79
+begin = 11
+end = 88
+
+[_C_28]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 67
+begin = 8
+end = 11
+
+[_C_72]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 88
+begin = 8
+end = 12
+
+[_C_59]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 81
+begin = 11
+end = 16
+
+[_C_48]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 77
+begin = 8
+end = 12
+
+[_C_51]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 78
+begin = 4
+end = 22
+
+[_C_31]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 69
+begin = 12
+end = 15
+
+[_C_77]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 90
+begin = 11
+end = 68
+
+[_C_83]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 91
+begin = 11
+end = 16
+
+[_C_41]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 77
+begin = 8
+end = 12
+
+[_C_4]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 57
+begin = 21
+end = 23
+
+[_C_71]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 88
+begin = 8
+end = 12
+
+[_C_70]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 88
+begin = 8
+end = 12
+
+[_C_61]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 80
+begin = 11
+end = 16
+
+[_C_69]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 88
+begin = 8
+end = 12
+
+[_C_32]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 69
+begin = 12
+end = 15
+
+[_C_23]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 63
+begin = 12
+end = 16
+
+[_C_19]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 60
+begin = 19
+end = 43
+
+[_C_42]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 77
+begin = 8
+end = 12
+
+[_C_82]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 92
+begin = 11
+end = 22
+
+[xinc]
+name = "Function xinc"
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 24
+begin = 5
+end = 32
+
+[test1]
+name = "Function test1"
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 75
+begin = 4
+end = 15
+
+[_C_84]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 91
+begin = 11
+end = 22
+
+[_C_13]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 32
+begin = 23
+end = 30
+
+[_C_5]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 51
+begin = 23
+end = 163
+
+[_C_36]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 13
+begin = 12
+end = 141
+
+[_C_12]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 33
+begin = 23
+end = 33
+
+[_C_33]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 12
+begin = 12
+end = 33
+
+[_C_79]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 90
+begin = 11
+end = 68
+
+[_C_85]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 90
+begin = 11
+end = 16
+
+[_C_22]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 63
+begin = 12
+end = 16
+
+[_C_65]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 77
+begin = 8
+end = 12
+
+[_C_9]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 36
+begin = 23
+end = 43
+
+[_C_57]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 82
+begin = 11
+end = 16
+
+[_C_54]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 79
+begin = 11
+end = 88
+
+[_C_30]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 69
+begin = 12
+end = 15
+
+[_C_63]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 79
+begin = 11
+end = 16
+
+[_C_6]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 43
+begin = 23
+end = 279
+
+[_C_64]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 79
+begin = 11
+end = 21
+
+[_C_49]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 77
+begin = 8
+end = 12
+
+[_C_24]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 63
+begin = 12
+end = 16
+
+[_C_45]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 77
+begin = 8
+end = 12
+
+[_C_20]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 61
+begin = 19
+end = 60
+
+[_C_73]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 88
+begin = 8
+end = 12
+
+[test2]
+name = "Function test2"
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 86
+begin = 4
+end = 15
+
+[_C_38]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 4
+begin = 13
+end = 20
+
+[_C_3]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 29
+begin = 12
+end = 13
+
+[_C_81]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 92
+begin = 11
+end = 16
+
+[_C_17]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 59
+begin = 11
+end = 15
+
+[_C_7]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 38
+begin = 23
+end = 200
+
+[_C_86]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 90
+begin = 11
+end = 22
+
+[_C_62]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 80
+begin = 11
+end = 22
+
+[_C_55]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 79
+begin = 11
+end = 88
+
+[_C_27]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 62
+begin = 12
+end = 19
+
+[_C_87]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 88
+begin = 8
+end = 12
+
+[_C_46]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 77
+begin = 8
+end = 12
+
+[_C_44]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 77
+begin = 8
+end = 12
+
+[_C_15]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 59
+begin = 11
+end = 15
+
+[_C_26]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 62
+begin = 12
+end = 14
+
+[_C_47]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 77
+begin = 8
+end = 12
+
+[_C_10]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 35
+begin = 23
+end = 32
+
+[_C_68]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 88
+begin = 8
+end = 12
+
+[_C_60]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 81
+begin = 11
+end = 21
+
+[_C_53]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 79
+begin = 11
+end = 88
+
+[_C_40]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 6
+begin = 13
+end = 34
+
+[_C_58]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 82
+begin = 11
+end = 21
+
+[_C_8]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 37
+begin = 23
+end = 45
+
+[_C_66]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 74
+begin = 12
+end = 19
+
+[_C_18]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 59
+begin = 11
+end = 15
+
+[_C_29]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 67
+begin = 8
+end = 11
+
+[_C_75]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 89
+begin = 9
+end = 15
+
+[_C_14]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 59
+begin = 11
+end = 15
+
+[_C_50]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 77
+begin = 8
+end = 12
+
+[_C_37]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 18
+begin = 12
+end = 178
+
+[_C_43]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 77
+begin = 8
+end = 12
+
+[_C_88]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 85
+begin = 12
+end = 19
+
+[_C_2]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 28
+begin = 13
+end = 18
+
+[_C_34]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 12
+begin = 12
+end = 33
+
+[_C_67]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 88
+begin = 8
+end = 12
+
+[_C_16]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 59
+begin = 11
+end = 15
+
+[_C_1]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 27
+begin = 12
+end = 16
+
+[_C_76]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 89
+begin = 4
+end = 23
+
+[_C_25]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 63
+begin = 12
+end = 16
+
+[_C_39]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 5
+begin = 13
+end = 27
+
+[_C_80]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 90
+begin = 11
+end = 68
+
+[_C_74]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 88
+begin = 8
+end = 12
+
+[_C_78]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 90
+begin = 11
+end = 68
+
+[_C_11]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 34
+begin = 23
+end = 29
+
+[_C_21]
+file = "/home/tsirleo/University/DeductiveVerification/Tests/exam/2/xinc.c"
+line = 63
+begin = 14
+end = 16
+

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE why3session PUBLIC "-//Why3//proof session v5//EN"
+"http://why3.lri.fr/why3session.dtd">
+<why3session shape_version="4">
+<prover id="0" name="CVC4" version="1.8" timelimit="5" steplimit="0" memlimit="1000"/>
+<prover id="1" name="Alt-Ergo" version="2.4.1" timelimit="5" steplimit="0" memlimit="1000"/>
+<prover id="2" name="Z3" version="4.8.15" timelimit="5" steplimit="0" memlimit="1000"/>
+<file name="../count.mlw" expanded="true">
+<theory name="Count" sum="675839fc2d893b0d02d4d8b90f8b26ca" expanded="true">
+ <goal name="WP_parameter count" expl="VC for count" expanded="true">
+ <transf name="split_goal_wp" expanded="true">
+  <goal name="WP_parameter count.1" expl="loop invariant init" expanded="true">
+  <proof prover="0"><result status="valid" time="0.02" steps="1167"/></proof>
+  <proof prover="1"><result status="valid" time="0.00" steps="2"/></proof>
+  <proof prover="2"><result status="valid" time="0.01"/></proof>
+  </goal>
+  <goal name="WP_parameter count.2" expl="loop invariant init" expanded="true">
+  <proof prover="0"><result status="valid" time="0.02" steps="1423"/></proof>
+  <proof prover="1"><result status="valid" time="0.00" steps="2"/></proof>
+  <proof prover="2"><result status="valid" time="0.01"/></proof>
+  </goal>
+  <goal name="WP_parameter count.3" expl="loop invariant init" expanded="true">
+  <proof prover="0"><result status="valid" time="0.03" steps="1676"/></proof>
+  <proof prover="1"><result status="valid" time="0.00" steps="4"/></proof>
+  <proof prover="2"><result status="valid" time="0.02"/></proof>
+  </goal>
+  <goal name="WP_parameter count.4" expl="loop invariant preservation" expanded="true">
+  <proof prover="0"><result status="valid" time="0.02" steps="2069"/></proof>
+  <proof prover="1"><result status="valid" time="0.00" steps="20"/></proof>
+  <proof prover="2"><result status="valid" time="0.02"/></proof>
+  </goal>
+  <goal name="WP_parameter count.5" expl="loop invariant preservation" expanded="true">
+  <proof prover="0"><result status="valid" time="0.01" steps="1596"/></proof>
+  <proof prover="1"><result status="valid" time="0.00" steps="20"/></proof>
+  <proof prover="2"><result status="valid" time="0.02"/></proof>
+  </goal>
+  <goal name="WP_parameter count.6" expl="loop invariant preservation" expanded="true">
+  <proof prover="0" obsolete="true"><result status="unknown" time="0.04" steps="7614"/></proof>
+  <proof prover="1"><result status="highfailure" time="0.17"/></proof>
+  <transf name="introduce_premises" expanded="true">
+   <goal name="WP_parameter count.6.1" expl="loop invariant preservation" expanded="true">
+   <transf name="inline_goal" expanded="true">
+    <goal name="WP_parameter count.6.1.1" expl="loop invariant preservation" expanded="true">
+    <transf name="inline_all" expanded="true">
+     <goal name="WP_parameter count.6.1.1.1" expl="loop invariant preservation" expanded="true">
+     <transf name="eliminate_if" expanded="true">
+      <goal name="WP_parameter count.6.1.1.1.1" expl="loop invariant preservation" expanded="true">
+      <proof prover="0"><result status="valid" time="0.02" steps="3163"/></proof>
+      <proof prover="1"><result status="highfailure" time="4.01"/></proof>
+      <proof prover="2"><result status="valid" time="0.01"/></proof>
+      </goal>
+     </transf>
+     </goal>
+    </transf>
+    </goal>
+   </transf>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter count.7" expl="loop variant decrease" expanded="true">
+  <proof prover="0"><result status="valid" time="0.02" steps="1633"/></proof>
+  <proof prover="1"><result status="valid" time="0.00" steps="20"/></proof>
+  <proof prover="2"><result status="valid" time="0.01"/></proof>
+  </goal>
+  <goal name="WP_parameter count.8" expl="loop invariant preservation" expanded="true">
+  <proof prover="0"><result status="valid" time="0.03" steps="2144"/></proof>
+  <proof prover="1"><result status="valid" time="0.00" steps="20"/></proof>
+  <proof prover="2"><result status="valid" time="0.02"/></proof>
+  </goal>
+  <goal name="WP_parameter count.9" expl="loop invariant preservation" expanded="true">
+  <proof prover="0"><result status="valid" time="0.01" steps="1600"/></proof>
+  <proof prover="1"><result status="valid" time="0.00" steps="20"/></proof>
+  <proof prover="2"><result status="valid" time="0.02"/></proof>
+  </goal>
+  <goal name="WP_parameter count.10" expl="loop invariant preservation" expanded="true">
+  <proof prover="0" obsolete="true"><result status="unknown" time="0.04" steps="7879"/></proof>
+  <proof prover="1"><result status="highfailure" time="0.19"/></proof>
+  <transf name="introduce_premises" expanded="true">
+   <goal name="WP_parameter count.10.1" expl="loop invariant preservation" expanded="true">
+   <transf name="inline_goal" expanded="true">
+    <goal name="WP_parameter count.10.1.1" expl="loop invariant preservation" expanded="true">
+    <transf name="inline_all" expanded="true">
+     <goal name="WP_parameter count.10.1.1.1" expl="loop invariant preservation" expanded="true">
+     <transf name="eliminate_if" expanded="true">
+      <goal name="WP_parameter count.10.1.1.1.1" expl="loop invariant preservation" expanded="true">
+      <proof prover="0"><result status="valid" time="0.03" steps="3085"/></proof>
+      <proof prover="1"><result status="highfailure" time="0.28"/></proof>
+      <proof prover="2"><result status="valid" time="0.01"/></proof>
+      </goal>
+     </transf>
+     </goal>
+    </transf>
+    </goal>
+   </transf>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter count.11" expl="loop variant decrease" expanded="true">
+  <proof prover="0"><result status="valid" time="0.02" steps="1637"/></proof>
+  <proof prover="1"><result status="valid" time="0.00" steps="20"/></proof>
+  <proof prover="2"><result status="valid" time="0.02"/></proof>
+  </goal>
+  <goal name="WP_parameter count.12" expl="loop invariant preservation" expanded="true">
+  <proof prover="0"><result status="valid" time="0.02" steps="1946"/></proof>
+  <proof prover="1"><result status="valid" time="0.00" steps="16"/></proof>
+  <proof prover="2"><result status="valid" time="0.01"/></proof>
+  </goal>
+  <goal name="WP_parameter count.13" expl="loop invariant preservation" expanded="true">
+  <proof prover="0"><result status="valid" time="0.02" steps="1508"/></proof>
+  <proof prover="1"><result status="valid" time="0.00" steps="16"/></proof>
+  <proof prover="2"><result status="valid" time="0.02"/></proof>
+  </goal>
+  <goal name="WP_parameter count.14" expl="loop invariant preservation" expanded="true">
+  <proof prover="0" obsolete="true"><result status="unknown" time="0.05" steps="7646"/></proof>
+  <proof prover="1"><result status="highfailure" time="0.15"/></proof>
+  <transf name="introduce_premises" expanded="true">
+   <goal name="WP_parameter count.14.1" expl="loop invariant preservation" expanded="true">
+   <transf name="inline_goal" expanded="true">
+    <goal name="WP_parameter count.14.1.1" expl="loop invariant preservation" expanded="true">
+    <transf name="inline_all" expanded="true">
+     <goal name="WP_parameter count.14.1.1.1" expl="loop invariant preservation" expanded="true">
+     <transf name="eliminate_if" expanded="true">
+      <goal name="WP_parameter count.14.1.1.1.1" expl="loop invariant preservation" expanded="true">
+      <proof prover="0"><result status="valid" time="0.03" steps="2880"/></proof>
+      <proof prover="1"><result status="highfailure" time="0.24"/></proof>
+      <proof prover="2"><result status="valid" time="0.01"/></proof>
+      </goal>
+     </transf>
+     </goal>
+    </transf>
+    </goal>
+   </transf>
+   </goal>
+  </transf>
+  </goal>
+  <goal name="WP_parameter count.15" expl="loop variant decrease" expanded="true">
+  <proof prover="0"><result status="valid" time="0.02" steps="1545"/></proof>
+  <proof prover="1"><result status="valid" time="0.00" steps="16"/></proof>
+  <proof prover="2"><result status="valid" time="0.01"/></proof>
+  </goal>
+  <goal name="WP_parameter count.16" expl="postcondition" expanded="true">
+  <proof prover="0"><result status="valid" time="0.02" steps="1815"/></proof>
+  <proof prover="1"><result status="valid" time="0.00" steps="12"/></proof>
+  <proof prover="2"><result status="valid" time="0.01"/></proof>
+  </goal>
+ </transf>
+ </goal>
+</theory>
+</file>
+</why3session>

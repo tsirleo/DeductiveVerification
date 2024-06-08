@@ -1,0 +1,60 @@
+module Count
+
+use import int.Int
+use import ref.Ref
+
+predicate p int
+
+function count (a : int) (b : int) : int
+
+axiom count_zero:
+    forall m : int, n : int.
+        m > n -> 
+            ((count m n) = 0)
+
+predicate count_one_p (a : int) =
+    (
+        (count a a) = 
+        (
+            if (p a) 
+            then 1 
+            else 0
+        )
+    )
+
+axiom count_one:
+    forall m : int.
+        (count_one_p m)
+
+predicate count_split_p (m : int) (k : int) (n : int) =
+    (count m n) = 
+        (count m (k - 1)) + (count k n)
+
+axiom count_split:
+    forall m : int, k : int, n : int.
+            (
+                m < k <= n -> 
+                    (count_split_p m k n)
+            )
+
+let count (a b: int) : int
+    requires { b >= a }
+    ensures { result = (count a b) }
+=
+    let k = ref a in
+    let c1 = ref 0 in
+    let c2 = ref 0 in
+    let d = ref 0 in
+        while !k <= b do
+            variant { b - !k }
+            invariant { a <= !k }
+            invariant { !k <= (b + 1) }
+            invariant { (count a (!k - 1)) = !c1 + !c2 }
+            if p !k then
+                if !d = 0 then c1 := !c1 + 1 else c2 := !c2 + 1; 
+            k := !k + 1;
+            d := 1 - !d
+        done;
+        !c1 + !c2
+
+end

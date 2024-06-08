@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE why3session PUBLIC "-//Why3//proof session v5//EN"
+"http://why3.lri.fr/why3session.dtd">
+<why3session shape_version="4">
+<prover id="3" name="CVC5" version="1.1.2" timelimit="1" steplimit="0" memlimit="2000"/>
+<prover id="4" name="Alt-Ergo" version="2.4.3" timelimit="1" steplimit="0" memlimit="2000"/>
+<prover id="5" name="CVC4" version="1.7" timelimit="60" steplimit="0" memlimit="12000"/>
+<file name="../count.mlw" expanded="true">
+<theory name="Count" sum="23ef73a49fc7be50855b025092c8cb71" expanded="true">
+ <goal name="WP_parameter count" expl="VC for count" expanded="true">
+ <transf name="split_goal_wp" expanded="true">
+  <goal name="WP_parameter count.1" expl="loop invariant init">
+  <proof prover="5"><result status="valid" time="0.00" steps="1118"/></proof>
+  </goal>
+  <goal name="WP_parameter count.2" expl="loop invariant init">
+  <proof prover="5"><result status="valid" time="0.02" steps="1277"/></proof>
+  </goal>
+  <goal name="WP_parameter count.3" expl="loop invariant init">
+  <proof prover="5"><result status="valid" time="0.01" steps="1631"/></proof>
+  </goal>
+  <goal name="WP_parameter count.4" expl="loop invariant preservation">
+  <proof prover="5"><result status="valid" time="0.01" steps="1566"/></proof>
+  </goal>
+  <goal name="WP_parameter count.5" expl="loop invariant preservation">
+  <proof prover="5"><result status="valid" time="0.01" steps="1555"/></proof>
+  </goal>
+  <goal name="WP_parameter count.6" expl="loop invariant preservation">
+  <proof prover="3"><result status="valid" time="0.02" steps="4400"/></proof>
+  <proof prover="4"><result status="highfailure" time="0.10"/></proof>
+  <proof prover="5" timelimit="1" memlimit="2000"><result status="unknown" time="0.03" steps="8087"/></proof>
+  </goal>
+  <goal name="WP_parameter count.7" expl="loop variant decrease">
+  <proof prover="5"><result status="valid" time="0.01" steps="1370"/></proof>
+  </goal>
+  <goal name="WP_parameter count.8" expl="loop invariant preservation">
+  <proof prover="5"><result status="valid" time="0.01" steps="1641"/></proof>
+  </goal>
+  <goal name="WP_parameter count.9" expl="loop invariant preservation">
+  <proof prover="5"><result status="valid" time="0.00" steps="1630"/></proof>
+  </goal>
+  <goal name="WP_parameter count.10" expl="loop invariant preservation">
+  <proof prover="3"><result status="valid" time="0.02" steps="4397"/></proof>
+  <proof prover="4"><result status="highfailure" time="0.13"/></proof>
+  <proof prover="5" timelimit="1" memlimit="2000"><result status="unknown" time="0.03" steps="8322"/></proof>
+  </goal>
+  <goal name="WP_parameter count.11" expl="loop variant decrease">
+  <proof prover="5"><result status="valid" time="0.00" steps="1401"/></proof>
+  </goal>
+  <goal name="WP_parameter count.12" expl="loop invariant preservation">
+  <proof prover="5"><result status="valid" time="0.01" steps="1517"/></proof>
+  </goal>
+  <goal name="WP_parameter count.13" expl="loop invariant preservation">
+  <proof prover="5"><result status="valid" time="0.00" steps="1506"/></proof>
+  </goal>
+  <goal name="WP_parameter count.14" expl="loop invariant preservation">
+  <proof prover="3"><result status="valid" time="0.02" steps="3925"/></proof>
+  <proof prover="4"><result status="highfailure" time="0.12"/></proof>
+  <proof prover="5" timelimit="1" memlimit="2000"><result status="unknown" time="0.02" steps="8105"/></proof>
+  </goal>
+  <goal name="WP_parameter count.15" expl="loop variant decrease">
+  <proof prover="5"><result status="valid" time="0.00" steps="1336"/></proof>
+  </goal>
+  <goal name="WP_parameter count.16" expl="postcondition">
+  <proof prover="5"><result status="valid" time="0.01" steps="1536"/></proof>
+  </goal>
+ </transf>
+ </goal>
+</theory>
+</file>
+</why3session>

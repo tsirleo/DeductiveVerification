@@ -1,0 +1,243 @@
+
+axiomatic Padding {
+
+  logic type padding
+  
+}
+
+axiomatic Memory_reinterpretation_predicates {
+
+  predicate uint8_as_uint32(uint32 d0, uint8 a0, uint8 a1, uint8 a2, uint8 a3) =
+  ((d0 == ((((((a3 * 256) + a2) * 256) + a1) * 256) + a0)) &&
+    \uint8_as_uint32(d0, a0, a1, a2, a3))
+   
+  logic uint32 complement_to_uint32(int32 v) =
+  (if (v >= 0) then (v :> uint32) else (((v :> integer) + 4294967296) :> uint32))
+   
+  predicate uint8_as_int32(int32 d0, uint8 a3, uint8 a2, uint8 a1, uint8 a0) =
+  (uint8_as_uint32(complement_to_uint32(d0), a3, a2, a1, a0) &&
+    \uint8_as_int32(d0, a3, a2, a1, a0))
+   
+  predicate uint32_as_uint8(uint32 d0, uint8 a0, uint8 a1, uint8 a2, uint8 a3) =
+  (((a0 == (d0 % 256)) &&
+     (let d1 = (d0 / 256)
+     in ((a1 == (d1 % 256)) &&
+          (let d2 = (d1 / 256)
+          in ((a2 == (d2 % 256)) && (let d3 = (d2 / 256) in (a3 == d3))))))) &&
+    \uint32_as_uint8(d0, a0, a1, a2, a3))
+   
+  predicate int32_as_uint8(int32 d0, uint8 a3, uint8 a2, uint8 a1, uint8 a0) =
+  (uint32_as_uint8(complement_to_uint32(d0), a3, a2, a1, a0) &&
+    \int32_as_uint8(d0, a3, a2, a1, a0))
+   
+  logic uint8 complement_to_uint8(int8 v) =
+  (if (v >= 0) then (v :> uint8) else (((v :> integer) + 256) :> uint8))
+   
+  predicate int8_as_int32(int32 d0, int8 a3, int8 a2, int8 a1, int8 a0) =
+  (uint8_as_int32(d0, complement_to_uint8(a3), complement_to_uint8(a2),
+                  complement_to_uint8(a1), complement_to_uint8(a0)) &&
+    \int8_as_int32(d0, a3, a2, a1, a0))
+   
+  predicate int32_as_int8(int32 d0, int8 a3, int8 a2, int8 a1, int8 a0) =
+  (int32_as_uint8(d0, complement_to_uint8(a3), complement_to_uint8(a2),
+                  complement_to_uint8(a1), complement_to_uint8(a0)) &&
+    \int32_as_int8(d0, a3, a2, a1, a0))
+  
+}
+
+tag voidP = {
+}
+
+type voidP = [voidP]
+
+tag charP = voidP with {
+  int8 charM: 8;
+}
+
+tag intP = voidP with {
+  int32 intM: 32;
+}
+
+unit xinc(intP[..] a, int32 sz, int32 x)
+  requires ((_C_38 : (sz >= (0 :> int32))) &&
+             ((_C_39 : (x < (0x7fffffff :> int32))) &&
+               (_C_40 : \at((if (\at(0,Here) <=
+                                  \at(((sz :> integer) - 1),Here)) then 
+                            (((\offset_min(\at(a,Here)) <= \at(0,Here)) &&
+                               (\offset_max(\at(a,Here)) >=
+                                 \at(((sz :> integer) - 1),Here))) &&
+                              (\forall integer __framac_tmp2;
+                                (((\at(0,Here) <= __framac_tmp2) &&
+                                   (__framac_tmp2 <=
+                                     \at(((sz :> integer) - 1),Here))) ==>
+                                  true))) else true),Here))));
+behavior default:
+  assigns (a + [0..((sz :> integer) - 1)]).intM;
+  allocates \nothing;
+  ensures (_C_33 : ((_C_34 : \at((if (\at(0,Here) <=
+                                       \at(((\at(sz,Old) :> integer) - 1),Here)) then 
+                                 (((\offset_min(\at(a,Old)) <= \at(0,Here)) &&
+                                    (\offset_max(\at(a,Old)) >=
+                                      \at(((\at(sz,Old) :> integer) - 1),Here))) &&
+                                   (\forall integer __framac_tmp1;
+                                     (((\at(0,Here) <= __framac_tmp1) &&
+                                        (__framac_tmp1 <=
+                                          \at(((\at(sz,Old) :> integer) - 1),Here))) ==>
+                                       true))) else true),Here)) &&
+                     ((_C_36 : (\forall integer i_2;
+                                 ((((0 <= i_2) &&
+                                     (i_2 < (\at(sz,Old) :> integer))) &&
+                                    (\at((\at(a,Old) + i_2).intM,Old) ==
+                                      \at(x,Old))) ==>
+                                   (((\at(a,Old) + i_2).intM :> integer) ==
+                                     ((\at(x,Old) :> integer) + 1))))) &&
+                       (_C_37 : (\forall integer i_3;
+                                  ((((0 <= i_3) &&
+                                      (i_3 < (\at(sz,Old) :> integer))) &&
+                                     (! (\at((\at(a,Old) + i_3).intM,Old) ==
+                                          \at(x,Old)))) ==>
+                                    (\at((\at(a,Old) + i_3).intM,Old) ==
+                                      (\at(a,Old) + i_3).intM)))))));
+{  
+   (var int32 size_1);
+   
+   (var intP[..] pre_a);
+   
+   (var int32 l);
+   
+   (var int32 tmp);
+   
+   {  (_C_1 : (size_1 = sz));
+      (_C_2 : (pre_a = a));
+      (_C_3 : (l = (0 :> int32)));
+      (LoopEntry : 
+      loop 
+      behavior default:
+        invariant (_C_13 : (sz >= (0 :> int32)));
+      behavior default:
+        invariant (_C_12 : (sz <= size_1));
+      behavior default:
+        invariant (_C_11 : (l >= (0 :> int32)));
+      behavior default:
+        invariant (_C_10 : (l <= size_1));
+      behavior default:
+        invariant (_C_9 : ((l :> integer) == (a - \at(a,Pre))));
+      behavior default:
+        invariant (_C_8 : (a ==
+                            ((pre_a + (size_1 :> integer)) - (sz :> integer))));
+      behavior default:
+        invariant (_C_7 : (\forall integer i;
+                            ((((0 <= i) &&
+                                (i <
+                                  ((size_1 :> integer) -
+                                    (\at(sz,Here) :> integer)))) &&
+                               (\at((\at(a,Pre) + i).intM,Pre) == x)) ==>
+                              (((\at(a,Pre) + i).intM :> integer) ==
+                                ((x :> integer) + 1)))));
+      behavior default:
+        invariant (_C_6 : (\forall integer i_0;
+                            ((((0 <= i_0) &&
+                                (i_0 <
+                                  ((size_1 :> integer) -
+                                    (\at(sz,Here) :> integer)))) &&
+                               (! (\at((\at(a,Pre) + i_0).intM,Pre) == x))) ==>
+                              (\at((\at(a,Pre) + i_0).intM,Pre) ==
+                                \at((\at(a,Pre) + i_0).intM,Here)))));
+      behavior default:
+        invariant (_C_5 : (\forall integer i_1;
+                            ((((l :> integer) <= i_1) &&
+                               (i_1 <= (size_1 :> integer))) ==>
+                              ((\at(a,Pre) + i_1).intM ==
+                                \at((a + i_1).intM,Pre)))));
+      variant (_C_4 : sz);
+      while (true)
+      {  
+         {  (LoopCurrent : 
+            {  (_C_14 : (tmp = sz));
+               (_C_17 : (sz = (_C_16 : ((_C_15 : (sz - (1 :> int32))) :> int32))));
+               ()
+            });
+            (if (_C_18 : ((tmp :> int32) != (0 :> int32))) then () else 
+            (goto while_0_break));
+            
+            {  
+               {  
+                  (assert for default: (_C_19 : (astraver : (a.intM ==
+                                                              (\at(a,Pre) +
+                                                                (l :> integer)).intM))));
+                  ()
+               };
+               
+               {  
+                  (assert for default: (_C_20 : (astraver : (a.intM ==
+                                                              \at((\at(a,Pre) +
+                                                                    (
+                                                                    \at(l,Here) :> integer)).intM,Pre)))));
+                  ()
+               };
+               (if (_C_27 : ((_C_26 : a.intM) == x)) then (_C_25 : ((_C_24 : a.intM) = 
+                                                          (_C_23 : ((_C_22 : 
+                                                                    ((_C_21 : a.intM) +
+                                                                    (1 :> int32))) :> int32)))) else ());
+               (_C_29 : (a = (_C_28 : (a + (1 :> int32)))));
+               (_C_32 : (l = (_C_31 : ((_C_30 : (l + (1 :> int32))) :> int32))))
+            }
+         }
+      });
+      (while_0_break : ());
+      
+      (return ())
+   }
+}
+
+int32 test1()
+behavior default:
+  ensures (_C_66 : (! (\result == 0)));
+{  
+   (var intP[0..3] a1);
+   
+   (var int32 tmp_0);
+   
+   {  (_C_42 : (a1 = (_C_41 : (new intP[4]))));
+      (_C_44 : ((_C_43 : (a1 + (3 :> int32)).intM) = (3 :> int32)));
+      (_C_46 : ((_C_45 : (a1 + (2 :> int32)).intM) = (1 :> int32)));
+      (_C_48 : ((_C_47 : (a1 + (1 :> int32)).intM) = (-1 :> int32)));
+      (_C_50 : ((_C_49 : (a1 + (0 :> int32)).intM) = (1 :> int32)));
+      (_C_51 : xinc(a1, (4 :> int32), (1 :> int32)));
+      (if (_C_64 : ((_C_63 : (a1 + (0 :> int32)).intM) == (2 :> int32))) then 
+      (if (_C_62 : ((_C_61 : (a1 + (1 :> int32)).intM) == (-1 :> int32))) then 
+      (if (_C_60 : ((_C_59 : (a1 + (2 :> int32)).intM) == (2 :> int32))) then 
+      (if (_C_58 : ((_C_57 : (a1 + (3 :> int32)).intM) == (3 :> int32))) then 
+      (_C_56 : (tmp_0 = (1 :> int32))) else (_C_55 : (tmp_0 = (0 :> int32)))) else 
+      (_C_54 : (tmp_0 = (0 :> int32)))) else (_C_53 : (tmp_0 = (0 :> int32)))) else 
+      (_C_52 : (tmp_0 = (0 :> int32))));
+      (_C_65 : (free(a1)));
+      
+      (return tmp_0)
+   }
+}
+
+int32 test2()
+behavior default:
+  ensures (_C_88 : (! (\result == 0)));
+{  
+   (var intP[0..2] a2);
+   
+   (var int32 tmp_1);
+   
+   {  (_C_68 : (a2 = (_C_67 : (new intP[3]))));
+      (_C_70 : ((_C_69 : (a2 + (2 :> int32)).intM) = (10 :> int32)));
+      (_C_72 : ((_C_71 : (a2 + (1 :> int32)).intM) = (10 :> int32)));
+      (_C_74 : ((_C_73 : (a2 + (0 :> int32)).intM) = (10 :> int32)));
+      (_C_76 : xinc((_C_75 : (a2 + (1 :> int32))), (1 :> int32),
+                    (10 :> int32)));
+      (if (_C_86 : ((_C_85 : (a2 + (0 :> int32)).intM) == (10 :> int32))) then 
+      (if (_C_84 : ((_C_83 : (a2 + (1 :> int32)).intM) == (11 :> int32))) then 
+      (if (_C_82 : ((_C_81 : (a2 + (2 :> int32)).intM) == (10 :> int32))) then 
+      (_C_80 : (tmp_1 = (1 :> int32))) else (_C_79 : (tmp_1 = (0 :> int32)))) else 
+      (_C_78 : (tmp_1 = (0 :> int32)))) else (_C_77 : (tmp_1 = (0 :> int32))));
+      (_C_87 : (free(a2)));
+      
+      (return tmp_1)
+   }
+}
